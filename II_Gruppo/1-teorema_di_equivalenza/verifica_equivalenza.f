@@ -12,14 +12,20 @@
 	N_2=NORMA2(X,N)
 	N_INF=NORMA_INF(X,N)
 
-	IF(N_INF.LE.N_2.AND.N_2.LE.SQRT(FLOAT(N))*N_INF)THEN 
+	IF(N_INF.LE.N_2.AND.N_2.LE.SQRT(FLOAT(N))*N_INF)THEN
+		WRITE(*,*)N_INF,' <= ', N_2,' <=' ,SQRT(FLOAT(N))*N_INF 
 		WRITE(*,*)'E'' verificata la prima disequazione!'
+		WRITE(*,*)
 	END IF
-	IF(N_2.LE.N_1.AND.N_1.LE.SQRT(FLOAT(N))*N_2)THEN 
+	IF(N_2.LE.N_1.AND.N_1.LE.SQRT(FLOAT(N))*N_2)THEN
+		WRITE(*,*)N_2,' <= ', N_1,' <=' ,SQRT(FLOAT(N))*N_2 
 		WRITE(*,*)'E'' verificata la seconda disequazione!'
+		WRITE(*,*)
 	END IF
 	IF(N_INF.LE.N_1.AND.N_1.LE.N*N_INF)THEN 
+		WRITE(*,*)N_INF,' <= ', N_1,' <=' ,N*N_INF
 		WRITE(*,*)'E'' verificata la terza disequazione!'
+		WRITE(*,*)
 	END IF
 	END
 
