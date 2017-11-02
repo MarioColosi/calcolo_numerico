@@ -60,7 +60,7 @@
 		END DO
 	END DO
 	IF(A(N,N).EQ.0)
-		WRITE(*,*)'La matrice � singolare!'
+		WRITE(*,*)'La matrice e'' singolare!'
 		RETURN
 	END IF
 	END
