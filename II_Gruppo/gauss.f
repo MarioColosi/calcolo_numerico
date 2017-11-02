@@ -1,4 +1,4 @@
-	PROGRAM GAUSS 
+	PROGRAM GAUSS
 * Metodo di Gauss con la strategia del pivot massimo
 	PARAMETER(N_MAX=500)
 	REAL A(N_MAX,N_MAX)
@@ -9,15 +9,15 @@
 	CALL INIT_B(B,N)
 	CALL FATTORIZZAZIONE_GAUSS(A,B,N_MAX,N)
 	CALL BACK
-	END 
+	END
 
 	SUBROUTINE INIT_MATRIX(A,N_MAX,N)
 	REAL A(N_MAX,N)
 	WRITE(*,*)'Inserisci i valori della matrice:'
 	DO I=1,N
 		READ(*,*)(A(I,J),J=1,N)
-	END DO 
-	END 
+	END DO
+	END
 
 	SUBROUTINE INIT_VETT(B,N)
 	REAL B(N)
@@ -38,8 +38,8 @@
 			END IF
 		END DO
 		IF(MAX.EQ.0)
-			WRITE(*,*)'La matrice è singolare!'
-			RETURN 
+			WRITE(*,*)'La matrice ï¿½ singolare!'
+			RETURN
 		END IF
 		IF(L.NE.K)
 			DO J=K,N
@@ -55,24 +55,26 @@
 			Q=A(I,K)/A(K,K)
 			DO J=K+1,N
 				A(I,J)=A(I,J)-Q*A(K,J)
-			END DO 
+			END DO
 			B(I)=B(I)-Q*B(K)
-		END DO 
+		END DO
 	END DO
-	IF(A(N,N).EQ.0) 
-		WRITE(*,*)'La matrice è singolare!'
-		RETURN 
+	IF(A(N,N).EQ.0)
+		WRITE(*,*)'La matrice ï¿½ singolare!'
+		RETURN
 	END IF
-	END 
+	END
 
-	
+
 	SUBROUTINE BACK(A,B,MAX_N,N)
 	REAL A(MAX_N,N)
 	REAL B(N)
 	REAL X(N)
-
+	REAL SOMMA
 	DO I=N,1,-1
 		DO J=I+1,N
-			
-		X(I)=B(I)-(
-		
+			SOMMA=SOMMA+A(I,J)*X(J)
+		END DO
+		X(I)=(B(I)-SOMMA)/A(I,I)
+	END DO
+	END
