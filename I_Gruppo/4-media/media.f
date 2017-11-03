@@ -1,6 +1,6 @@
-      PROGRAM MEDIA
+      PROGRAM CALCOLAMEDIA
       PARAMETER(MAX_N=100)
-      REAL X(MAX_N)
+      REAL X(MAX_N),MEDIA
       WRITE(*,*)'*** MEDIA DI N NUMERI INTERI ***'
   1   FORMAT('Di quanti numeri vuoi fare la media? [MAX:',I3,']')
       WRITE(*,1)MAX_N
@@ -11,7 +11,7 @@
           STOP
       END IF
       CALL INIT_X(X,N)
-      CALL CALC_MEDIA(X,N,RESULT)
+      RESULT = MEDIA(X,N)
       WRITE(*,*)'La media e''',RESULT
       END
 
@@ -20,11 +20,11 @@
       READ(*,*)(X(I),I=1,N)
       END
 
-      SUBROUTINE CALC_MEDIA(X,N,RESULT)
+      REAL FUNCTION MEDIA(X,N)
       REAL X(N)
-      RESULT = 0.0
+      MEDIA = 0.0
       DO I=1,N
-        RESULT = RESULT+X(I)
+        MEDIA = MEDIA+X(I)
       END DO
-      RESULT=RESULT/N
+      MEDIA=MEDIA/N
       END
