@@ -1,0 +1,8 @@
+	SUBROUTINE BUILD_HILBERT(H,MAX_N,N)
+	REAL H(MAX_N,N)
+	DO 	I=1,N
+		DO J=1,N
+			H(I,J)=1./(I+J-1)
+		END DO
+	END DO
+	END 
