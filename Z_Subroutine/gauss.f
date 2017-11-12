@@ -1,33 +1,8 @@
-	PARAMETER(N_MAX=500)
- 	REAL A(N_MAX,N_MAX)
-	REAL B(N_MAX)
-	WRITE(*,*)'Inserisci la dimensione della matrice e del vettore:'
-	READ(*,*)N
-	CALL INIT_MATRIX(A,N_MAX,N)
-	CALL INIT_B(B,N)
-	CALL FATTORIZZAZIONE_GAUSS(A,B,N_MAX,N)
-	CALL BACK(A,B,MAX_N,N)
-	END
-
-	SUBROUTINE INIT_MATRIX(A,N_MAX,N)
-	REAL A(N_MAX,N)
-	WRITE(*,*)'Inserisci i valori della matrice:'
-	DO I=1,N
-		READ(*,*)(A(I,J),J=1,N)
-	END DO
-	END
-
-	SUBROUTINE INIT_VETT(B,N)
-	REAL B(N)
-	WRITE(*,*)'Inserisci i valori del vettore:'
-	READ(*,*)(B(I),I=1,N)
-	END
-
-	SUBROUTINE FATTORIZZAZIONE_GAUSS(A,B,N_MAX,N)
+	SUBROUTINE GAUSS(A,B,N_MAX,N)
 	REAL A(N_MAX,N)
 	REAL B(N)
 	REAL MAX,Q,W
-	DO K=0,N-1
+	DO K=1,N-1
 		MAX=0
 		DO I=K,N
 			IF(ABS(A(I,K)).GT.MAX)THEN
@@ -36,7 +11,7 @@
 			END IF
 		END DO
 		IF(MAX.EQ.0)THEN
-			WRITE(*,*)'La matrice ? singolare!'
+			WRITE(*,*)'La matrice e'' singolare!'
 			RETURN
 		END IF
 		IF(L.NE.K)THEN

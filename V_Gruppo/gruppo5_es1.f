@@ -10,34 +10,35 @@
 * soluzione data dal calcolatore e la soluzione esatta. Analizzare i risultati ottenuti.
 
 	PARAMETER(N_MAX=500)
-	REAL HILB(N_MAX,N_MAX)
-	REAL X(N_MAX)
-	WRITE(*,*)'Inserisci la dimensione di N>5:'
+	REAL A(N_MAX,N_MAX+1)
+	WRITE(*,*)'Inserisci la dimensione della matrice (N>5):'
 	READ(*,*)N
-	CALL BUILD_HILBERT(HILB,N_MAX,N)
-	CALL INIT_X(X,N,N_MAX,HILB)
+	CALL BUILD_HILBERT(A,N_MAX,N)
+	CALL INIT_B(A,N_MAX,N)
+1	FORMAT(:10(' ',F8.3))
 	WRITE(*,*)'MATRICE:'
 	DO I=1,N
-		WRITE(*,*)(HILB(I,J),J=1,N)
+		WRITE(*,1)(A(I,J),J=1,N+1)
 		WRITE(*,*)
 	END DO 
-	WRITE(*,*)'VETTORE:'
+	CALL GAUSS(A,A(1,N+1),N_MAX,N)
+	WRITE(*,*)'FATTORIZZAZIONE GAUSS:'
 	DO I=1,N
-		WRITE(*,*)(X(I))
-	END DO
+		WRITE(*,1)(A(I,J),J=1,N+1)
+		WRITE(*,*)
+	  END DO 
 
 	END 
 
-	SUBROUTINE INIT_X(X,N_MAX,N,A)
-	REAL X(N_MAX)
-	REAL SOMMA=0
+	SUBROUTINE INIT_B(A,N_MAX,N)
+	REAL A(N_MAX,N)
+	REAL SOMMA
 	DO I=1,N
+	    SOMMA=0
 		DO J=1,N
-			DO K=1,N
-				SOMMA=SOMMA+A(J,K)
-				X(I)=SOMMA
-			END DO
+			SOMMA=SOMMA+A(I,J)
 		END DO
+		A(I,N+1)=SOMMA
 	END DO
 	END 
 

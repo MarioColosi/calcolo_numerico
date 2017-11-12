@@ -33,6 +33,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "gruppo5_es1 - Win32 Debug"
 RSC=rc.exe
 F90=fl32.exe
 
@@ -49,9 +50,10 @@ ALL : "$(OUTDIR)\gruppo5_es1.exe"
 
 CLEAN : 
 	-@erase ".\gruppo5_es1.exe"
+	-@erase ".\gauss.obj"
 	-@erase ".\gruppo5_es1.obj"
 	-@erase ".\build_hilbert.obj"
-	-@erase ".\gauss.obj"
+	-@erase ".\build_wilkinson.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -70,9 +72,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /machine:I386 /out:"$(OUTDIR)/gruppo5_es1.exe"\
  
 LINK32_OBJS= \
+	".\gauss.obj" \
 	".\gruppo5_es1.obj" \
 	".\build_hilbert.obj" \
-	".\gauss.obj"
+	".\build_wilkinson.obj"
 
 "$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -92,9 +95,10 @@ ALL : "$(OUTDIR)\gruppo5_es1.exe"
 
 CLEAN : 
 	-@erase ".\gruppo5_es1.exe"
+	-@erase ".\gauss.obj"
 	-@erase ".\gruppo5_es1.obj"
 	-@erase ".\build_hilbert.obj"
-	-@erase ".\gauss.obj"
+	-@erase ".\build_wilkinson.obj"
 	-@erase ".\gruppo5_es1.ilk"
 	-@erase ".\gruppo5_es1.pdb"
 
@@ -115,9 +119,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/gruppo5_es1.exe" 
 LINK32_OBJS= \
+	".\gauss.obj" \
 	".\gruppo5_es1.obj" \
 	".\build_hilbert.obj" \
-	".\gauss.obj"
+	".\build_wilkinson.obj"
 
 "$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -159,7 +164,18 @@ SOURCE=.\gruppo5_es1.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_hilbert.f
+SOURCE=\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss.f
+
+"$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_hilbert.f
 
 "$(INTDIR)\build_hilbert.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -169,9 +185,10 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_hilbert.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_wilkinson.f
 
-"$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\build_wilkinson.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
