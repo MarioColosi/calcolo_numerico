@@ -1,0 +1,27 @@
+	PROGRAM TOEPLIZ_MATRIX
+	PARAMETER(MAX_N=500)
+	REAL H(MAX_N,MAX_N)
+	WRITE(*,*)'Inserisci la grandezza della matrice: '
+	READ(*,*)N
+	CALL MATRIX_H(H,MAX_N,N)
+	DO I=1,N
+		WRITE(*,*)(H(I,J),J=1,N)
+	END DO
+	END
+
+	SUBROUTINE MATRIX_H(H,MAX_N,N)
+	REAL H(MAX_N,N)
+	REAL VETT(2:2*N)
+	CALL INIT_VETT(VETT,N)
+	DO I=1,N
+		DO J=1,N
+			H(I,J)=VETT(I+J)
+		END	DO
+	END DO
+	END
+
+	SUBROUTINE INIT_VETT(VETT,N)
+	REAL VETT(2:2*N)
+	WRITE(*,*)'Inserisci i valori del vettore: '
+	READ(*,*)(VETT(I),I=2,2*N)
+	END
