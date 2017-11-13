@@ -1,4 +1,4 @@
-	PROGRAM TOEPLIZ_MATRIX
+	PROGRAM HANKEL
 	PARAMETER(MAX_N=500)
 	REAL H(MAX_N,MAX_N)
 	WRITE(*,*)'Inserisci la grandezza della matrice: '
