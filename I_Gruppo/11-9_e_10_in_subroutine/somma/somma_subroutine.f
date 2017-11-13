@@ -1,0 +1,8 @@
+	SUBROUTINE SOMMA(A,B,C,N_MAX,N)
+	REAL A(N_MAX,N),B(N_MAX,N),C(N_MAX,N)
+	DO I=1,N
+		DO J=1,N
+		C(I,J)=A(I,J)+B(I,J)
+		END DO
+	END DO
+	END
