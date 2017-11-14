@@ -49,11 +49,14 @@ ALL : "$(OUTDIR)\confronto.exe"
 
 CLEAN : 
 	-@erase ".\confronto.exe"
-	-@erase ".\build_wilkinson.obj"
-	-@erase ".\confronto.obj"
-	-@erase ".\norma_inf.obj"
 	-@erase ".\norma_2.obj"
+	-@erase ".\build_wilkinson.obj"
+	-@erase ".\norma_inf.obj"
 	-@erase ".\norma_1.obj"
+	-@erase ".\confronto.obj"
+	-@erase ".\build_vandermonde.obj"
+	-@erase ".\build_toepliz.obj"
+	-@erase ".\build_hilbert.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -71,11 +74,14 @@ LINK32=link.exe
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/confronto.pdb" /machine:I386 /out:"$(OUTDIR)/confronto.exe" 
 LINK32_OBJS= \
-	".\build_wilkinson.obj" \
-	".\confronto.obj" \
-	".\norma_inf.obj" \
 	".\norma_2.obj" \
-	".\norma_1.obj"
+	".\build_wilkinson.obj" \
+	".\norma_inf.obj" \
+	".\norma_1.obj" \
+	".\confronto.obj" \
+	".\build_vandermonde.obj" \
+	".\build_toepliz.obj" \
+	".\build_hilbert.obj"
 
 "$(OUTDIR)\confronto.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -95,11 +101,14 @@ ALL : "$(OUTDIR)\confronto.exe"
 
 CLEAN : 
 	-@erase ".\confronto.exe"
-	-@erase ".\build_wilkinson.obj"
-	-@erase ".\confronto.obj"
-	-@erase ".\norma_inf.obj"
 	-@erase ".\norma_2.obj"
+	-@erase ".\build_wilkinson.obj"
+	-@erase ".\norma_inf.obj"
 	-@erase ".\norma_1.obj"
+	-@erase ".\confronto.obj"
+	-@erase ".\build_vandermonde.obj"
+	-@erase ".\build_toepliz.obj"
+	-@erase ".\build_hilbert.obj"
 	-@erase ".\confronto.ilk"
 	-@erase ".\confronto.pdb"
 
@@ -120,11 +129,14 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/confronto.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/confronto.exe" 
 LINK32_OBJS= \
-	".\build_wilkinson.obj" \
-	".\confronto.obj" \
-	".\norma_inf.obj" \
 	".\norma_2.obj" \
-	".\norma_1.obj"
+	".\build_wilkinson.obj" \
+	".\norma_inf.obj" \
+	".\norma_1.obj" \
+	".\confronto.obj" \
+	".\build_vandermonde.obj" \
+	".\build_toepliz.obj" \
+	".\build_hilbert.obj"
 
 "$(OUTDIR)\confronto.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -199,6 +211,36 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_2.f
 SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_1.f
 
 "$(INTDIR)\norma_1.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_vandermonde.f
+
+"$(INTDIR)\build_vandermonde.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_toepliz.f
+
+"$(INTDIR)\build_toepliz.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_hilbert.f
+
+"$(INTDIR)\build_hilbert.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

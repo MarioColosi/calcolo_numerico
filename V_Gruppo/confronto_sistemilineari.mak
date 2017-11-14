@@ -35,8 +35,9 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-RSC=rc.exe
+# PROP Target_Last_Scanned "confronto_sistemilineari - Win32 Debug"
 F90=fl32.exe
+RSC=rc.exe
 
 !IF  "$(CFG)" == "confronto_sistemilineari - Win32 Release"
 
@@ -51,9 +52,12 @@ ALL : "$(OUTDIR)\confronto_sistemilineari.exe"
 
 CLEAN : 
 	-@erase ".\confronto_sistemilineari.exe"
-	-@erase ".\confronto_sistemilineari.obj"
 	-@erase ".\build_hilbert.obj"
+	-@erase ".\confronto_sistemilineari.obj"
 	-@erase ".\gauss.obj"
+	-@erase ".\build_wilkinson.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\norma_inf.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -72,9 +76,12 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/confronto_sistemilineari.pdb" /machine:I386\
  /out:"$(OUTDIR)/confronto_sistemilineari.exe" 
 LINK32_OBJS= \
-	".\confronto_sistemilineari.obj" \
 	".\build_hilbert.obj" \
-	".\gauss.obj"
+	".\confronto_sistemilineari.obj" \
+	".\gauss.obj" \
+	".\build_wilkinson.obj" \
+	".\norme_vett.obj" \
+	".\norma_inf.obj"
 
 "$(OUTDIR)\confronto_sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE)\
  $(LINK32_OBJS)
@@ -95,9 +102,12 @@ ALL : "$(OUTDIR)\confronto_sistemilineari.exe"
 
 CLEAN : 
 	-@erase ".\confronto_sistemilineari.exe"
-	-@erase ".\confronto_sistemilineari.obj"
 	-@erase ".\build_hilbert.obj"
+	-@erase ".\confronto_sistemilineari.obj"
 	-@erase ".\gauss.obj"
+	-@erase ".\build_wilkinson.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\norma_inf.obj"
 	-@erase ".\confronto_sistemilineari.ilk"
 	-@erase ".\confronto_sistemilineari.pdb"
 
@@ -118,9 +128,12 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/confronto_sistemilineari.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/confronto_sistemilineari.exe" 
 LINK32_OBJS= \
-	".\confronto_sistemilineari.obj" \
 	".\build_hilbert.obj" \
-	".\gauss.obj"
+	".\confronto_sistemilineari.obj" \
+	".\gauss.obj" \
+	".\build_wilkinson.obj" \
+	".\norme_vett.obj" \
+	".\norma_inf.obj"
 
 "$(OUTDIR)\confronto_sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE)\
  $(LINK32_OBJS)
@@ -176,6 +189,36 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_hilbert.f
 SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_wilkinson.f
+
+"$(INTDIR)\build_wilkinson.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_vett.f
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_inf.f
+
+"$(INTDIR)\norma_inf.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

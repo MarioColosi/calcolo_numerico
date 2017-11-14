@@ -1,7 +1,7 @@
 	PROGRAM ORDINAMENTO 
 * Ordinamento di un insieme di numeri (oppure nomi), stampare l'insieme ordinato
 	
-	PARAMETER(N_MAX=500)
+	PARAMETER(N_MAX=10)
 	REAL X(N_MAX)
 	WRITE(*,*)'Inserisci la dimensione del vettore:'
 	READ(*,*)N
@@ -10,7 +10,7 @@
 	WRITE(*,*)(X(I),I=1,N)
 	CALL ORDINA_X(X,N)
 	WRITE(*,*)'Il vettore ordinato e'':'
-	WRITE(*,*)(X(I),I=2,N+1)
+	WRITE(*,*)(X(I),I=1,N)
 
 	END
 
@@ -24,7 +24,7 @@
 	SUBROUTINE ORDINA_X(X,N)
 	REAL X(N),TEMP
 	DO I=1,N
-		DO J=1,N
+		DO J=1,N-I
 		IF(X(J).GT.X(J+1))THEN
 			TEMP=X(J)
 			X(J)=X(J+1)

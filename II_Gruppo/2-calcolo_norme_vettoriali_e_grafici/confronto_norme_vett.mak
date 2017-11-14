@@ -35,8 +35,8 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-RSC=rc.exe
 F90=fl32.exe
+RSC=rc.exe
 
 !IF  "$(CFG)" == "confronto_norme_vett - Win32 Release"
 

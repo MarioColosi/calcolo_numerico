@@ -8,6 +8,11 @@
 	WRITE(*,*)'Inserisci la dimensione della matrice:'
 	READ(*,*)N
 	CALL INIT(X,N_MAX,N)
+20	FORMAT(:20(F7.2))
+	DO I=1,N
+		WRITE(*,20)(X(I,J),J=1,N)
+		WRITE(*,*)
+	END DO
 	N_1=NORMA_1(X,N_MAX,N)
 	N_2=NORMA_2(X,N_MAX,N)
 	N_INF=NORMA_INF(X,N_MAX,N)

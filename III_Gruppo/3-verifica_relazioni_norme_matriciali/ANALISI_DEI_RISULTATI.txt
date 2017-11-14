@@ -1,0 +1,60 @@
+GRUPPO_3 ESERCIZIO_3
+Date le seguenti principali relazioni tra le varie norme matriciali studiate:
+  1)
+	(1/SQRT(N))*||A||inf <= ||A||2 <= SQRT(N)*||A||inf
+  2)
+	(1/SQRT(N))*||A||1   <= ||A||2 <= SQRT(N)*||A||1
+  3)
+	max[i,j](|A(i,j)|)   <= ||A||2 <= N*max[i,j](|A(i,j)|)
+  4)
+	||A||2  <=  SQRT(||A||1*||A||inf) 
+
+************************** TEST 1 *******************************
+Data la seguente matrice di ordine N=5:
+
+ 1.   3.   4.   5.   6.
+
+ 5.   2.  33.   4.  56.
+
+ 7.   6.   5.   4.   5.
+
+ 6.  76. 544.  23.  44.
+
+ 1.   2.  65.   4.   6.
+
+  1)
+ 	309.919000 <=      556.716000 <=    1549.595000
+	E' verificata la prima disequazione!
+  2)
+    	291.136000 <=      651.000000 <=    1244.855000
+	E' verificata la seconda disequazione!
+  3)
+        544 <=      556.716000 <=       2720
+	E' verificata la terza disequazione!
+  4)
+     	556.716000 <=      671.671800
+	E' verificata la quarta disequazione!
+
+************************** TEST 2 *******************************
+Data la seguente matrice di ordine N=4:
+
+-3.00   4.00   5.30  -7.00
+
+-88.00   9.00   1.10   2.00
+
+  3.00  -5.00   6.00   7.00
+
+ -1.00   2.00  -2.00   4.50
+
+  1)
+      	50.050000 <=       88.620910 <=     200.200000
+	E' verificata la prima disequazione!
+  2)
+     	47.500000 <=       95.000000 <=     177.241800
+	E' verificata la seconda disequazione!
+  3)
+        88 <=       88.620910 <=        352
+	E' verificata la terza disequazione!
+  4)
+      	88.620910 <=       97.516660
+	E' verificata la quarta disequazione!
