@@ -1,5 +1,5 @@
 	PROGRAM WILKINSON
-
+  
 	PARAMETER(MDIM=100)
 	INTEGER W(MDIM,MDIM)
 	WRITE(*,*)'Inserire l''ordine della matrice di Wilkinson'
