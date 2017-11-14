@@ -48,12 +48,8 @@ ALL : "$(OUTDIR)\grafici.exe"
 CLEAN : 
 	-@erase ".\grafici.exe"
 	-@erase ".\grafici.obj"
-	-@erase ".\norma_inf.obj"
-	-@erase ".\norma_2.obj"
-	-@erase ".\norma_1.obj"
+	-@erase ".\norme_mat.obj"
 	-@erase ".\build_wilkinson.obj"
-	-@erase ".\build_vandermonde.obj"
-	-@erase ".\build_toepliz.obj"
 	-@erase ".\build_hilbert.obj"
 
 # ADD BASE F90 /Ox /c /nologo
@@ -73,12 +69,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/grafici.pdb" /machine:I386 /out:"$(OUTDIR)/grafici.exe" 
 LINK32_OBJS= \
 	".\grafici.obj" \
-	".\norma_inf.obj" \
-	".\norma_2.obj" \
-	".\norma_1.obj" \
+	".\norme_mat.obj" \
 	".\build_wilkinson.obj" \
-	".\build_vandermonde.obj" \
-	".\build_toepliz.obj" \
 	".\build_hilbert.obj"
 
 "$(OUTDIR)\grafici.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
@@ -100,12 +92,8 @@ ALL : "$(OUTDIR)\grafici.exe"
 CLEAN : 
 	-@erase ".\grafici.exe"
 	-@erase ".\grafici.obj"
-	-@erase ".\norma_inf.obj"
-	-@erase ".\norma_2.obj"
-	-@erase ".\norma_1.obj"
+	-@erase ".\norme_mat.obj"
 	-@erase ".\build_wilkinson.obj"
-	-@erase ".\build_vandermonde.obj"
-	-@erase ".\build_toepliz.obj"
 	-@erase ".\build_hilbert.obj"
 	-@erase ".\grafici.ilk"
 	-@erase ".\grafici.pdb"
@@ -127,12 +115,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/grafici.pdb" /debug /machine:I386 /out:"$(OUTDIR)/grafici.exe" 
 LINK32_OBJS= \
 	".\grafici.obj" \
-	".\norma_inf.obj" \
-	".\norma_2.obj" \
-	".\norma_1.obj" \
+	".\norme_mat.obj" \
 	".\build_wilkinson.obj" \
-	".\build_vandermonde.obj" \
-	".\build_toepliz.obj" \
 	".\build_hilbert.obj"
 
 "$(OUTDIR)\grafici.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
@@ -175,9 +159,10 @@ SOURCE=.\grafici.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_inf.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_mat.f
 
-"$(INTDIR)\norma_inf.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
@@ -185,27 +170,8 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_inf.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_2.f
-
-"$(INTDIR)\norma_2.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_1.f
-
-"$(INTDIR)\norma_1.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_wilkinson.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_wilkinson.f
 
 "$(INTDIR)\build_wilkinson.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -215,27 +181,8 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_wilkinson.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_vandermonde.f
-
-"$(INTDIR)\build_vandermonde.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_toepliz.f
-
-"$(INTDIR)\build_toepliz.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_hilbert.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_hilbert.f
 
 "$(INTDIR)\build_hilbert.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
