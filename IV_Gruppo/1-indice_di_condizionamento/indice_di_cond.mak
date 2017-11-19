@@ -34,8 +34,9 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-F90=fl32.exe
+# PROP Target_Last_Scanned "indice_di_cond - Win32 Debug"
 RSC=rc.exe
+F90=fl32.exe
 
 !IF  "$(CFG)" == "indice_di_cond - Win32 Release"
 
@@ -51,13 +52,11 @@ ALL : "$(OUTDIR)\indice_di_cond.exe"
 CLEAN : 
 	-@erase ".\indice_di_cond.exe"
 	-@erase ".\indice_di_cond.obj"
-	-@erase ".\norma_inf.obj"
-	-@erase ".\norma_2.obj"
-	-@erase ".\norma_1.obj"
 	-@erase ".\build_wilkinson.obj"
 	-@erase ".\build_vandermonde.obj"
 	-@erase ".\build_toepliz.obj"
 	-@erase ".\build_hilbert.obj"
+	-@erase ".\norme_mat.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -77,13 +76,11 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /out:"$(OUTDIR)/indice_di_cond.exe" 
 LINK32_OBJS= \
 	".\indice_di_cond.obj" \
-	".\norma_inf.obj" \
-	".\norma_2.obj" \
-	".\norma_1.obj" \
 	".\build_wilkinson.obj" \
 	".\build_vandermonde.obj" \
 	".\build_toepliz.obj" \
-	".\build_hilbert.obj"
+	".\build_hilbert.obj" \
+	".\norme_mat.obj"
 
 "$(OUTDIR)\indice_di_cond.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -104,13 +101,11 @@ ALL : "$(OUTDIR)\indice_di_cond.exe"
 CLEAN : 
 	-@erase ".\indice_di_cond.exe"
 	-@erase ".\indice_di_cond.obj"
-	-@erase ".\norma_inf.obj"
-	-@erase ".\norma_2.obj"
-	-@erase ".\norma_1.obj"
 	-@erase ".\build_wilkinson.obj"
 	-@erase ".\build_vandermonde.obj"
 	-@erase ".\build_toepliz.obj"
 	-@erase ".\build_hilbert.obj"
+	-@erase ".\norme_mat.obj"
 	-@erase ".\indice_di_cond.ilk"
 	-@erase ".\indice_di_cond.pdb"
 
@@ -132,13 +127,11 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /out:"$(OUTDIR)/indice_di_cond.exe" 
 LINK32_OBJS= \
 	".\indice_di_cond.obj" \
-	".\norma_inf.obj" \
-	".\norma_2.obj" \
-	".\norma_1.obj" \
 	".\build_wilkinson.obj" \
 	".\build_vandermonde.obj" \
 	".\build_toepliz.obj" \
-	".\build_hilbert.obj"
+	".\build_hilbert.obj" \
+	".\norme_mat.obj"
 
 "$(OUTDIR)\indice_di_cond.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -180,37 +173,8 @@ SOURCE=.\indice_di_cond.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_inf.f
-
-"$(INTDIR)\norma_inf.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_2.f
-
-"$(INTDIR)\norma_2.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_1.f
-
-"$(INTDIR)\norma_1.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_wilkinson.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_wilkinson.f
 
 "$(INTDIR)\build_wilkinson.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -220,7 +184,8 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_wilkinson.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_vandermonde.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_vandermonde.f
 
 "$(INTDIR)\build_vandermonde.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -230,7 +195,8 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_vandermonde.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_toepliz.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_toepliz.f
 
 "$(INTDIR)\build_toepliz.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -240,9 +206,21 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_toepliz.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\build_hilbert.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_hilbert.f
 
 "$(INTDIR)\build_hilbert.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_mat.f
+
+"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
