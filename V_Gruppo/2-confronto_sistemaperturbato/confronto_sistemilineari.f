@@ -1,4 +1,5 @@
 	PROGRAM CONFRONTO_SISTEMILINEARI
+	USE MSIMSL
 * Risolvere un sistema lineare Ax=b con il metodo di Gauss. 
 * Perturbare almeno un elemento di A e risolvere nuovamente il sistema mantenendo
 * lo stesso vettore dei termini noti. Confrontare la soluzione ottenuta con quella 
@@ -7,7 +8,7 @@
 
 	PARAMETER(N_MAX=500,ERR=0.01)
 	REAL A(N_MAX,N_MAX),P(N_MAX,N_MAX),D_M(N_MAX,N_MAX)
-	REAL B(N_MAX),B(N_MAX)
+	REAL B2(N_MAX),B(N_MAX)
 	REAL ERR_SOLU, ERR_DATI
 	WRITE(*,*)'Inserisci la dimensione della matrice e del vettore:'
 	READ(*,*)N
@@ -34,10 +35,9 @@
 	DO I=1,N
 		WRITE(*,*)(P(I,J),J=1,N)
 	END DO
-	D_M(I,J)=
-	ERR_DATI=NORMA_INF(P,N_MAX,N)/NORMA_INF(A,N_MAX,N)
+	CALL DIFF_M(P,A,D_M,N_MAX,N)
+	ERR_DATI=NORMA_INF(D_M,N_MAX,N)/NORMA_INF(A,N_MAX,N)
 	ERR_SOLU=NORMAINF(B2,N)/NORMAINF(B,N)
-
 	END 
 
 	SUBROUTINE INIT_B(X,N)
@@ -46,3 +46,11 @@
 	READ(*,*)(X(I),I=1,N)
 	END
 
+	SUBROUTINE DIFF_M(A,B,C,N_MAX,N)
+	REAL A(N_MAX,N),B(N_MAX,N),C(N_MAX,N)
+	DO I=1,N
+		DO J=1,N
+			C(I,J)=A(I,J)-B(I,J)
+		END DO 
+	END DO
+	END 

@@ -4,23 +4,25 @@
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
 !IF "$(CFG)" == ""
-CFG=gruppo5_es1 - Win32 Debug
-!MESSAGE No configuration specified.  Defaulting to gruppo5_es1 - Win32 Debug.
+CFG=confronto_sistemilineari - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to confronto_sistemilineari -\
+ Win32 Debug.
 !ENDIF 
 
-!IF "$(CFG)" != "gruppo5_es1 - Win32 Release" && "$(CFG)" !=\
- "gruppo5_es1 - Win32 Debug"
+!IF "$(CFG)" != "confronto_sistemilineari - Win32 Release" && "$(CFG)" !=\
+ "confronto_sistemilineari - Win32 Debug"
 !MESSAGE Invalid configuration "$(CFG)" specified.
 !MESSAGE You can specify a configuration when running NMAKE on this makefile
 !MESSAGE by defining the macro CFG on the command line.  For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "gruppo5_es1.mak" CFG="gruppo5_es1 - Win32 Debug"
+!MESSAGE NMAKE /f "confronto_sistemilineari.mak"\
+ CFG="confronto_sistemilineari - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "gruppo5_es1 - Win32 Release" (based on\
+!MESSAGE "confronto_sistemilineari - Win32 Release" (based on\
  "Win32 (x86) Console Application")
-!MESSAGE "gruppo5_es1 - Win32 Debug" (based on\
+!MESSAGE "confronto_sistemilineari - Win32 Debug" (based on\
  "Win32 (x86) Console Application")
 !MESSAGE 
 !ERROR An invalid configuration is specified.
@@ -33,11 +35,10 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-# PROP Target_Last_Scanned "gruppo5_es1 - Win32 Debug"
-RSC=rc.exe
 F90=fl32.exe
+RSC=rc.exe
 
-!IF  "$(CFG)" == "gruppo5_es1 - Win32 Release"
+!IF  "$(CFG)" == "confronto_sistemilineari - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -46,14 +47,15 @@ F90=fl32.exe
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\gruppo5_es1.exe"
+ALL : "$(OUTDIR)\confronto_sistemilineari.exe"
 
 CLEAN : 
-	-@erase ".\gruppo5_es1.exe"
+	-@erase ".\confronto_sistemilineari.exe"
+	-@erase ".\confronto_sistemilineari.obj"
+	-@erase ".\matrici.obj"
 	-@erase ".\gauss.obj"
-	-@erase ".\gruppo5_es1.obj"
-	-@erase ".\build_hilbert.obj"
-	-@erase ".\build_wilkinson.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\norme_mat.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -63,26 +65,28 @@ F90_PROJ=/Ox /c /nologo
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/gruppo5_es1.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/confronto_sistemilineari.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
- /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /machine:I386 /out:"$(OUTDIR)/gruppo5_es1.exe"\
- 
+ /pdb:"$(OUTDIR)/confronto_sistemilineari.pdb" /machine:I386\
+ /out:"$(OUTDIR)/confronto_sistemilineari.exe" 
 LINK32_OBJS= \
+	".\confronto_sistemilineari.obj" \
+	".\matrici.obj" \
 	".\gauss.obj" \
-	".\gruppo5_es1.obj" \
-	".\build_hilbert.obj" \
-	".\build_wilkinson.obj"
+	".\norme_vett.obj" \
+	".\norme_mat.obj"
 
-"$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\confronto_sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE)\
+ $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
 
-!ELSEIF  "$(CFG)" == "gruppo5_es1 - Win32 Debug"
+!ELSEIF  "$(CFG)" == "confronto_sistemilineari - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -91,40 +95,43 @@ LINK32_OBJS= \
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\gruppo5_es1.exe"
+ALL : "$(OUTDIR)\confronto_sistemilineari.exe"
 
 CLEAN : 
-	-@erase ".\gruppo5_es1.exe"
+	-@erase ".\confronto_sistemilineari.exe"
+	-@erase ".\confronto_sistemilineari.obj"
+	-@erase ".\matrici.obj"
 	-@erase ".\gauss.obj"
-	-@erase ".\gruppo5_es1.obj"
-	-@erase ".\build_hilbert.obj"
-	-@erase ".\build_wilkinson.obj"
-	-@erase ".\gruppo5_es1.ilk"
-	-@erase ".\gruppo5_es1.pdb"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\norme_mat.obj"
+	-@erase ".\confronto_sistemilineari.ilk"
+	-@erase ".\confronto_sistemilineari.pdb"
 
 # ADD BASE F90 /Zi /c /nologo
 # ADD F90 /Zi /c /nologo
-F90_PROJ=/Zi /c /nologo /Fd"gruppo5_es1.pdb" 
+F90_PROJ=/Zi /c /nologo /Fd"confronto_sistemilineari.pdb" 
 # ADD BASE RSC /l 0x410 /d "_DEBUG"
 # ADD RSC /l 0x410 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/gruppo5_es1.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/confronto_sistemilineari.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
- /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /debug /machine:I386\
- /out:"$(OUTDIR)/gruppo5_es1.exe" 
+ /pdb:"$(OUTDIR)/confronto_sistemilineari.pdb" /debug /machine:I386\
+ /out:"$(OUTDIR)/confronto_sistemilineari.exe" 
 LINK32_OBJS= \
+	".\confronto_sistemilineari.obj" \
+	".\matrici.obj" \
 	".\gauss.obj" \
-	".\gruppo5_es1.obj" \
-	".\build_hilbert.obj" \
-	".\build_wilkinson.obj"
+	".\norme_vett.obj" \
+	".\norme_mat.obj"
 
-"$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\confronto_sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE)\
+ $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
@@ -143,28 +150,38 @@ LINK32_OBJS= \
 ################################################################################
 # Begin Target
 
-# Name "gruppo5_es1 - Win32 Release"
-# Name "gruppo5_es1 - Win32 Debug"
+# Name "confronto_sistemilineari - Win32 Release"
+# Name "confronto_sistemilineari - Win32 Debug"
 
-!IF  "$(CFG)" == "gruppo5_es1 - Win32 Release"
+!IF  "$(CFG)" == "confronto_sistemilineari - Win32 Release"
 
-!ELSEIF  "$(CFG)" == "gruppo5_es1 - Win32 Debug"
+!ELSEIF  "$(CFG)" == "confronto_sistemilineari - Win32 Debug"
 
 !ENDIF 
 
 ################################################################################
 # Begin Source File
 
-SOURCE=.\gruppo5_es1.f
+SOURCE=.\confronto_sistemilineari.f
 
-"$(INTDIR)\gruppo5_es1.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\confronto_sistemilineari.obj" : $(SOURCE) "$(INTDIR)"
 
 
 # End Source File
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss.f
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
+
+"$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -174,10 +191,9 @@ SOURCE=\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\
-\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_hilbert.f
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_vett.f
 
-"$(INTDIR)\build_hilbert.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
@@ -185,10 +201,9 @@ SOURCE=\
 ################################################################################
 # Begin Source File
 
-SOURCE=\
-\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\build_wilkinson.f
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_mat.f
 
-"$(INTDIR)\build_wilkinson.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

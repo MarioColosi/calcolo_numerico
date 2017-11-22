@@ -4,24 +4,23 @@
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
 !IF "$(CFG)" == ""
-CFG=indice_di_cond - Win32 Debug
-!MESSAGE No configuration specified.  Defaulting to indice_di_cond - Win32\
- Debug.
+CFG=gruppo5_es1 - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to gruppo5_es1 - Win32 Debug.
 !ENDIF 
 
-!IF "$(CFG)" != "indice_di_cond - Win32 Release" && "$(CFG)" !=\
- "indice_di_cond - Win32 Debug"
+!IF "$(CFG)" != "gruppo5_es1 - Win32 Release" && "$(CFG)" !=\
+ "gruppo5_es1 - Win32 Debug"
 !MESSAGE Invalid configuration "$(CFG)" specified.
 !MESSAGE You can specify a configuration when running NMAKE on this makefile
 !MESSAGE by defining the macro CFG on the command line.  For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "indice_di_cond.mak" CFG="indice_di_cond - Win32 Debug"
+!MESSAGE NMAKE /f "gruppo5_es1.mak" CFG="gruppo5_es1 - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "indice_di_cond - Win32 Release" (based on\
+!MESSAGE "gruppo5_es1 - Win32 Release" (based on\
  "Win32 (x86) Console Application")
-!MESSAGE "indice_di_cond - Win32 Debug" (based on\
+!MESSAGE "gruppo5_es1 - Win32 Debug" (based on\
  "Win32 (x86) Console Application")
 !MESSAGE 
 !ERROR An invalid configuration is specified.
@@ -34,11 +33,10 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-# PROP Target_Last_Scanned "indice_di_cond - Win32 Debug"
 RSC=rc.exe
 F90=fl32.exe
 
-!IF  "$(CFG)" == "indice_di_cond - Win32 Release"
+!IF  "$(CFG)" == "gruppo5_es1 - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -47,14 +45,13 @@ F90=fl32.exe
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\indice_di_cond.exe"
+ALL : "$(OUTDIR)\gruppo5_es1.exe"
 
 CLEAN : 
-	-@erase ".\indice_di_cond.exe"
-	-@erase ".\norme_mat.obj"
-	-@erase ".\indice_di_cond.obj"
+	-@erase ".\gruppo5_es1.exe"
+	-@erase ".\gruppo5_es1.obj"
 	-@erase ".\matrici.obj"
-	-@erase ".\cond.obj"
+	-@erase ".\gauss.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -64,26 +61,25 @@ F90_PROJ=/Ox /c /nologo
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/indice_di_cond.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/gruppo5_es1.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
- /pdb:"$(OUTDIR)/indice_di_cond.pdb" /machine:I386\
- /out:"$(OUTDIR)/indice_di_cond.exe" 
+ /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /machine:I386 /out:"$(OUTDIR)/gruppo5_es1.exe"\
+ 
 LINK32_OBJS= \
-	".\norme_mat.obj" \
-	".\indice_di_cond.obj" \
+	".\gruppo5_es1.obj" \
 	".\matrici.obj" \
-	".\cond.obj"
+	".\gauss.obj"
 
-"$(OUTDIR)\indice_di_cond.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
 
-!ELSEIF  "$(CFG)" == "indice_di_cond - Win32 Debug"
+!ELSEIF  "$(CFG)" == "gruppo5_es1 - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -92,40 +88,38 @@ LINK32_OBJS= \
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\indice_di_cond.exe"
+ALL : "$(OUTDIR)\gruppo5_es1.exe"
 
 CLEAN : 
-	-@erase ".\indice_di_cond.exe"
-	-@erase ".\norme_mat.obj"
-	-@erase ".\indice_di_cond.obj"
+	-@erase ".\gruppo5_es1.exe"
+	-@erase ".\gruppo5_es1.obj"
 	-@erase ".\matrici.obj"
-	-@erase ".\cond.obj"
-	-@erase ".\indice_di_cond.ilk"
-	-@erase ".\indice_di_cond.pdb"
+	-@erase ".\gauss.obj"
+	-@erase ".\gruppo5_es1.ilk"
+	-@erase ".\gruppo5_es1.pdb"
 
 # ADD BASE F90 /Zi /c /nologo
 # ADD F90 /Zi /c /nologo
-F90_PROJ=/Zi /c /nologo /Fd"indice_di_cond.pdb" 
+F90_PROJ=/Zi /c /nologo /Fd"gruppo5_es1.pdb" 
 # ADD BASE RSC /l 0x410 /d "_DEBUG"
 # ADD RSC /l 0x410 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/indice_di_cond.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/gruppo5_es1.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
- /pdb:"$(OUTDIR)/indice_di_cond.pdb" /debug /machine:I386\
- /out:"$(OUTDIR)/indice_di_cond.exe" 
+ /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /debug /machine:I386\
+ /out:"$(OUTDIR)/gruppo5_es1.exe" 
 LINK32_OBJS= \
-	".\norme_mat.obj" \
-	".\indice_di_cond.obj" \
+	".\gruppo5_es1.obj" \
 	".\matrici.obj" \
-	".\cond.obj"
+	".\gauss.obj"
 
-"$(OUTDIR)\indice_di_cond.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
@@ -144,32 +138,21 @@ LINK32_OBJS= \
 ################################################################################
 # Begin Target
 
-# Name "indice_di_cond - Win32 Release"
-# Name "indice_di_cond - Win32 Debug"
+# Name "gruppo5_es1 - Win32 Release"
+# Name "gruppo5_es1 - Win32 Debug"
 
-!IF  "$(CFG)" == "indice_di_cond - Win32 Release"
+!IF  "$(CFG)" == "gruppo5_es1 - Win32 Release"
 
-!ELSEIF  "$(CFG)" == "indice_di_cond - Win32 Debug"
+!ELSEIF  "$(CFG)" == "gruppo5_es1 - Win32 Debug"
 
 !ENDIF 
 
 ################################################################################
 # Begin Source File
 
-SOURCE=.\indice_di_cond.f
+SOURCE=.\gruppo5_es1.f
 
-"$(INTDIR)\indice_di_cond.obj" : $(SOURCE) "$(INTDIR)"
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\
-\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_mat.f
-
-"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
+"$(INTDIR)\gruppo5_es1.obj" : $(SOURCE) "$(INTDIR)"
 
 
 # End Source File
@@ -186,9 +169,9 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\cond.f
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
 
-"$(INTDIR)\cond.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
