@@ -8,7 +8,7 @@
 
 	PARAMETER(N_MAX=500,ERR=0.01)
 	REAL A(N_MAX,N_MAX),P(N_MAX,N_MAX),D_M(N_MAX,N_MAX)
-	REAL B2(N_MAX),B(N_MAX)
+	REAL B2(N_MAX),B(N_MAX),X(N_MAX),X2(N_MAX)
 	REAL ERR_SOLU, ERR_DATI
 	WRITE(*,*)'Inserisci la dimensione della matrice e del vettore:'
 	READ(*,*)N
@@ -22,7 +22,7 @@
 	WRITE(*,*)'Il vettore e'':'
 	WRITE(*,*)(B(I),I=1,N)
 	CALL GAUSS(A,B,N_MAX,N)
-	CALL BACK(A,B,N_MAX,N)
+	CALL BACK(A,B,N_MAX,N,X)
 	WRITE(*,*)'GAUSS + BACK:'
 	DO I=1,N
 		WRITE(*,*)(A(I,J),J=1,N)
@@ -30,7 +30,7 @@
 	CALL BUILD_WILKINSON(A,N_MAX,N)
 	CALL BUILD_WILKINSON(P,N_MAX,N)
 	P(1,1)=P(1,1)+ERR
-	CALL GAUSS(P,B2,N_MAX,N)
+	CALL GAUSS(P,B2,N_MAX,N,X2)
 	WRITE(*,*)'La matrice perturbata di un elemento e'':'
 	DO I=1,N
 		WRITE(*,*)(P(I,J),J=1,N)
@@ -38,6 +38,8 @@
 	CALL DIFF_M(P,A,D_M,N_MAX,N)
 	ERR_DATI=NORMA_INF(D_M,N_MAX,N)/NORMA_INF(A,N_MAX,N)
 	ERR_SOLU=NORMAINF(B2,N)/NORMAINF(B,N)
+	WRITE(*,*)'Errore sui dati:',ERR_DATI
+	WRITE(*,*)'Errore sulla soluzione:',ERR_SOLU
 	END 
 
 	SUBROUTINE INIT_B(X,N)

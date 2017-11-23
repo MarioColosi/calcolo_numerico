@@ -35,8 +35,8 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-F90=fl32.exe
 RSC=rc.exe
+F90=fl32.exe
 
 !IF  "$(CFG)" == "confronto_sistemilineari - Win32 Release"
 

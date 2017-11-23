@@ -10,10 +10,10 @@
 * soluzione data dal calcolatore e la soluzione esatta. Analizzare i risultati ottenuti.
 
 	PARAMETER(N_MAX=500)
-	REAL A(N_MAX,N_MAX+1)
+	REAL A(N_MAX,N_MAX+1),X(N_MAX),DELTA(N_MAX), ERR
 	WRITE(*,*)'Inserisci la dimensione della matrice (N>5):'
 	READ(*,*)N
-	CALL BUILD_HILBERT(A,N_MAX,N)
+	CALL BUILD_VANDERMONDE(A,N_MAX,N)
 	CALL INIT_B(A,N_MAX,N)
 1	FORMAT(:10(' ',F8.3))
 	WRITE(*,*)'MATRICE:'
@@ -26,8 +26,17 @@
 	DO I=1,N
 		WRITE(*,1)(A(I,J),J=1,N+1)
 		WRITE(*,*)
-	  END DO 
-
+	END DO
+	CALL BACK(A,A(1,N+1),N_MAX,N,X)
+	DO I=1,N
+		WRITE(*,*)X(I)
+	END DO
+	CALL CALCOLA_DELTA(X,DELTA,N)
+	R1=NORMAINF(DELTA,N)
+	R2=NORMAINF(X,N)
+      ERR=R1/R2
+	WRITE(*,*)NORMAINF(DELTA,N),NORMAINF(X,N)
+	WRITE(*,*)'ERRORE RELATIVO:',ERR
 	END 
 
 	SUBROUTINE INIT_B(A,N_MAX,N)
@@ -42,3 +51,9 @@
 	END DO
 	END 
 
+	SUBROUTINE CALCOLA_DELTA(X,DELTA,N)
+	REAL X(N),DELTA(N)
+	DO I=1,N
+		DELTA(I)=1-X(I)
+	END DO
+	END

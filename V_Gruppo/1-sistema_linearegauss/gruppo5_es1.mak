@@ -52,6 +52,7 @@ CLEAN :
 	-@erase ".\gruppo5_es1.obj"
 	-@erase ".\matrici.obj"
 	-@erase ".\gauss.obj"
+	-@erase ".\norme_vett.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -72,7 +73,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
 LINK32_OBJS= \
 	".\gruppo5_es1.obj" \
 	".\matrici.obj" \
-	".\gauss.obj"
+	".\gauss.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -95,6 +97,7 @@ CLEAN :
 	-@erase ".\gruppo5_es1.obj"
 	-@erase ".\matrici.obj"
 	-@erase ".\gauss.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\gruppo5_es1.ilk"
 	-@erase ".\gruppo5_es1.pdb"
 
@@ -117,7 +120,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
 LINK32_OBJS= \
 	".\gruppo5_es1.obj" \
 	".\matrici.obj" \
-	".\gauss.obj"
+	".\gauss.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -172,6 +176,16 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
 SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_vett.f
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
