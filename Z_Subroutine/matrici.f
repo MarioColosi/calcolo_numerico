@@ -12,7 +12,7 @@
 	SUBROUTINE INIT_VETT_H(VETT,N)
 	REAL VETT(2:2*N)
 * FORMATO STRINGA PER INPUT DATI
-3	FORMAT(2X,'[INPUT] ',A,$)
+3	FORMAT(2X,'[HANKEL] ',A,$)
 	WRITE(*,3)'Inserisci i valori del vettore: '
 	READ(*,*)(VETT(I),I=2,2*N)
 	END
@@ -40,7 +40,7 @@
 	SUBROUTINE INIT_VETT_T(VETT,N)
 	REAL VETT(-N+1:N-1)
 * FORMATO STRINGA PER INPUT DATI
-3	FORMAT(2X,'[INPUT] ',A,$)
+3	FORMAT(2X,'[TOEPLIZ] ',A,$)
 	WRITE(*,3)'Inserisci i valori del vettore: '
 	READ(*,*)(VETT(I),I=-N+1,N-1)
 	END
@@ -53,7 +53,7 @@
 	SUBROUTINE INIT_VETT_TRI(VETT,N)
 	REAL VETT(3*N)
 * FORMATO STRINGA PER INPUT DATI
-3	FORMAT(2X,'[INPUT] ',A,$)
+3	FORMAT(2X,'[VETT_TRI] ',A,$)
 	VETT(0)=0
 	WRITE(*,3)'Inserisci i valori del vettore a: '
 	READ(*,*)(VETT(I),I=2,N)
@@ -80,7 +80,7 @@
 	REAL X(N)
 	REAL A,B,H
 * FORMATO STRINGA PER INPUT DATI
-3	FORMAT(2X,'[INPUT] ',A,$)
+3	FORMAT(2X,'[VANDERMONDE] ',A,$)
 	WRITE(*,3)'Inserisci gli estremi dell''intervallo [a,b]: '
 	READ(*,*)A,B
 	H=ABS(A-B)/N

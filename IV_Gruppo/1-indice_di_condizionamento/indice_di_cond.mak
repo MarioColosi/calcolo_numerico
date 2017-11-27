@@ -51,10 +51,10 @@ ALL : "$(OUTDIR)\indice_di_cond.exe"
 
 CLEAN : 
 	-@erase ".\indice_di_cond.exe"
-	-@erase ".\norme_mat.obj"
 	-@erase ".\indice_di_cond.obj"
-	-@erase ".\matrici.obj"
+	-@erase ".\norme_mat.obj"
 	-@erase ".\cond.obj"
+	-@erase ".\matrici.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -73,10 +73,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/indice_di_cond.pdb" /machine:I386\
  /out:"$(OUTDIR)/indice_di_cond.exe" 
 LINK32_OBJS= \
-	".\norme_mat.obj" \
-	".\indice_di_cond.obj" \
-	".\matrici.obj" \
-	".\cond.obj"
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\indice_di_cond.obj" \
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\norme_mat.obj" \
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\cond.obj" \
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\matrici.obj"
 
 "$(OUTDIR)\indice_di_cond.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -96,10 +96,10 @@ ALL : "$(OUTDIR)\indice_di_cond.exe"
 
 CLEAN : 
 	-@erase ".\indice_di_cond.exe"
-	-@erase ".\norme_mat.obj"
 	-@erase ".\indice_di_cond.obj"
-	-@erase ".\matrici.obj"
+	-@erase ".\norme_mat.obj"
 	-@erase ".\cond.obj"
+	-@erase ".\matrici.obj"
 	-@erase ".\indice_di_cond.ilk"
 	-@erase ".\indice_di_cond.pdb"
 
@@ -120,10 +120,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/indice_di_cond.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/indice_di_cond.exe" 
 LINK32_OBJS= \
-	".\norme_mat.obj" \
-	".\indice_di_cond.obj" \
-	".\matrici.obj" \
-	".\cond.obj"
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\indice_di_cond.obj" \
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\norme_mat.obj" \
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\cond.obj" \
+	"$(INTDIR)/IV_Gruppo\1-indice_di_condizionamento\matrici.obj"
 
 "$(OUTDIR)\indice_di_cond.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -176,9 +176,9 @@ SOURCE=\
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
+SOURCE=\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\cond.f
 
-"$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\cond.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
@@ -186,9 +186,10 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\cond.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\matrici.f
 
-"$(INTDIR)\cond.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
