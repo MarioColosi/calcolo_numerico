@@ -35,8 +35,9 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-RSC=rc.exe
+# PROP Target_Last_Scanned "confronto_sistemilineari - Win32 Debug"
 F90=fl32.exe
+RSC=rc.exe
 
 !IF  "$(CFG)" == "confronto_sistemilineari - Win32 Release"
 
@@ -73,12 +74,13 @@ LINK32=link.exe
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/confronto_sistemilineari.pdb" /machine:I386\
  /out:"$(OUTDIR)/confronto_sistemilineari.exe" 
-LINK32_OBJS= \
-	".\confronto_sistemilineari.obj" \
-	".\matrici.obj" \
-	".\gauss.obj" \
-	".\norme_vett.obj" \
-	".\norme_mat.obj"
+LINK32_OBJS=\
+ \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\confronto_sistemilineari.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\matrici.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\gauss.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\norme_vett.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\norme_mat.obj"
 
 "$(OUTDIR)\confronto_sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE)\
  $(LINK32_OBJS)
@@ -123,12 +125,13 @@ LINK32=link.exe
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/confronto_sistemilineari.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/confronto_sistemilineari.exe" 
-LINK32_OBJS= \
-	".\confronto_sistemilineari.obj" \
-	".\matrici.obj" \
-	".\gauss.obj" \
-	".\norme_vett.obj" \
-	".\norme_mat.obj"
+LINK32_OBJS=\
+ \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\confronto_sistemilineari.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\matrici.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\gauss.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\norme_vett.obj" \
+	"$(INTDIR)/V_Gruppo\2-confronto_sistemaperturbato\norme_mat.obj"
 
 "$(OUTDIR)\confronto_sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE)\
  $(LINK32_OBJS)
@@ -171,7 +174,7 @@ SOURCE=.\confronto_sistemilineari.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\matrici.f"
 
 "$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -181,7 +184,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\gauss.f"
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -191,7 +194,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_vett.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f"
 
 "$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -201,7 +204,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_vett.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_mat.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_mat.f"
 
 "$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
