@@ -44,6 +44,7 @@
 	REAL X(N)
 	REAL SOMMA
 	DO I=N,1,-1
+		SOMMA=0
 		DO J=I+1,N
 			SOMMA=SOMMA+A(I,J)*X(J)
 		END DO

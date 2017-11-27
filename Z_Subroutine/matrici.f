@@ -11,7 +11,9 @@
 
 	SUBROUTINE INIT_VETT_H(VETT,N)
 	REAL VETT(2:2*N)
-	WRITE(*,*)'Inserisci i valori del vettore: '
+* FORMATO STRINGA PER INPUT DATI
+3	FORMAT(2X,'[INPUT] ',A,$)
+	WRITE(*,3)'Inserisci i valori del vettore: '
 	READ(*,*)(VETT(I),I=2,2*N)
 	END
 
@@ -37,7 +39,9 @@
 
 	SUBROUTINE INIT_VETT_T(VETT,N)
 	REAL VETT(-N+1:N-1)
-	WRITE(*,*)'Inserisci i valori del vettore: '
+* FORMATO STRINGA PER INPUT DATI
+3	FORMAT(2X,'[INPUT] ',A,$)
+	WRITE(*,3)'Inserisci i valori del vettore: '
 	READ(*,*)(VETT(I),I=-N+1,N-1)
 	END
 
@@ -48,12 +52,14 @@
 
 	SUBROUTINE INIT_VETT_TRI(VETT,N)
 	REAL VETT(3*N)
+* FORMATO STRINGA PER INPUT DATI
+3	FORMAT(2X,'[INPUT] ',A,$)
 	VETT(0)=0
-	WRITE(*,*)'Inserisci i valori del vettore a: '
+	WRITE(*,3)'Inserisci i valori del vettore a: '
 	READ(*,*)(VETT(I),I=2,N)
-	WRITE(*,*)'Inserisci i valori del vettore b: '
+	WRITE(*,3)'Inserisci i valori del vettore b: '
 	READ(*,*)(VETT(I),I=N+1,2*N)
-	WRITE(*,*)'Inserisci i valori del vettore b: '
+	WRITE(*,3)'Inserisci i valori del vettore b: '
 	READ(*,*)(VETT(I),I=2*N+1,3*N-1)
 	VETT(3*N)=0
 	END
@@ -73,7 +79,9 @@
 	SUBROUTINE INIT_X_V(X,N)
 	REAL X(N)
 	REAL A,B,H
-	WRITE(*,*)'Inserisci gli estremi dell''intervallo [a,b]: '
+* FORMATO STRINGA PER INPUT DATI
+3	FORMAT(2X,'[INPUT] ',A,$)
+	WRITE(*,3)'Inserisci gli estremi dell''intervallo [a,b]: '
 	READ(*,*)A,B
 	H=ABS(A-B)/N
 	X(1)=A
