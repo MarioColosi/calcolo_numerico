@@ -1,0 +1,7 @@
+* FORMATO STAMPA TITOLO (2 STRINGHE DA 50 CARATTERI)
+1	FORMAT(2X,52('_'),/,'  |',50X,'|',/,'  |',A,'|',/,
+	*'  |',A,'|',/,'  |',50('_'),'|',/)
+* FORMATO STAMPA TITOLO (1 STRINGA DA 50 CARATTERI)
+2	FORMAT(/,2X,52('-'),/,2X,'# ',A,/,2X,52('-'),/)
+* FORMATO STRINGA PER INPUT DATI
+3	FORMAT(2X,'[INPUT] ',A,$)
