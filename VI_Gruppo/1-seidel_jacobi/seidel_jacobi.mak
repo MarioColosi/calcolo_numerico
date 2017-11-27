@@ -34,6 +34,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "seidel_jacobi - Win32 Debug"
 F90=fl32.exe
 RSC=rc.exe
 
@@ -160,7 +161,8 @@ SOURCE=.\seidel_jacobi.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\jacobi_ottimizzato.f
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f"
 
 "$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -170,7 +172,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\jacobi_ottimizzato.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss_seidel.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\gauss_seidel.f"
 
 "$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)

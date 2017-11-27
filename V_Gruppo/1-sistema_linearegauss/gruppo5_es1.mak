@@ -33,6 +33,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "gruppo5_es1 - Win32 Debug"
 RSC=rc.exe
 F90=fl32.exe
 
@@ -71,10 +72,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /machine:I386 /out:"$(OUTDIR)/gruppo5_es1.exe"\
  
 LINK32_OBJS= \
-	".\gruppo5_es1.obj" \
-	".\matrici.obj" \
-	".\gauss.obj" \
-	".\norme_vett.obj"
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\gruppo5_es1.obj" \
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\matrici.obj" \
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\gauss.obj" \
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\norme_vett.obj"
 
 "$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -118,10 +119,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/gruppo5_es1.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/gruppo5_es1.exe" 
 LINK32_OBJS= \
-	".\gruppo5_es1.obj" \
-	".\matrici.obj" \
-	".\gauss.obj" \
-	".\norme_vett.obj"
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\gruppo5_es1.obj" \
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\matrici.obj" \
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\gauss.obj" \
+	"$(INTDIR)/V_Gruppo\1-sistema_linearegauss\norme_vett.obj"
 
 "$(OUTDIR)\gruppo5_es1.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -163,7 +164,7 @@ SOURCE=.\gruppo5_es1.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\matrici.f"
 
 "$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -173,7 +174,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\gauss.f"
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -183,7 +184,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norme_vett.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f"
 
 "$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
