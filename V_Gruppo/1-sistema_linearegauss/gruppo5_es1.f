@@ -10,33 +10,49 @@
 * soluzione data dal calcolatore e la soluzione esatta. Analizzare i risultati ottenuti.
 
 	PARAMETER(N_MAX=500)
-	REAL A(N_MAX,N_MAX+1),X(N_MAX),DELTA(N_MAX), ERR
-	WRITE(*,*)'Inserisci la dimensione della matrice (N>5):'
+	REAL A(N_MAX,N_MAX+1),X(N_MAX),DELTA(N_MAX), ERR, NORMAINF
+
+* FORMATO STAMPA TITOLO (2 STRINGHE DA 50 CARATTERI)
+1	FORMAT(2X,52('_'),/,'  |',50X,'|',/,'  |',A,'|',/,
+	*'  |',A,'|',/,'  |',50('_'),'|',/)
+* FORMATO STAMPA TITOLO (1 STRINGA DA 50 CARATTERI)
+2	FORMAT(/,2X,52('-'),/,2X,'# ',A,/,2X,52('-'),/)
+* FORMATO STRINGA PER INPUT DATI
+3	FORMAT(2X,'[INPUT] ',A,$)
+
+
+	WRITE(*,1)'      SISTEMA DI EQUAZIONI LINEARI CON GAUSS      ',
+	*'        E ERRORE RELATIVO SULLA SOLUZIONE         '
+	WRITE(*,3)'Inserisci la dimensione della matrice (N>5): '
 	READ(*,*)N
 	CALL BUILD_VANDERMONDE(A,N_MAX,N)
 	CALL INIT_B(A,N_MAX,N)
-1	FORMAT(:10(' ',F8.3))
-	WRITE(*,*)'MATRICE:'
+11	FORMAT(:10(' ',F8.3))
+	WRITE(*,2)'MATRICE DI INPUT CON VETTORE DEI T.N.'
 	DO I=1,N
-		WRITE(*,1)(A(I,J),J=1,N+1)
+		WRITE(*,11)(A(I,J),J=1,N+1)
 		WRITE(*,*)
 	END DO 
 	CALL GAUSS(A,A(1,N+1),N_MAX,N)
-	WRITE(*,*)'FATTORIZZAZIONE GAUSS:'
+	WRITE(*,2)'FATTORIZZAZIONE GAUSS'
 	DO I=1,N
-		WRITE(*,1)(A(I,J),J=1,N+1)
+		WRITE(*,11)(A(I,J),J=1,N+1)
 		WRITE(*,*)
 	END DO
 	CALL BACK(A,A(1,N+1),N_MAX,N,X)
+5	FORMAT('  X',I2,' = ',F16.8)
+	WRITE(*,2)'SOLUZIONI DEL SISTEMA'
 	DO I=1,N
-		WRITE(*,*)X(I)
+		WRITE(*,5)I,X(I)
 	END DO
 	CALL CALCOLA_DELTA(X,DELTA,N)
-	R1=NORMAINF(DELTA,N)
-	R2=NORMAINF(X,N)
-      ERR=R1/R2
-	WRITE(*,*)NORMAINF(DELTA,N),NORMAINF(X,N)
-	WRITE(*,*)'ERRORE RELATIVO:',ERR
+      ERR=NORMAINF(DELTA,N)/NORMAINF(X,N)
+	WRITE(*,*)
+	WRITE(*,*)' ----------------------------------------------------'
+	WRITE(*,*)' # RISULTATO'
+	WRITE(*,*)' Errore relativo della soluzione:',ERR
+	WRITE(*,*)' ----------------------------------------------------'
+	WRITE(*,*)
 	END 
 
 	SUBROUTINE INIT_B(A,N_MAX,N)
