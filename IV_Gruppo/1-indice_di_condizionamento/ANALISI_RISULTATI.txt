@@ -1,0 +1,17 @@
+GRUPPO_4 ESERCIZIO_1
+
+Indice di condizionamento:
+Il condizionamento, che viene trattato in questo esercizio, riguarda il rapporto tra errore commesso 
+sul risultato di un calcolo e incertezza sui dati in ingresso.
+Un problema è ben condizionato quando la soluzione del problema con delle piccole variazioni, 
+non differisce molto dalla soluzione del problema originale; 
+al contrario, un problema mal condizionato è un problema dove le soluzioni sono molto sensibili 
+a piccole perturbazioni dei dati iniziali.
+
+Utilizziamo sperimentalmente le nozioni acquisite dallo studio del condizionamento per risolvere l'esercizio:
+'Studiare, analizzando i risultati, l’indice di condizionamento di alcune classi 
+ di matrici rispetto ad una delle norme studiate. Fare il grafico dell’andamento
+ dell’indice di condizionamento al crescere dell’ordine n da 2 a 10 per alcune tra 
+ le famiglie di matrici confrontabili, perché generate dalla stessa regola di costruzione. 
+ Confrontare, analizzare e commentare i risultati.'
+

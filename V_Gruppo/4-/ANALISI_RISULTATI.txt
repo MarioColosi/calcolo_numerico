@@ -1,0 +1,73 @@
+GRUPPO_5 ESERCIZIO_5
+
+- Matrice positiva:
+Una matrice si definice positiva se per ogni vettore x appartenente a R^n si ha che il prodotto
+xAxt è strettamente positivo. 
+
+- Matrice simmetrica:
+Una matrice si definisce simmetrica se è una matrice quadrata che ha la proprietà di essere la trasposta di se stessa.
+
+- Matrice simmetrica positiva:
+Due particolari matrici definite simmetriche positive sono le matrici di Hankel E Toepliz.
+
+Considerando il metodo di Gauss per la risuluzione dei sistemi lineari di tipo: 'Ax=b'.
+ELIMINAZIONE DI GAUSS: 
+Costituisce un algoritmo che ha come obiettivo quello di trasformare una matrice M in una matrice M triangolare superiore.
+
+Utilizziamo sperimentalmente l'eliminazione gaussiana per risolvere il seguente esercizio:
+'Risolvere il sistema lineare Ax=b , dove A e’ una matrice simmetrica definita positiva.'
+
+**************************************** TEST 1 ******************************************
+
+Data la matrice di ordine N=7
+Dato il vettore di input= |2,-23,2,4,5,-9,44|t
+Dato il vettore utilizzato per costruire la matrice di Hankel= |3,4,99-34,3,44,2,3,44,-5,3,-4,-55,-3|t
+
+MATRICE DI HANKEL:
+
+       3.000000        4.000000    9.900000E-33        3.000000
+      44.000000        2.000000        3.000000
+       4.000000    9.900000E-33        3.000000       44.000000
+       2.000000        3.000000       44.000000
+   9.900000E-33        3.000000       44.000000        2.000000
+       3.000000       44.000000       -5.000000
+       3.000000       44.000000        2.000000        3.000000
+      44.000000       -5.000000        3.000000
+      44.000000        2.000000        3.000000       44.000000
+      -5.000000        3.000000       -4.000000
+       2.000000        3.000000       44.000000       -5.000000
+       3.000000       -4.000000      -55.000000
+       3.000000       44.000000       -5.000000        3.000000
+      -4.000000      -55.000000       -3.000000
+
+BACK:
+
+ X1 = 2.997844   
+ X2 = -2.482080E-01        
+ X2 = 1.640318       
+ X3 = -2.729825
+ X4 = -2.419615E-02       
+ X5 = -1.235383        
+ X6 = 1.908057
+ X7 = 1.705543
+
+*************************************** TEST 2 **********************************************
+
+Data la matrice di ordine N=4
+Dato il vettore di input= |3,4,5,5,|t
+Dato il vettore utilizzato per costruire la matrice di Hankel= |6,5,5,66,-2,1,2|t
+
+MATRICE DI TOEPLIZ:
+
+      66.000000        5.000000        5.000000        6.000000
+      -2.000000       66.000000        5.000000        5.000000
+       1.000000       -2.000000       66.000000        5.000000
+       2.000000        1.000000       -2.000000       66.000000
+
+BACK:
+
+ X1 = 2.932523E-02   
+ X2 = 5.033403E-02  
+ X3 = 7.106128E-02   
+ X4 = 7.625967E-02
+

@@ -51,10 +51,10 @@ ALL : "$(OUTDIR)\sistemilineari.exe"
 CLEAN : 
 	-@erase ".\sistemilineari.exe"
 	-@erase ".\sistemilineari.obj"
-	-@erase ".\norme_vett.obj"
-	-@erase ".\norme_mat.obj"
 	-@erase ".\matrici.obj"
 	-@erase ".\gauss.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\norme_mat.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -74,10 +74,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /out:"$(OUTDIR)/sistemilineari.exe" 
 LINK32_OBJS= \
 	".\sistemilineari.obj" \
-	".\norme_vett.obj" \
-	".\norme_mat.obj" \
 	".\matrici.obj" \
-	".\gauss.obj"
+	".\gauss.obj" \
+	".\norme_vett.obj" \
+	".\norme_mat.obj"
 
 "$(OUTDIR)\sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -98,10 +98,10 @@ ALL : "$(OUTDIR)\sistemilineari.exe"
 CLEAN : 
 	-@erase ".\sistemilineari.exe"
 	-@erase ".\sistemilineari.obj"
-	-@erase ".\norme_vett.obj"
-	-@erase ".\norme_mat.obj"
 	-@erase ".\matrici.obj"
 	-@erase ".\gauss.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\norme_mat.obj"
 	-@erase ".\sistemilineari.ilk"
 	-@erase ".\sistemilineari.pdb"
 
@@ -123,10 +123,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /out:"$(OUTDIR)/sistemilineari.exe" 
 LINK32_OBJS= \
 	".\sistemilineari.obj" \
-	".\norme_vett.obj" \
-	".\norme_mat.obj" \
 	".\matrici.obj" \
-	".\gauss.obj"
+	".\gauss.obj" \
+	".\norme_vett.obj" \
+	".\norme_mat.obj"
 
 "$(OUTDIR)\sistemilineari.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -168,30 +168,7 @@ SOURCE=.\sistemilineari.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\
-\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_vett.f
-
-"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\
-\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_mat.f
-
-"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\
-\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\matrici.f
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\matrici.f
 
 "$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -201,9 +178,29 @@ SOURCE=\
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss.f
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\gauss.f
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_mat.f
+
+"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

@@ -73,9 +73,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/simmetica_positiva.pdb" /machine:I386\
  /out:"$(OUTDIR)/simmetica_positiva.exe" 
 LINK32_OBJS= \
-	".\simmetica_positiva.obj" \
-	".\matrici.obj" \
-	".\gauss.obj"
+	"$(INTDIR)/V_Gruppo\4-\simmetica_positiva.obj" \
+	"$(INTDIR)/V_Gruppo\4-\matrici.obj" \
+	"$(INTDIR)/V_Gruppo\4-\gauss.obj"
 
 "$(OUTDIR)\simmetica_positiva.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -118,9 +118,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/simmetica_positiva.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/simmetica_positiva.exe" 
 LINK32_OBJS= \
-	".\simmetica_positiva.obj" \
-	".\matrici.obj" \
-	".\gauss.obj"
+	"$(INTDIR)/V_Gruppo\4-\simmetica_positiva.obj" \
+	"$(INTDIR)/V_Gruppo\4-\matrici.obj" \
+	"$(INTDIR)/V_Gruppo\4-\gauss.obj"
 
 "$(OUTDIR)\simmetica_positiva.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -162,7 +162,7 @@ SOURCE=.\simmetica_positiva.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\matrici.f
 
 "$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -172,7 +172,7 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\matrici.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Subroutine\gauss.f
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\gauss.f
 
 "$(INTDIR)\gauss.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
