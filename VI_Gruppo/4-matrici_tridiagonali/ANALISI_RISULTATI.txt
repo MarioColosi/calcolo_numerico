@@ -1,0 +1,38 @@
+GRUPPO_6 ESERCIZIO_4
+
+METODO JACOBI(metodo degli spostamenti simultanei, ad ogni iterazione le componenti del vettore x^(k-1)
+sono sostituite simultaneamente dalle componenti x^(k)):
+Il metodo di Jacobi è un metodo iterativo per la risoluzione di sistemi lineari, un metodo cioè che calcola la soluzione 
+di un sistema di equazioni lineari dopo un numero teoricamente infinito di passi. Per calcolare tale risultato il metodo 
+utilizza una successione x^(k) che converge verso la soluzione esatta del sistema lineare e ne calcola progressivamente 
+i valori arrestandosi quando la soluzione ottenuta è sufficientemente vicina a quella esatta.
+Proprio perchè il metodo di Jacobi è detto 'degli spostamenti simultanei' necessita di due vettori. 
+
+MATRICE TRIDIAGONALE:
+Una matrice tridiagonale è una matrice quadrata che al di fuori della diagonale principale
+e delle linee immediatamente al di sopra e al di sotto di essa (la prima sovradiagonale e la prima sottodiagonale),
+ha solo valori nulli (0). Nella diagonale principale, nella prima sovradiagonale e nella prima sottodiagonale, invece,
+può esserci qualunque valore (compreso il valore nullo). 
+
+MATRICE PENTADIAGONALE:
+Una matrice pentadiagoale è una matrice quadrata che al di fuori delle cinque diagonali centrali ha valori nulli. 
+
+MATRICE EPTADIAGONALE:
+Una matrice eptadiagonale è una matrice quadrata che al di fuori delle sette diagonali centrali ha valori nulli. 
+
+
+Utilizziamo sperimentalmente le nozioni acquisite dalla teoria per risolvere il seguente esercizio:
+'Scrivere il programma del metodo iterativo di Jacobi per risolvere il sistema lineare Ax=b , 
+ dove A e’ una matrice tridiagonale, pentadiagonale o eptadiagonale, usando la tecnica di memorizzazione 
+ di A in vettori.'
+
+
+*************************************** TEST 1 *******************************************
+
+
+************************************** TEST 2 *****************************************
+
+
+********************************** ANALISI ***************************************
+
+ 

@@ -1,0 +1,38 @@
+GRUPPO_6 ESERCIZIO_1
+
+METODO JACOBI (metodo degli spostamenti simultanei, ad ogni iterazione le componenti del vettore x^(k-1)
+sono sostituite simultaneamente dalle componenti x^(k)):
+Il metodo di Jacobi è un metodo iterativo per la risoluzione di sistemi lineari, un metodo cioè che calcola la soluzione 
+di un sistema di equazioni lineari dopo un numero teoricamente infinito di passi. Per calcolare tale risultato il metodo 
+utilizza una successione x^(k) che converge verso la soluzione esatta del sistema lineare e ne calcola progressivamente 
+i valori arrestandosi quando la soluzione ottenuta è sufficientemente vicina a quella esatta.
+Proprio perchè il metodo di Jacobi è detto 'degli spostamenti simultanei' necessita di due vettori. 
+
+
+METODO GAUSS-SEIDEL (metodo degli spostamenti successivi, ad ogni iterazione le componenti del vettore x^(k)
+sono calcolate utilizzando anche le componenti già determinate dello stesso vettore.):
+Il metodo di Gauss-Seidel è un metodo iterativo, simile al metodo di Jacobi, per la risoluzione di un sistema lineare, 
+scritto nella forma matriciale Ax=b. Gauss-Seidel inibisce il parallelismo in quanto il risultato di ogni iterazione 
+dipende da quello precedente. 
+Il metodo di Gauss-Seidel non necessita di due vettori, ma solo di uno. 
+
+-Nei due algoritmi iterativi consideriamo un test di arresto che sia il più coincidente possibile con la soluzione 
+ esatta del sistema x^(*).
+-Il metodo Gauss-Seidel, che utilizza immediatamente i valori calcolati nell'iterazione corrente, risulta in molti casi 
+ significativi più veloce del metodo di Jacobi. Però esistono casi particolari in cui non solo il metodo di Jacobi risulta 
+ più veloce del metodo di Gauss-Seidel, ma addirittura il metodo di Jacobi è convergente e quello di Gauss-Seidel non lo è. 
+
+
+Utilizziamo sperimentalmente le nozioni acquisite per risolvere il seguente esercizio:
+' Confrontare sullo stesso sistema lineare il comportamento dei metodi di Jacobi e Gauss-Seidel. 
+  Confrontare l’andamento grafico degli errori nei vari iterati.'
+
+******************************************* TEST 1 ********************************************
+
+
+******************************************* TEST 2 ********************************************
+
+
+*************************************** ANALISI ***************************************
+Risulta evidente che un metodo iterativo, rispetto alle analisi svolte negli esercizi precedenti con un metodo diretto,
+è in generale meno sensibile alla propagazione degli errori. 

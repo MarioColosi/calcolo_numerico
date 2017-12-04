@@ -4,24 +4,25 @@
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
 !IF "$(CFG)" == ""
-CFG=seidel_jacobi - Win32 Debug
-!MESSAGE No configuration specified.  Defaulting to seidel_jacobi - Win32\
- Debug.
+CFG=matrici_tridiagonali - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to matrici_tridiagonali -\
+ Win32 Debug.
 !ENDIF 
 
-!IF "$(CFG)" != "seidel_jacobi - Win32 Release" && "$(CFG)" !=\
- "seidel_jacobi - Win32 Debug"
+!IF "$(CFG)" != "matrici_tridiagonali - Win32 Release" && "$(CFG)" !=\
+ "matrici_tridiagonali - Win32 Debug"
 !MESSAGE Invalid configuration "$(CFG)" specified.
 !MESSAGE You can specify a configuration when running NMAKE on this makefile
 !MESSAGE by defining the macro CFG on the command line.  For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "seidel_jacobi.mak" CFG="seidel_jacobi - Win32 Debug"
+!MESSAGE NMAKE /f "matrici_tridiagonali.mak"\
+ CFG="matrici_tridiagonali - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "seidel_jacobi - Win32 Release" (based on\
+!MESSAGE "matrici_tridiagonali - Win32 Release" (based on\
  "Win32 (x86) Console Application")
-!MESSAGE "seidel_jacobi - Win32 Debug" (based on\
+!MESSAGE "matrici_tridiagonali - Win32 Debug" (based on\
  "Win32 (x86) Console Application")
 !MESSAGE 
 !ERROR An invalid configuration is specified.
@@ -34,11 +35,10 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-# PROP Target_Last_Scanned "seidel_jacobi - Win32 Debug"
 F90=fl32.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "seidel_jacobi - Win32 Release"
+!IF  "$(CFG)" == "matrici_tridiagonali - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -47,12 +47,11 @@ RSC=rc.exe
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\seidel_jacobi.exe"
+ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 
 CLEAN : 
-	-@erase ".\seidel_jacobi.exe"
-	-@erase ".\seidel_jacobi.obj"
-	-@erase ".\jacobi_ottimizzato.obj"
+	-@erase ".\matrici_tridiagonali.exe"
+	-@erase ".\matrici_tridiagonali.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -62,24 +61,23 @@ F90_PROJ=/Ox /c /nologo
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/seidel_jacobi.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/matrici_tridiagonali.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
- /pdb:"$(OUTDIR)/seidel_jacobi.pdb" /machine:I386\
- /out:"$(OUTDIR)/seidel_jacobi.exe" 
+ /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /machine:I386\
+ /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
-	".\seidel_jacobi.obj" \
-	".\jacobi_ottimizzato.obj"
+	"$(INTDIR)/matrici_tridiagonali.obj"
 
-"$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
 
-!ELSEIF  "$(CFG)" == "seidel_jacobi - Win32 Debug"
+!ELSEIF  "$(CFG)" == "matrici_tridiagonali - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -88,36 +86,34 @@ LINK32_OBJS= \
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\seidel_jacobi.exe"
+ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 
 CLEAN : 
-	-@erase ".\seidel_jacobi.exe"
-	-@erase ".\seidel_jacobi.obj"
-	-@erase ".\jacobi_ottimizzato.obj"
-	-@erase ".\seidel_jacobi.ilk"
-	-@erase ".\seidel_jacobi.pdb"
+	-@erase ".\matrici_tridiagonali.exe"
+	-@erase ".\matrici_tridiagonali.obj"
+	-@erase ".\matrici_tridiagonali.ilk"
+	-@erase ".\matrici_tridiagonali.pdb"
 
 # ADD BASE F90 /Zi /c /nologo
 # ADD F90 /Zi /c /nologo
-F90_PROJ=/Zi /c /nologo /Fd"seidel_jacobi.pdb" 
+F90_PROJ=/Zi /c /nologo /Fd"matrici_tridiagonali.pdb" 
 # ADD BASE RSC /l 0x410 /d "_DEBUG"
 # ADD RSC /l 0x410 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/seidel_jacobi.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/matrici_tridiagonali.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
- /pdb:"$(OUTDIR)/seidel_jacobi.pdb" /debug /machine:I386\
- /out:"$(OUTDIR)/seidel_jacobi.exe" 
+ /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /debug /machine:I386\
+ /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
-	".\seidel_jacobi.obj" \
-	".\jacobi_ottimizzato.obj"
+	"$(INTDIR)/matrici_tridiagonali.obj"
 
-"$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
@@ -136,31 +132,21 @@ LINK32_OBJS= \
 ################################################################################
 # Begin Target
 
-# Name "seidel_jacobi - Win32 Release"
-# Name "seidel_jacobi - Win32 Debug"
+# Name "matrici_tridiagonali - Win32 Release"
+# Name "matrici_tridiagonali - Win32 Debug"
 
-!IF  "$(CFG)" == "seidel_jacobi - Win32 Release"
+!IF  "$(CFG)" == "matrici_tridiagonali - Win32 Release"
 
-!ELSEIF  "$(CFG)" == "seidel_jacobi - Win32 Debug"
+!ELSEIF  "$(CFG)" == "matrici_tridiagonali - Win32 Debug"
 
 !ENDIF 
 
 ################################################################################
 # Begin Source File
 
-SOURCE=.\seidel_jacobi.f
+SOURCE=.\matrici_tridiagonali.f
 
-"$(INTDIR)\seidel_jacobi.obj" : $(SOURCE) "$(INTDIR)"
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f
-
-"$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
+"$(INTDIR)\matrici_tridiagonali.obj" : $(SOURCE) "$(INTDIR)"
 
 
 # End Source File
