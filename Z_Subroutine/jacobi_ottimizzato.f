@@ -16,11 +16,13 @@
 			END DO
 			X_NEW(I)=(B(I)-SOMMA)/A(I,I)
 		END DO
+* ------- TEST DI ARRESTO ----------------------------------
 		CALL DELTA_VETT(X_NEW,X_OLD,DELTA,N)
 		IF(NORMAINF(DELTA,N)/NORMAINF(X_NEW,N).LT.EPS)THEN
 			ENDTEST=.TRUE.
 			RETURN
-		END IF 
+		END IF
+* ---------------------------------------------------------- 
 		DO I=1,N
 			X_OLD(I)=X_NEW(I)
 		END DO

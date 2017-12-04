@@ -1,17 +1,23 @@
-	SUBROUTINE GAUSS_SEIDEL(A,B,X,K,N_MAX,N)
+	SUBROUTINE GAUSS_SEIDEL(A,B,X,N_MAX,N,MAX_K,EPS,ENDTEST)
 	REAL A(N_MAX,N_MAX)
 	REAL B(N_MAX),X(N_MAX)
-	REAL VAR1,VAR2
-	VAR1=0
-	VAR2=0
-	DO I=1,N
-		DO J=1,I-1
-			VAR1=VAR1+(A(I,J)*(X(J)**K))
+	REAL SOMMA
+	LOGICAL ENDTEST
+	ENDTEST=.FALSE.
+	X(:)=0.0
+	DO K=1,MAX_K
+		DO I=1,N
+			SOMMA=0.0
+			DO J=1,I-1
+				SOMMA=SOMMA+(A(I,J)*X(J))
+			END DO
+			DO J=I+1,N
+				SOMMA=SOMMA+(A(I.J)*X(J))
+			END DO
+			X(I)=(B(I)-SOMMA)/A(I,I)
 		END DO
-		DO J=I+1,N
-			VAR2=VAR2+(A(I.J)*(X(J)**(K-1)))
-		END DO
-		VAR1=VAR1+VAR2
-		(X(I)**(K))=(B(I)-VAR1)/A(I,I)
+* ------- TEST DI ARRESTO ----------------------------------
+
+* ---------------------------------------------------------- 
 	END DO 
 	END 
