@@ -15,3 +15,5 @@ Utilizziamo sperimentalmente le nozioni acquisite dallo studio del condizionamen
  le famiglie di matrici confrontabili, perché generate dalla stessa regola di costruzione. 
  Confrontare, analizzare e commentare i risultati.'
 
+
+

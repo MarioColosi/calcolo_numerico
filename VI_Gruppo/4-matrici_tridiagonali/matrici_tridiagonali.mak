@@ -35,6 +35,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "matrici_tridiagonali - Win32 Debug"
 F90=fl32.exe
 RSC=rc.exe
 
@@ -52,6 +53,8 @@ ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 CLEAN : 
 	-@erase ".\matrici_tridiagonali.exe"
 	-@erase ".\matrici_tridiagonali.obj"
+	-@erase ".\jacobi_ottimizzato.obj"
+	-@erase ".\norme_vett.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -70,7 +73,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /machine:I386\
  /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/matrici_tridiagonali.obj"
+	".\matrici_tridiagonali.obj" \
+	".\jacobi_ottimizzato.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -91,6 +96,8 @@ ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 CLEAN : 
 	-@erase ".\matrici_tridiagonali.exe"
 	-@erase ".\matrici_tridiagonali.obj"
+	-@erase ".\jacobi_ottimizzato.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\matrici_tridiagonali.ilk"
 	-@erase ".\matrici_tridiagonali.pdb"
 
@@ -111,7 +118,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/matrici_tridiagonali.obj"
+	".\matrici_tridiagonali.obj" \
+	".\jacobi_ottimizzato.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -147,6 +156,26 @@ LINK32_OBJS= \
 SOURCE=.\matrici_tridiagonali.f
 
 "$(INTDIR)\matrici_tridiagonali.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f
+
+"$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File
