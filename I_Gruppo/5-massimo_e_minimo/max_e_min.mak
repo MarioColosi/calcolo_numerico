@@ -4,26 +4,23 @@
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
 !IF "$(CFG)" == ""
-CFG=precisione_macchina - Win32 Debug
-!MESSAGE No configuration specified.  Defaulting to precisione_macchina - Win32\
- Debug.
+CFG=max_e_min - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to max_e_min - Win32 Debug.
 !ENDIF 
 
-!IF "$(CFG)" != "precisione_macchina - Win32 Release" && "$(CFG)" !=\
- "precisione_macchina - Win32 Debug"
+!IF "$(CFG)" != "max_e_min - Win32 Release" && "$(CFG)" !=\
+ "max_e_min - Win32 Debug"
 !MESSAGE Invalid configuration "$(CFG)" specified.
 !MESSAGE You can specify a configuration when running NMAKE on this makefile
 !MESSAGE by defining the macro CFG on the command line.  For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "precisione_macchina.mak"\
- CFG="precisione_macchina - Win32 Debug"
+!MESSAGE NMAKE /f "max_e_min.mak" CFG="max_e_min - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "precisione_macchina - Win32 Release" (based on\
+!MESSAGE "max_e_min - Win32 Release" (based on\
  "Win32 (x86) Console Application")
-!MESSAGE "precisione_macchina - Win32 Debug" (based on\
- "Win32 (x86) Console Application")
+!MESSAGE "max_e_min - Win32 Debug" (based on "Win32 (x86) Console Application")
 !MESSAGE 
 !ERROR An invalid configuration is specified.
 !ENDIF 
@@ -35,10 +32,10 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-F90=fl32.exe
 RSC=rc.exe
+F90=fl32.exe
 
-!IF  "$(CFG)" == "precisione_macchina - Win32 Release"
+!IF  "$(CFG)" == "max_e_min - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -47,11 +44,11 @@ RSC=rc.exe
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\precisione_macchina.exe"
+ALL : "$(OUTDIR)\max_e_min.exe"
 
 CLEAN : 
-	-@erase ".\precisione_macchina.exe"
-	-@erase ".\precisione_macchina.obj"
+	-@erase ".\max_e_min.exe"
+	-@erase ".\max_e_min.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -61,23 +58,22 @@ F90_PROJ=/Ox /c /nologo
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/precisione_macchina.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/max_e_min.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
- /pdb:"$(OUTDIR)/precisione_macchina.pdb" /machine:I386\
- /out:"$(OUTDIR)/precisione_macchina.exe" 
+ /pdb:"$(OUTDIR)/max_e_min.pdb" /machine:I386 /out:"$(OUTDIR)/max_e_min.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/precisione_macchina.obj"
+	"$(INTDIR)/max_e_min.obj"
 
-"$(OUTDIR)\precisione_macchina.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\max_e_min.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
 
-!ELSEIF  "$(CFG)" == "precisione_macchina - Win32 Debug"
+!ELSEIF  "$(CFG)" == "max_e_min - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -86,34 +82,34 @@ LINK32_OBJS= \
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\precisione_macchina.exe"
+ALL : "$(OUTDIR)\max_e_min.exe"
 
 CLEAN : 
-	-@erase ".\precisione_macchina.exe"
-	-@erase ".\precisione_macchina.obj"
-	-@erase ".\precisione_macchina.ilk"
-	-@erase ".\precisione_macchina.pdb"
+	-@erase ".\max_e_min.exe"
+	-@erase ".\max_e_min.obj"
+	-@erase ".\max_e_min.ilk"
+	-@erase ".\max_e_min.pdb"
 
 # ADD BASE F90 /Zi /c /nologo
 # ADD F90 /Zi /c /nologo
-F90_PROJ=/Zi /c /nologo /Fd"precisione_macchina.pdb" 
+F90_PROJ=/Zi /c /nologo /Fd"max_e_min.pdb" 
 # ADD BASE RSC /l 0x410 /d "_DEBUG"
 # ADD RSC /l 0x410 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/precisione_macchina.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/max_e_min.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
- /pdb:"$(OUTDIR)/precisione_macchina.pdb" /debug /machine:I386\
- /out:"$(OUTDIR)/precisione_macchina.exe" 
+ /pdb:"$(OUTDIR)/max_e_min.pdb" /debug /machine:I386\
+ /out:"$(OUTDIR)/max_e_min.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/precisione_macchina.obj"
+	"$(INTDIR)/max_e_min.obj"
 
-"$(OUTDIR)\precisione_macchina.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+"$(OUTDIR)\max_e_min.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
@@ -132,21 +128,21 @@ LINK32_OBJS= \
 ################################################################################
 # Begin Target
 
-# Name "precisione_macchina - Win32 Release"
-# Name "precisione_macchina - Win32 Debug"
+# Name "max_e_min - Win32 Release"
+# Name "max_e_min - Win32 Debug"
 
-!IF  "$(CFG)" == "precisione_macchina - Win32 Release"
+!IF  "$(CFG)" == "max_e_min - Win32 Release"
 
-!ELSEIF  "$(CFG)" == "precisione_macchina - Win32 Debug"
+!ELSEIF  "$(CFG)" == "max_e_min - Win32 Debug"
 
 !ENDIF 
 
 ################################################################################
 # Begin Source File
 
-SOURCE=.\precisione_macchina.f
+SOURCE=.\max_e_min.f
 
-"$(INTDIR)\precisione_macchina.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\max_e_min.obj" : $(SOURCE) "$(INTDIR)"
 
 
 # End Source File

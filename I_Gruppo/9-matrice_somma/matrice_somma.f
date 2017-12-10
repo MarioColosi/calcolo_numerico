@@ -2,33 +2,52 @@
 *Date due matrici di ordine n calcolare la matrice somma
 	PARAMETER(N_MAX=500)
 	REAL A(N_MAX,N_MAX),B(N_MAX,N_MAX),C(N_MAX,N_MAX)
-	WRITE(*,*)'Inserisci la dimensione della matrice:'
+
+*    Titolo (INPUT: 1 stringa da 50 caratteri)
+2	FORMAT(/,2X,52('-'),/,2X,'  ',A,/,2X,52('-'),/)
+*    Messaggio di input (INPUT: 1 stringa)
+3	FORMAT(2X,'[INPUT] ',A,$)
+																 	
+	WRITE(*,2)'                SOMMA DI MATRICI                    '
+	WRITE(*,3)'Inserisci la dimensione della matrice: '
 	READ(*,*)N
+	WRITE(*,*)
+	WRITE(*,*)' [INPUT] MATRICE A'
 	CALL INIT_MATRIX(A,N_MAX,N)
+	WRITE(*,*)
+	WRITE(*,*)' [INPUT] MATRICE B'
 	CALL INIT_MATRIX(B,N_MAX,N)
-	WRITE(*,*)'La matrice A e'':'
+	WRITE(*,*)
+	WRITE(*,*)'---------------------------------------------------'
+	WRITE(*,*)' [INPUT] MATRICE A'
 	DO I=1,N
 		WRITE(*,*)(A(I,J),J=1,N)
 	END DO
-	WRITE(*,*)'La matrice B e'':'
+	WRITE(*,*)
+	WRITE(*,*)' [INPUT] MATRICE B'
 	DO I=1,N
 		WRITE(*,*)(B(I,J),J=1,N)
 	END DO
 	CALL SOMMA(A,B,C,N_MAX,N)
-	WRITE(*,*)'La matrice SOMMA e'':'
+	WRITE(*,*)
+	WRITE(*,*)' [RESULT] La matrice SOMMA e'':'
 	DO I=1,N
 		WRITE(*,*)(C(I,J),J=1,N)
 	END DO
+	WRITE(*,*)
 	END 
 
+****** Subroutine di inizializzazione di una matrice di dimensione N
 	SUBROUTINE INIT_MATRIX(A,N_MAX,N)
 	REAL A(N_MAX,N)
-	WRITE(*,*)'Inserisci i valori della matrice:'
+ 3	FORMAT(2X,'[INPUT] ',A,'[RIGA',I3,']: ',$)
 	DO I=1,N
+		WRITE(*,3)'Inserisci i valori della matrice ', I
 		READ(*,*)(A(I,J),J=1,N)
 	END DO
 	END 
 
+****** Subroutine di calcolo della matrice somma
 	SUBROUTINE SOMMA(A,B,C,N_MAX,N)
 	REAL A(N_MAX,N),B(N_MAX,N),C(N_MAX,N)
 	DO I=1,N
