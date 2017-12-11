@@ -35,7 +35,6 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-# PROP Target_Last_Scanned "matrici_tridiagonali - Win32 Debug"
 F90=fl32.exe
 RSC=rc.exe
 
@@ -52,9 +51,10 @@ ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 
 CLEAN : 
 	-@erase ".\matrici_tridiagonali.exe"
+	-@erase ".\matrici_tridiagonali.obj"
 	-@erase ".\norme_vett.obj"
 	-@erase ".\jacobi_ottimizzato.obj"
-	-@erase ".\matrici_tridiagonali.obj"
+	-@erase ".\gauss_seidel.obj"
 	-@erase ".\init_matrix.obj"
 
 # ADD BASE F90 /Ox /c /nologo
@@ -74,9 +74,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /machine:I386\
  /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
+	".\matrici_tridiagonali.obj" \
 	".\norme_vett.obj" \
 	".\jacobi_ottimizzato.obj" \
-	".\matrici_tridiagonali.obj" \
+	".\gauss_seidel.obj" \
 	".\init_matrix.obj"
 
 "$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
@@ -97,9 +98,10 @@ ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 
 CLEAN : 
 	-@erase ".\matrici_tridiagonali.exe"
+	-@erase ".\matrici_tridiagonali.obj"
 	-@erase ".\norme_vett.obj"
 	-@erase ".\jacobi_ottimizzato.obj"
-	-@erase ".\matrici_tridiagonali.obj"
+	-@erase ".\gauss_seidel.obj"
 	-@erase ".\init_matrix.obj"
 	-@erase ".\matrici_tridiagonali.ilk"
 	-@erase ".\matrici_tridiagonali.pdb"
@@ -121,9 +123,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
+	".\matrici_tridiagonali.obj" \
 	".\norme_vett.obj" \
 	".\jacobi_ottimizzato.obj" \
-	".\matrici_tridiagonali.obj" \
+	".\gauss_seidel.obj" \
 	".\init_matrix.obj"
 
 "$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
@@ -167,17 +170,7 @@ SOURCE=.\matrici_tridiagonali.f
 # Begin Source File
 
 SOURCE=\
-"\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f"
-
-"$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f"
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_vett.f
 
 "$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -187,7 +180,30 @@ SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f"
 ################################################################################
 # Begin Source File
 
-SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\init_matrix.f"
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\jacobi_ottimizzato.f
+
+"$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss_seidel.f
+
+"$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\init_matrix.f
 
 "$(INTDIR)\init_matrix.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)

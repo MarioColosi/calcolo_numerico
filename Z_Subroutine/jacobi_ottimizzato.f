@@ -1,4 +1,4 @@
-	SUBROUTINE JACOBI_OTTIMIZZATO(A,B,X,N_MAX,N,MAX_ITER,EPS,ITER)
+	SUBROUTINE JACOBI_OTTIMIZZATO(A,B,X,N_MAX,N,MAX_ITER,ITER,EPS)
 	REAL A(N_MAX,N)
 	REAL B(N),X_OLD(N),X(N),DELTA(N)
 	REAL NORMAINF,EPS
@@ -26,7 +26,6 @@
 		END DO
 * ------- TEST DI ARRESTO ------------------------------------------------
 		IF(NORMAINF(DELTA,N)/NORMAINF(X,N).LT.EPS)THEN
-			WRITE(*,*)'Test di arresto'
 			RETURN
 		END IF
 * ------------------------------------------------------------------------ 
