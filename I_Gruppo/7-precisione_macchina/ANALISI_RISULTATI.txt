@@ -4,15 +4,18 @@ PRECISIONE MACCHINA:
 In informatica l'epsilon di macchina è il più piccolo numero, epsilon,
 appartenente a un dato insieme F di numeri in virgola mobile, diverso 
 in valore assoluto da zero, che sommato all' unità, dà un risultato diverso da 1.
+L'epsilon-macchina è una costante propria di ciascun calcolatore e rappresenta la 
+massima precisione di calcolo raggiungibile. Pertanto, non ha senso cercare di 
+determinare approssimazioni con errore relativo inferiore ad eps.
 
 Utilizziamo le nozioni acquisite per risolvere il seguente esercizio:
 'Trovare la precisione della macchina in singola e doppia precisione.'
 
 **************************** TEST 1 ******************************
-La precisione della macchina e':   1.192093E-07
-La precisione nel secondo metodo e':   2.220446E-16
-La precisione della macchina a REAL*8 e':  2.220446049250313E-016
+[RESULT] La precisione della macchina e':   1.192093E-07
+ [RESULT] La precisione con controllo nella ALU e':   2.220446E-16
+ [RESULT] La precisione di macchina a REAL*8 e':  2.220446049250313E-016
 
 **************************** ANALISI *******************************
 
-La precisione è calcolata in una macchina virtuale Windows. 
+La precisione è calcolata in una macchina virtuale Windows in un MAC OS.  
