@@ -18,6 +18,7 @@ NORMA(N-1)=NORMAINF(VETT,N)
 	CALL WRITE_FILE(NORMA,MAX_N-1)
 	END
 
+****** Subroutine di inizializzazione del vettore, con valori equidistanti compresi tra -1 e 1
       SUBROUTINE INIT_VETT(VETT,N)
 	PARAMETER(K=-1,L=1)
 	REAL VETT(N)
@@ -29,34 +30,8 @@ NORMA(N-1)=NORMAINF(VETT,N)
 	END DO
 	VETT(N)=L
 	END	
-		
-	REAL FUNCTION NORMA1(X,N)
- 	REAL X(N)
-	NORMA1=0
-	DO I=1,N
-		NORMA1=NORMA1+ABS(X(I))
-	END DO
-	END
-
-	REAL FUNCTION NORMA2(X,N)
-	REAL X(N)
-	NORMA2=0
-	DO I=1,N
-		NORMA2=NORMA2+(X(I)*X(I))
-	END DO
-	NORMA2=SQRT(NORMA2)
-	END 
-
-	REAL FUNCTION NORMAINF(X,N)
-	REAL X(N)
-	NORMAINF=X(1)
-	DO I=2,N
-		IF(NORMAINF.LT.X(I))THEN
-			NORMAINF=X(I)
-	    END IF
-	END DO
-	END 
-
+	
+****** Subroutine di scrittura su file dei valori del vettore NORMA	
 	SUBROUTINE WRITE_FILE(NORMA,N)
 	REAL NORMA(N)
 	DO I=1,N

@@ -24,17 +24,15 @@ Dimensione del vettore: 6
 
 Il vettore è X = |2,3,4,5,6,7|t
 Le disequazioni svolte dal compilatore sono:
-  1)
+
+  1)	La prima disequazione è verificata!
 	7.000000  <= 11.789830 <= 17.146430
-	E' verificata la prima disequazione!
 
-  2)
+  2)	La seconda disequazione è verificata!
 	11.789830 <= 27.000000 <= 28.879060
-	E' verificata la seconda disequazione!
 
-  3)
+  3)	La terza disequazione è verificata
 	7.000000  <= 27.000000 <= 42.000000
-	E' verificata la terza disequazione!
 
 ************************* TEST 2 *************************
 
@@ -42,16 +40,15 @@ Dimensione del vettore: 10
 
 Il vettore è X = |-2,5,55,7,-9,4,6,99,-23,1.1|t
 Le disequazioni svolte dal compilatore sono:
-  1)
+
+  1)	La prima disequazione è verificata!
 	99.000000  <= 116.478400 <= 313.065500
-	E' verificata la prima disequazione!
-  2)
+
+  2)	La seconda disequazione è verificata!
      	116.478400 <= 211.100000 <= 368.336900
-	E' verificata la seconda disequazione!
-  3)
+
+  3)	La terza disequazione è verificata!
       	99.000000  <= 211.100000 <= 990.000000
-	E' verificata la terza disequazione!
 
 *********************************** ANALISI **********************************
 Il teorema è verificato in entrambi i test. 
-

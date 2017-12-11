@@ -32,6 +32,7 @@
 	END DO
       END
 
+****** Subroutine di stampa della matrice
 	SUBROUTINE PRINT_MATRIX(A,N_MAX,N)
 	REAL A(N_MAX,N)
 6	FORMAT(:10(' ',F8.3))

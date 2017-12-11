@@ -35,6 +35,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "verifica_equivalenza - Win32 Debug"
 F90=fl32.exe
 RSC=rc.exe
 
@@ -52,9 +53,8 @@ ALL : "$(OUTDIR)\verifica_equivalenza.exe"
 CLEAN : 
 	-@erase ".\verifica_equivalenza.exe"
 	-@erase ".\verifica_equivalenza.obj"
-	-@erase ".\norma_inf.obj"
-	-@erase ".\norma_2.obj"
-	-@erase ".\norma_1.obj"
+	-@erase ".\norme_mat.obj"
+	-@erase ".\indice_di_cond.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -73,10 +73,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/verifica_equivalenza.pdb" /machine:I386\
  /out:"$(OUTDIR)/verifica_equivalenza.exe" 
 LINK32_OBJS= \
-	".\verifica_equivalenza.obj" \
-	".\norma_inf.obj" \
-	".\norma_2.obj" \
-	".\norma_1.obj"
+	"$(INTDIR)/verifica_equivalenza.obj" \
+	"$(INTDIR)/norme_mat.obj" \
+	"$(INTDIR)/indice_di_cond.obj"
 
 "$(OUTDIR)\verifica_equivalenza.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -97,9 +96,8 @@ ALL : "$(OUTDIR)\verifica_equivalenza.exe"
 CLEAN : 
 	-@erase ".\verifica_equivalenza.exe"
 	-@erase ".\verifica_equivalenza.obj"
-	-@erase ".\norma_inf.obj"
-	-@erase ".\norma_2.obj"
-	-@erase ".\norma_1.obj"
+	-@erase ".\norme_mat.obj"
+	-@erase ".\indice_di_cond.obj"
 	-@erase ".\verifica_equivalenza.ilk"
 	-@erase ".\verifica_equivalenza.pdb"
 
@@ -120,10 +118,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/verifica_equivalenza.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/verifica_equivalenza.exe" 
 LINK32_OBJS= \
-	".\verifica_equivalenza.obj" \
-	".\norma_inf.obj" \
-	".\norma_2.obj" \
-	".\norma_1.obj"
+	"$(INTDIR)/verifica_equivalenza.obj" \
+	"$(INTDIR)/norme_mat.obj" \
+	"$(INTDIR)/indice_di_cond.obj"
 
 "$(OUTDIR)\verifica_equivalenza.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -165,9 +162,9 @@ SOURCE=.\verifica_equivalenza.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_inf.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_mat.f"
 
-"$(INTDIR)\norma_inf.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
@@ -175,19 +172,10 @@ SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_inf.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_2.f
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\IV_Gruppo\1-indice_di_condizionamento\indice_di_cond.f"
 
-"$(INTDIR)\norma_2.obj" : $(SOURCE) "$(INTDIR)"
-   $(F90) $(F90_PROJ) $(SOURCE)
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\Fortran\Esercizi\Z_Funzioni\norma_1.f
-
-"$(INTDIR)\norma_1.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\indice_di_cond.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

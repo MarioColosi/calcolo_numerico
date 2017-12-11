@@ -52,6 +52,7 @@ ALL : "$(OUTDIR)\verifica_equivalenza.exe"
 CLEAN : 
 	-@erase ".\verifica_equivalenza.exe"
 	-@erase ".\verifica_equivalenza.obj"
+	-@erase ".\norme_vett.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -70,7 +71,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/verifica_equivalenza.pdb" /machine:I386\
  /out:"$(OUTDIR)/verifica_equivalenza.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/verifica_equivalenza.obj"
+	".\verifica_equivalenza.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\verifica_equivalenza.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -91,6 +93,7 @@ ALL : "$(OUTDIR)\verifica_equivalenza.exe"
 CLEAN : 
 	-@erase ".\verifica_equivalenza.exe"
 	-@erase ".\verifica_equivalenza.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\verifica_equivalenza.ilk"
 	-@erase ".\verifica_equivalenza.pdb"
 
@@ -111,7 +114,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/verifica_equivalenza.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/verifica_equivalenza.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/verifica_equivalenza.obj"
+	".\verifica_equivalenza.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\verifica_equivalenza.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -147,6 +151,16 @@ LINK32_OBJS= \
 SOURCE=.\verifica_equivalenza.f
 
 "$(INTDIR)\verifica_equivalenza.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f"
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File
