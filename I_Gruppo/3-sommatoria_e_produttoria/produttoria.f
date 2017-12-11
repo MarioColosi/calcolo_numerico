@@ -1,9 +1,5 @@
       PROGRAM PRODUTTORIA
-<<<<<<< HEAD
-* Scrivere i programmi per la sommatoria e la produttoria di n numeri. 
-=======
 * 3. Scrivere i programmi per la produttoria di n numeri reali e complessi.
->>>>>>> 9b63569f1f8179eb489f1e964a55366d2c3f0c9f
       PARAMETER(MAX_N=100)
       REAL X(MAX_N)
 

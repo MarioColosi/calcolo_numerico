@@ -1,7 +1,6 @@
 	PROGRAM PRODOTTO_SCALARE
-*.
-
-	PARAMETER(MAX_N=500)
+*12.Dati due vettori x e y con n componenti calcolare il prodotto scalare.
+	PARAMETER(MAX_N=50)
 	REAL X(MAX_N),Y(MAX_N),M
 
 *    Sottotitolo (INPUT: 1 stringa da 50 caratteri)

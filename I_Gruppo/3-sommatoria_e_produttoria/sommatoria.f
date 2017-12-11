@@ -1,5 +1,4 @@
-
-      PROGRAM SOMMATORIA
+	PROGRAM SOMMATORIA
 * 3. Scrivere i programmi per la sommatoria di n numeri reali e complessi.     
       PARAMETER(MAX_N=100)
       REAL X(MAX_N)

@@ -30,6 +30,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "eq2 - Win32 Debug"
 RSC=rc.exe
 F90=fl32.exe
 
@@ -47,6 +48,7 @@ ALL : "$(OUTDIR)\eq2.exe"
 CLEAN : 
 	-@erase ".\eq2.exe"
 	-@erase ".\eq2.obj"
+	-@erase ".\produttoria.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -64,7 +66,8 @@ LINK32=link.exe
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/eq2.pdb" /machine:I386 /out:"$(OUTDIR)/eq2.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/eq2.obj"
+	"$(INTDIR)/eq2.obj" \
+	"$(INTDIR)/produttoria.obj"
 
 "$(OUTDIR)\eq2.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -85,6 +88,7 @@ ALL : "$(OUTDIR)\eq2.exe"
 CLEAN : 
 	-@erase ".\eq2.exe"
 	-@erase ".\eq2.obj"
+	-@erase ".\produttoria.obj"
 	-@erase ".\eq2.ilk"
 	-@erase ".\eq2.pdb"
 
@@ -104,7 +108,8 @@ LINK32=link.exe
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/eq2.pdb" /debug /machine:I386 /out:"$(OUTDIR)/eq2.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/eq2.obj"
+	"$(INTDIR)/eq2.obj" \
+	"$(INTDIR)/produttoria.obj"
 
 "$(OUTDIR)\eq2.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -140,6 +145,17 @@ LINK32_OBJS= \
 SOURCE=.\eq2.f
 
 "$(INTDIR)\eq2.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\I_Gruppo\3-sommatoria_e_produttoria\produttoria.f"
+
+"$(INTDIR)\produttoria.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File

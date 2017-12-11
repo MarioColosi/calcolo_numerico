@@ -1,7 +1,7 @@
 	SUBROUTINE GAUSS_SEIDEL(A,B,X,N_MAX,N,MAX_K,EPS,ENDTEST)
 	REAL A(N_MAX,N_MAX)
 	REAL B(N_MAX),X(N_MAX)
-	REAL SOMMA
+	REAL SOMMA, NORMA_OLD
 	LOGICAL ENDTEST
 	ENDTEST=.FALSE.
 	X(:)=0.0
@@ -12,12 +12,12 @@
 				SOMMA=SOMMA+(A(I,J)*X(J))
 			END DO
 			DO J=I+1,N
-				SOMMA=SOMMA+(A(I.J)*X(J))
+				SOMMA=SOMMA+(A(I,J)*X(J))
 			END DO
 			X(I)=(B(I)-SOMMA)/A(I,I)
 		END DO
 * ------- TEST DI ARRESTO ----------------------------------
-
+			
 * ---------------------------------------------------------- 
 	END DO 
 	END 

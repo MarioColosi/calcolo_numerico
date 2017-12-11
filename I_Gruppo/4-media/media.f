@@ -1,10 +1,5 @@
       PROGRAM CALCOLAMEDIA
-<<<<<<< HEAD
-* Scrivere un programma che calcola la media di n numeri interi (o reali).
-* Trasformare il programma in una funzione.
-=======
 * 4 - Scrivere un programma che calcola la media di n numeri interi (o reali). Trasformare il programma in una funzione.
->>>>>>> 9b63569f1f8179eb489f1e964a55366d2c3f0c9f
       PARAMETER(MAX_N=100)
       REAL X(MAX_N),MEDIA
 

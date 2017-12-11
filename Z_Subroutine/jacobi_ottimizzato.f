@@ -1,38 +1,34 @@
-	SUBROUTINE JACOBI_OTTIMIZZATO(A,B,X_NEW,N_MAX,N,MAX_K,EPS,ENDTEST)
+	SUBROUTINE JACOBI_OTTIMIZZATO(A,B,X,N_MAX,N,MAX_ITER,EPS,ITER)
 	REAL A(N_MAX,N)
-	REAL B(N),X_OLD(N),X_NEW(N),DELTA(N)
-	REAL SOMMA
+	REAL B(N),X_OLD(N),X(N),DELTA(N)
+	REAL NORMAINF,EPS
 	LOGICAL ENDTEST
-	X_OLD(:)=0
-	ENDTEST=.FALSE.
-	DO K=1,MAX_K
+*    Inizializzazione del vettore X_OLD
+	DO I=1,N
+		X_OLD(I)=X(I)
+	END DO
+
+*    Algoritmo di iterazione	
+      DO ITER=1,MAX_ITER
 		DO I=1,N
-			SOMMA=0
+			X(I)=B(I)
 			DO J=1,I-1
-				SOMMA=SOMMA+(A(I,J)*X_OLD(J))
+				X(I)=X(I)-(A(I,J)*X_OLD(J))
 			END DO
 			DO J=I+1,N
-				SOMMA=SOMMA+(A(I,J)*X_OLD(J))
+				X(I)=X(I)-(A(I,J)*X_OLD(J))
 			END DO
-			X_NEW(I)=(B(I)-SOMMA)/A(I,I)
+			X(I)=X(I)/A(I,I)
 		END DO
-* ------- TEST DI ARRESTO ----------------------------------
-		CALL DELTA_VETT(X_NEW,X_OLD,DELTA,N)
-		IF(NORMAINF(DELTA,N)/NORMAINF(X_NEW,N).LT.EPS)THEN
-			ENDTEST=.TRUE.
+		DO I=1,N
+			DELTA(I)=X(I)-X_OLD(I)
+			X_OLD(I)=X(I)
+		END DO
+* ------- TEST DI ARRESTO ------------------------------------------------
+		IF(NORMAINF(DELTA,N)/NORMAINF(X,N).LT.EPS)THEN
+			WRITE(*,*)'Test di arresto'
 			RETURN
 		END IF
-* ---------------------------------------------------------- 
-		DO I=1,N
-			X_OLD(I)=X_NEW(I)
-		END DO
+* ------------------------------------------------------------------------ 
 	END DO
 	END
-
-	SUBROUTINE DELTA_VETT(X,Y,DELTA,N)
-	REAL X(N),Y(N),DELTA(N)
-	DO I=1,N
-		DELTA(I)=X(I)-Y(I)
-	END DO
-	END
-		

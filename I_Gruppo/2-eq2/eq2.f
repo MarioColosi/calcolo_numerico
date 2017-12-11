@@ -1,11 +1,4 @@
       PROGRAM EQ2
-<<<<<<< HEAD
-* Risolvere l'equazione di secondo grado
-      WRITE(*,*)'*** EQUAZIONI DI SECONDO GRADO: ax^2 + bx + c = 0'
-      WRITE(*,*)'Inserisci il valore di A'
-=======
-* 2. Scrivere un programma per la risoluzione delle equazioni di secondo grado. Trasformare
-*    il programma in subroutine.
 	REAL DELTA
 	COMPLEX C1,C2
 
@@ -20,7 +13,6 @@
 	WRITE(*,1)'      RISULUZIONE EQUAZIONE DI SECONDO GRADO      ',
 	*		  '          DEL TIPO:   ax^2 + bx + c = 0           '
       WRITE(*,3)'Inserisci il valore di A: '		   
->>>>>>> 9b63569f1f8179eb489f1e964a55366d2c3f0c9f
       READ(*,*)A
       WRITE(*,3)'Inserisci il valore di B: '
       READ(*,*)B

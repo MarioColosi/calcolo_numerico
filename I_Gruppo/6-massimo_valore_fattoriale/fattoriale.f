@@ -1,11 +1,6 @@
 	PROGRAM FATTORIALE 
-<<<<<<< HEAD
-*Studiare il massimo valore del fattoriale di n calcolabile da un elaboratore nel caso 
-*di variabili di tipo intero, reale e reale in doppia precisione. 
-=======
 * 6. Studiare il massimo valore del fattoriale di n calcolabile da un elaboratore nel caso di
 *    variabili di tipo intero, reale e reale in doppia precisione.
->>>>>>> 9b63569f1f8179eb489f1e964a55366d2c3f0c9f
 	INTEGER FATT,RIS
 
 	REAL FATT_R,RIS_R

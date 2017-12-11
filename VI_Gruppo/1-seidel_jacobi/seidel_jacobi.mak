@@ -34,9 +34,8 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-# PROP Target_Last_Scanned "seidel_jacobi - Win32 Debug"
-F90=fl32.exe
 RSC=rc.exe
+F90=fl32.exe
 
 !IF  "$(CFG)" == "seidel_jacobi - Win32 Release"
 
@@ -52,7 +51,9 @@ ALL : "$(OUTDIR)\seidel_jacobi.exe"
 CLEAN : 
 	-@erase ".\seidel_jacobi.exe"
 	-@erase ".\seidel_jacobi.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\jacobi_ottimizzato.obj"
+	-@erase ".\gauss_seidel.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -72,7 +73,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /out:"$(OUTDIR)/seidel_jacobi.exe" 
 LINK32_OBJS= \
 	".\seidel_jacobi.obj" \
-	".\jacobi_ottimizzato.obj"
+	".\norme_vett.obj" \
+	".\jacobi_ottimizzato.obj" \
+	".\gauss_seidel.obj"
 
 "$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -93,7 +96,9 @@ ALL : "$(OUTDIR)\seidel_jacobi.exe"
 CLEAN : 
 	-@erase ".\seidel_jacobi.exe"
 	-@erase ".\seidel_jacobi.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\jacobi_ottimizzato.obj"
+	-@erase ".\gauss_seidel.obj"
 	-@erase ".\seidel_jacobi.ilk"
 	-@erase ".\seidel_jacobi.pdb"
 
@@ -115,7 +120,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /out:"$(OUTDIR)/seidel_jacobi.exe" 
 LINK32_OBJS= \
 	".\seidel_jacobi.obj" \
-	".\jacobi_ottimizzato.obj"
+	".\norme_vett.obj" \
+	".\jacobi_ottimizzato.obj" \
+	".\gauss_seidel.obj"
 
 "$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -157,9 +164,30 @@ SOURCE=.\seidel_jacobi.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f"
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f"
 
 "$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\gauss_seidel.f"
+
+"$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

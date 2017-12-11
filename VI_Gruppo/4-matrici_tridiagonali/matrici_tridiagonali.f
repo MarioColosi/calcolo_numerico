@@ -4,25 +4,22 @@
 * dove A e’ una matrice tridiagonale, pentadiagonale o eptadiagonale, usando la tecnica di 
 * memorizzazione di A in vettori.
 
-	PARAMETER(N_MAX=500,N1=4,K_MAX=50,EPS=0.0001)
+	PARAMETER(N_MAX=500,N1=3,MAX_K=50,EPS=0.0001)
 	REAL TRI(N_MAX,N_MAX)
 	REAL X1(N_MAX),X2(N_MAX),X3(N_MAX)
 	REAL B(N_MAX),X(N_MAX)
 	LOGICAL ENDTEST
 	WRITE(*,*)'La dimensione della matrice tridiagonale e'' N=4'
 	
-	CALL INIT_TRI(TRI,N_MAX,N1,X1,X2,X3)
+*	CALL INIT_TRI(TRI,N_MAX,N1,X1,X2,X3)
+	CALL INIT_MATRIX(TRI,N_MAX,N1)
       WRITE(*,*)'Inserisci il vettore termini noti con 4 elementi'
 	READ(*,*)(B(I),I=1,N1)
 
-	WRITE(*,*)'MATRICE TRIDIAGONALE:'
-	DO I=1,N1
-		WRITE(*,*)(TRI(I,J),J=1,N1)
-	END DO
-
 	I=1
 	ENDTEST=.FALSE.
-	DO WHILE(.NOT.ENDTEST.AND.I.LT.50)
+	X(:)=0.
+	DO WHILE(.NOT.ENDTEST.AND.I.LT.2)
 		CALL JACOBI_OTTIMIZZATO(TRI,B,X,N_MAX,N1,MAX_K,EPS,ENDTEST)
 		I=I+1
       END DO

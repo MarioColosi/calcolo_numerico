@@ -1,10 +1,5 @@
       PROGRAM MASSIMO_E_MINIMO
-<<<<<<< HEAD
-*Trovare il massimo (o minimo) di un insieme di numeri. 
-*Trasformare il programma in una funzione. 
-=======
 * 5. Trovare il massimo (o minimo) di un insieme di numeri. Trasformare il programma in una funzione.
->>>>>>> 9b63569f1f8179eb489f1e964a55366d2c3f0c9f
       PARAMETER(MAX_N=100)
       REAL X(MAX_N),MINIMO,MASSIMO
 

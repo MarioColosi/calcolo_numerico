@@ -33,6 +33,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "sommatoria - Win32 Debug"
 RSC=rc.exe
 F90=fl32.exe
 
@@ -49,7 +50,9 @@ ALL : "$(OUTDIR)\sommatoria.exe"
 
 CLEAN : 
 	-@erase ".\sommatoria.exe"
+	-@erase ".\max_e_min.obj"
 	-@erase ".\sommatoria.obj"
+	-@erase ".\fattoriale.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -67,7 +70,9 @@ LINK32=link.exe
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/sommatoria.pdb" /machine:I386 /out:"$(OUTDIR)/sommatoria.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/sommatoria.obj"
+	"$(INTDIR)/max_e_min.obj" \
+	"$(INTDIR)/sommatoria.obj" \
+	"$(INTDIR)/fattoriale.obj"
 
 "$(OUTDIR)\sommatoria.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -87,7 +92,9 @@ ALL : "$(OUTDIR)\sommatoria.exe"
 
 CLEAN : 
 	-@erase ".\sommatoria.exe"
+	-@erase ".\max_e_min.obj"
 	-@erase ".\sommatoria.obj"
+	-@erase ".\fattoriale.obj"
 	-@erase ".\sommatoria.ilk"
 	-@erase ".\sommatoria.pdb"
 
@@ -108,7 +115,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/sommatoria.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/sommatoria.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/sommatoria.obj"
+	"$(INTDIR)/max_e_min.obj" \
+	"$(INTDIR)/sommatoria.obj" \
+	"$(INTDIR)/fattoriale.obj"
 
 "$(OUTDIR)\sommatoria.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -144,6 +153,28 @@ LINK32_OBJS= \
 SOURCE=.\sommatoria.f
 
 "$(INTDIR)\sommatoria.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\I_Gruppo\5-massimo_e_minimo\max_e_min.f"
+
+"$(INTDIR)\max_e_min.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\I_Gruppo\6-massimo_valore_fattoriale\fattoriale.f"
+
+"$(INTDIR)\fattoriale.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File

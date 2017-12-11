@@ -35,6 +35,7 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
+# PROP Target_Last_Scanned "precisione_macchina - Win32 Debug"
 F90=fl32.exe
 RSC=rc.exe
 
@@ -52,6 +53,8 @@ ALL : "$(OUTDIR)\precisione_macchina.exe"
 CLEAN : 
 	-@erase ".\precisione_macchina.exe"
 	-@erase ".\precisione_macchina.obj"
+	-@erase ".\ordinamento.obj"
+	-@erase ".\prodotto_scalare.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -70,7 +73,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/precisione_macchina.pdb" /machine:I386\
  /out:"$(OUTDIR)/precisione_macchina.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/precisione_macchina.obj"
+	"$(INTDIR)/precisione_macchina.obj" \
+	"$(INTDIR)/ordinamento.obj" \
+	"$(INTDIR)/prodotto_scalare.obj"
 
 "$(OUTDIR)\precisione_macchina.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -91,6 +96,8 @@ ALL : "$(OUTDIR)\precisione_macchina.exe"
 CLEAN : 
 	-@erase ".\precisione_macchina.exe"
 	-@erase ".\precisione_macchina.obj"
+	-@erase ".\ordinamento.obj"
+	-@erase ".\prodotto_scalare.obj"
 	-@erase ".\precisione_macchina.ilk"
 	-@erase ".\precisione_macchina.pdb"
 
@@ -111,7 +118,9 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/precisione_macchina.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/precisione_macchina.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/precisione_macchina.obj"
+	"$(INTDIR)/precisione_macchina.obj" \
+	"$(INTDIR)/ordinamento.obj" \
+	"$(INTDIR)/prodotto_scalare.obj"
 
 "$(OUTDIR)\precisione_macchina.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -147,6 +156,28 @@ LINK32_OBJS= \
 SOURCE=.\precisione_macchina.f
 
 "$(INTDIR)\precisione_macchina.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\I_Gruppo\8-ordinamento_vettore\ordinamento.f"
+
+"$(INTDIR)\ordinamento.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\
+"\Users\Mario-PC\Desktop\calcolo_numerico\I_Gruppo\12-prodotto_scalare\prodotto_scalare.f"
+
+"$(INTDIR)\prodotto_scalare.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File
