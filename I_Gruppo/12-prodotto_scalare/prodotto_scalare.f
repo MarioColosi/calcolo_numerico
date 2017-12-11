@@ -1,5 +1,6 @@
 	PROGRAM PRODOTTO_SCALARE
-*.Dati due vettori x e y con n componenti calcolare il prodotto scalare
+*.
+
 	PARAMETER(MAX_N=500)
 	REAL X(MAX_N),Y(MAX_N),M
 	WRITE(*,*)'Inserisci la dimensione del vettore:'

@@ -1,0 +1,40 @@
+GRUPPO1_ESERCIZIO12
+
+PRODOTTO SCALARE:
+Il prodotto scalare è un'operazione binaria che associa ad ogni coppia di vettori 
+appartenenti ad uno spazio vettoriale definito sul campo reale un elemento del campo.
+Si tratta di un prodotto interno sul campo reale.
+
+Utilizziamo le nozioni acquisite per risolvere l'esercizio:
+'Dati due vettori x e y con n componenti calcolare il prodotto scalare.'
+
+
+********************************** TEST 1 *********************************
+Considero i vettori di DIM=2
+X=|6 , 7|t
+Y=|4, 5|t
+Il vettore X e':
+       6.000000        7.000000
+Il vettore Y e':
+       4.000000        5.000000
+Il prodotto scalare e':      59.000000
+
+
+********************************* TEST 2 **********************************
+Considero i vettori di DIM=50
+
+Il vettore X e':
+       2.000000        4.000000    56786.000000   334567.000000
+ 3334545.000000       -3.000000 -4455455.000000        3.000000
+       4.000000        4.000000
+Il vettore Y e':
+     345.000000    0.000000E+00     8765.000000   467654.000000
+  -26543.000000  -578765.000000       -3.000000       -3.000000
+      45.000000        4.000000
+Il prodotto scalare e':   6.846560E+10 
+
+
+**************************** ANALISI ***************************
+
+Dai test risulta che il prodotto scalare funziona correttamente. 
+

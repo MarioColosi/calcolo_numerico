@@ -1,6 +1,8 @@
 	PROGRAM FATTORIALE 
-
+*Studiare il massimo valore del fattoriale di n calcolabile da un elaboratore nel caso 
+*di variabili di tipo intero, reale e reale in doppia precisione. 
 	INTEGER FATT,RIS
+
 	REAL FATT_R,RIS_R
 	REAL*8 FATT_R8, RIS_R8
 	WRITE(*,*)'Inserisci il numero che vuoi fattorializzare:'

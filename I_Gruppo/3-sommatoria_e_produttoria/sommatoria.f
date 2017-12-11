@@ -1,3 +1,4 @@
+
       PROGRAM SOMMATORIA
       PARAMETER(MAX_N=100)
       REAL X(MAX_N)

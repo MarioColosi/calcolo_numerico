@@ -1,0 +1,38 @@
+GRUPPO1_ESERCIZIO3
+
+Calcolo della sommatoria :
+La sommatoria abbrevia, in una notazione sintetica, la somma di un certo insieme 
+di addendi. 
+In un linguaggio di programmazione qualsiasi il calcolo della sommatoria equivale ad 
+un ciclo iterativo.
+
+Calcolo della produttoria : 
+La produttoria abbrevia, in una notazione sintetica, la moltiplicazione 
+di un certo numero di fattori. 
+In un linguaggio di programmazione qualsiasi il calcolo della sommatoria equivale ad 
+un ciclo iterativo.
+
+Utilizziamo le nozioni sopra citate per risolvere il seguente esercizio:
+' Scrivere i programmi per la sommatoria e la produttoria di n numeri.'
+
+**************************** TEST 1 ******************************
+
+PRODUTTORIA di 12 numeri:
+
+13, 12, 12, 12, 15, 1, 33, 45, 65, 77, 45, 900
+
+La produttoria dei numeri e'   1.014294E+17
+
+***************************** TEST 2 *******************************
+
+SOMMATORIA di 66 numeri:
+
+2,3,4,22,6,7654,9,8,7,-333,56,5555,6543,-4,37485,3,4,6,7,88,7,8,6,
+5,4,5,3,-99,-100,47,3,4,55,678,4,5,6,3,4,9,8,6,5,4,4,4,4,5,6,7,8,9,
+3,4,5,2,3,4,-4,-7,-7,6,6,4,8,-1
+
+La sommatoria dei numeri e'   57878.000000
+
+**************************** ANALISI **************************
+
+Il calcolo della sommatoria e della produttoria funziona correttamente. 

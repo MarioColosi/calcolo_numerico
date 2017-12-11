@@ -1,0 +1,47 @@
+GRUPPO1_ESERCIZIO1
+
+Nei linguaggi di programmazione ad alto livello (C,C++,Python,...) per verificare se 
+un numero è pari o dispari si utilizza l'operatore '%' (modulo). 
+OPERATORE MODULO: Tra i numeri interi è definita la funzione modulo, indicato con 
+'%', che dà come risultato il resto della divisione euclidea del primo numero 
+per il secondo. 
+L'operatore prima citato non fa parte della sintassi di Fortran 77, conseguentemente
+utilizziamo il seguente algoritmo:
+
+' L=N/2
+  se L*2 è uguale ad N 
+       il numero è pari
+  altrimenti 
+       il numero è dispari '
+
+		
+Utilizziamo il linguaggio Fortran per risolvere il seguente esercizio:
+'Dati due numeri interi dire se il primo e' multiplo del secondo.
+ Caso particolare dato un numero intero dire se e' pari o dispari.'
+
+************************** TEST 1 *****************************
+
+Dato i numeri interi : 3, 5
+Il primo numero non e' multiplo del secondo!
+
+*** PARI E DISPARI ***
+Dato il numero intero : 5
+
+Il numero e' dispari!
+
+*************************** TEST 2 ******************************
+
+Dati i numeri interi : 32, 8
+Il primo numero e' multiplo del secondo!
+
+*** PARI E DISPARI ***
+Dato il numero intero : 900000000
+
+Il numero e' pari!
+
+
+***************************** ANALISI *******************************
+
+L'algoritmo utilizzato per calcolare i multipli e la parità/disparità di un numero intero 
+funziona anche per numeri molto grandi!
+Il codice risulta quindi ottimizzato. 

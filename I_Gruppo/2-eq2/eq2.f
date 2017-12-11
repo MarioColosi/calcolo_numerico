@@ -1,4 +1,5 @@
       PROGRAM EQ2
+* Risolvere l'equazione di secondo grado
       WRITE(*,*)'*** EQUAZIONI DI SECONDO GRADO: ax^2 + bx + c = 0'
       WRITE(*,*)'Inserisci il valore di A'
       READ(*,*)A

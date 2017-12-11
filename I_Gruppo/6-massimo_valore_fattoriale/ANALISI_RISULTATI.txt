@@ -1,0 +1,129 @@
+GRUPP01_ESERCIZIO6
+
+FATTORIALE: 
+Si definisce fattoriale di un numero naturale n, indicato con n!,
+il prodotto dei numeri interi positivi minori o uguali a tale numero.
+
+7!=7*6*5*4*3*2*1
+
+Per risolvere il fattoriale nel modo più efficiente possibile utilizziamo una formula 
+che procede all'inverso:
+
+7!=1*2*3*4*5*6*7
+
+Utilizziamo le nozioni acquisite per risolvere il seguente esercizio:
+' Studiare il massimo valore del fattoriale di n calcolabile da un elaboratore
+  nel caso di variabili di tipo intero, reale e reale in doppia precisione. '
+
+***************************** TEST 1 ******************************
+
+FATTORIALE DI 77:
+
+Il fattoriale di:          1 e':          1
+Il fattoriale di:          2 e':          2
+Il fattoriale di:          3 e':          6
+Il fattoriale di:          4 e':         24
+Il fattoriale di:          5 e':        120
+Il fattoriale di:          6 e':        720
+Il fattoriale di:          7 e':       5040
+Il fattoriale di:          8 e':      40320
+Il fattoriale di:          9 e':     362880
+Il fattoriale di:         10 e':    3628800
+Il fattoriale di:         11 e':   39916800
+Il fattoriale di:         12 e':  479001600
+Il fattoriale di:         13 e': 1932053504
+Il fattoriale di:         14 e': 1278945280
+Il fattoriale di:         15 e': 2004310016
+Il fattoriale di:         16 e': 2004189184
+Il fattoriale di:         17 e': -288522240
+Il fattoriale di:         18 e': -898433024
+Il fattoriale di:         19 e':  109641728
+Il fattoriale di:         20 e':-2102132736
+Il fattoriale di:         21 e':-1195114496
+Il fattoriale di:         22 e': -522715136
+Il fattoriale di:         23 e':  862453760
+Il fattoriale di:         24 e': -775946240
+Il fattoriale di:         25 e': 2076180480
+Il fattoriale di:         26 e':-1853882368
+Il fattoriale di:         27 e': 1484783616
+Il fattoriale di:         28 e':-1375731712
+Il fattoriale di:         29 e':-1241513984
+Il fattoriale di:         30 e': 1409286144
+Il fattoriale di:         31 e':  738197504
+Il fattoriale di:         32 e':-2147483648
+Il fattoriale di:         33 e':-2147483648
+Il fattoriale di:         34 e':          0
+Il fattoriale di:         35 e':          0
+Il fattoriale di:         36 e':          0
+Il fattoriale di:         37 e':          0
+Il fattoriale di:         38 e':          0
+Il fattoriale di:         39 e':          0
+Il fattoriale di:         40 e':          0
+Il fattoriale di:         41 e':          0
+Il fattoriale di:         42 e':          0
+Il fattoriale di:         43 e':          0
+Il fattoriale di:         44 e':          0
+Il fattoriale di:         45 e':          0
+Il fattoriale di:         46 e':          0
+Il fattoriale di:         47 e':          0
+Il fattoriale di:         48 e':          0
+Il fattoriale di:         49 e':          0
+Il fattoriale di:         50 e':          0
+Il fattoriale di:         51 e':          0
+Il fattoriale di:         52 e':          0
+Il fattoriale di:         53 e':          0
+Il fattoriale di:         54 e':          0
+Il fattoriale di:         55 e':          0
+Il fattoriale di:         56 e':          0
+Il fattoriale di:         57 e':          0
+Il fattoriale di:         58 e':          0
+Il fattoriale di:         59 e':          0
+Il fattoriale di:         60 e':          0
+Il fattoriale di:         61 e':          0
+Il fattoriale di:         62 e':          0
+Il fattoriale di:         63 e':          0
+Il fattoriale di:         64 e':          0
+Il fattoriale di:         65 e':          0
+Il fattoriale di:         66 e':          0
+Il fattoriale di:         67 e':          0
+Il fattoriale di:         68 e':          0
+Il fattoriale di:         69 e':          0
+Il fattoriale di:         70 e':          0
+Il fattoriale di:         71 e':          0
+Il fattoriale di:         72 e':          0
+Il fattoriale di:         73 e':          0
+Il fattoriale di:         74 e':          0
+Il fattoriale di:         75 e':          0
+Il fattoriale di:         76 e':          0
+Il fattoriale di:         77 e':          0
+
+************************************ TEST 2 ***********************************
+
+FATTORIALE DI 6: 
+
+Il fattoriale di:          1 e':          1
+Il fattoriale di:          2 e':          2
+Il fattoriale di:          3 e':          6
+Il fattoriale di:          4 e':         24
+Il fattoriale di:          5 e':        120
+Il fattoriale di:          6 e':        720
+
+Il fattoriale di:          1 e':   5.912880E-39
+Il fattoriale di:          2 e':   1.182576E-38
+Il fattoriale di:          3 e':   3.547728E-38
+Il fattoriale di:          4 e':   1.419091E-37
+Il fattoriale di:          5 e':   7.095456E-37
+Il fattoriale di:          6 e':   4.257273E-36
+
+Il fattoriale di:          1 e':       1.000000000000000
+Il fattoriale di:          2 e':       2.000000000000000
+Il fattoriale di:          3 e':       6.000000000000000
+Il fattoriale di:          4 e':      24.000000000000000
+Il fattoriale di:          5 e':     120.000000000000000
+Il fattoriale di:          6 e':     720.000000000000000
+
+*************************** ANALISI ***************************
+
+L'algoritmo ottimizzato funziona correttamente per numeri piccoli, ma nel primo test 
+si evince che superata una certa cifra il risultato è sempre 0. 
+Nel secondo test invece è stato possibile stampare anche la soluzione in doppia precisione. 

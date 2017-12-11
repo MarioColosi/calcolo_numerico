@@ -1,0 +1,35 @@
+GRUPPO1_ESERCIZIO5
+
+Calcolare il massimo e il minimo dati un set di numeri in input significa effettuare 
+ripetuti confronti tra i numeri per trovare quello minimo e massimo. 
+
+Utilizziamo sperimentalmente le nozioni acquisite per risolvere il seguente esercizio:
+' Trovare il massimo (o minimo) di un insieme di numeri. 
+  Trasformare il programma in una funzione.'
+
+**************************** TEST 1 *****************************
+
+Dati 10 numeri: 2,3,4,5,6,7,4,8,9,6
+
+Il minimo e':       2.000000
+Il massimo e':       9.000000
+
+
+**************************** TEST 2 ******************************
+
+Dati 10 numeri: -2,3,-1,0,33,4,-45,8,9,4
+
+Il minimo e':     -45.000000
+Il massimo e':      33.000000
+
+**************************** TEST 3 ******************************
+
+Dati 10 numeri: 1234,543678,5434446,496743,575757,33,5,6859473,-44565,-98767
+
+Il minimo e':  -98767.000000
+Il massimo e': 6859473.000000
+
+******************************** ANALISI **********************************
+
+L'algoritmo utilizzato risulta efficiente per numeri molto grandi ed anche negativi.
+ 

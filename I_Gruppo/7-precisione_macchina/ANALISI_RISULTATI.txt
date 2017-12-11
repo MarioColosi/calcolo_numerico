@@ -1,0 +1,18 @@
+GRUPPO1_ESERCIZIO7
+
+PRECISIONE MACCHINA:
+In informatica l'epsilon di macchina è il più piccolo numero, epsilon,
+appartenente a un dato insieme F di numeri in virgola mobile, diverso 
+in valore assoluto da zero, che sommato all' unità, dà un risultato diverso da 1.
+
+Utilizziamo le nozioni acquisite per risolvere il seguente esercizio:
+'Trovare la precisione della macchina in singola e doppia precisione.'
+
+**************************** TEST 1 ******************************
+La precisione della macchina e':   1.192093E-07
+La precisione nel secondo metodo e':   2.220446E-16
+La precisione della macchina a REAL*8 e':  2.220446049250313E-016
+
+**************************** ANALISI *******************************
+
+La precisione è calcolata in una macchina virtuale Windows. 

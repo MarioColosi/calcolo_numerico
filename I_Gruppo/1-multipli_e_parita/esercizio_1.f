@@ -1,6 +1,6 @@
 	PROGRAM esercizio_1
 * 1. Dati due numeri interi dire se il primo e' multiplo del secondo.
-*    Caso particolare dato un numero intero dire se � pari o dispari.
+*    Caso particolare dato un numero intero dire se e' pari o dispari.
 
 	WRITE(*,*)'*** MULTIPLO ***'
       WRITE(*,*)'Inserire un numero intero:'

@@ -1,4 +1,5 @@
       PROGRAM PRODUTTORIA
+* Scrivere i programmi per la sommatoria e la produttoria di n numeri. 
       PARAMETER(MAX_N=100)
       REAL X(MAX_N)
       WRITE(*,*)'*** PRODUTTORIA DI N NUMERI INTERI ***'

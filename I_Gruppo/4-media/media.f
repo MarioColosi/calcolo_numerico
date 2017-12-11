@@ -1,4 +1,6 @@
       PROGRAM CALCOLAMEDIA
+* Scrivere un programma che calcola la media di n numeri interi (o reali).
+* Trasformare il programma in una funzione.
       PARAMETER(MAX_N=100)
       REAL X(MAX_N),MEDIA
       WRITE(*,*)'*** MEDIA DI N NUMERI INTERI ***'

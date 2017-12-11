@@ -1,4 +1,12 @@
 GRUPPO_3 ESERCIZIO_3
+
+NORME MATRICIALI:
+||A||1   =  max[j=1,N]S[i=1,N]ABS(A(i,j))
+||A||2   =  SQRT(p(At*A))
+||A||inf =  max[i=1,N]S[j=1,N]ABS(A(i,j))
+||A||fr  =  SQRT(tr(At*A)) = S[i,j=1,N](A(i,j))^2
+
+
 Date le seguenti principali relazioni tra le varie norme matriciali studiate:
   1)
 	(1/SQRT(N))*||A||inf <= ||A||2 <= SQRT(N)*||A||inf
@@ -58,3 +66,7 @@ Data la seguente matrice di ordine N=4:
   4)
       	88.620910 <=       97.516660
 	E' verificata la quarta disequazione!
+
+******************************** ANALISI ****************************
+Le matrici richieste in input risultano ben condizionate in quanto verificano le disequazioni
+proposte dall'esercizio. 

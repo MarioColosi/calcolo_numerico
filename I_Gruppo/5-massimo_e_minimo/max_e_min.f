@@ -1,4 +1,6 @@
       PROGRAM MASSIMO_E_MINIMO
+*Trovare il massimo (o minimo) di un insieme di numeri. 
+*Trasformare il programma in una funzione. 
       PARAMETER(MAX_N=100)
       REAL X(MAX_N),MINIMO,MASSIMO
       WRITE(*,*)'*** MASSIMO E MINIMO DI N NUMERI INTERI ***'

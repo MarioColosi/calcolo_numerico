@@ -1,0 +1,49 @@
+GRUPPO1_ESERCIZIO2
+
+EQUAZIONI DI SECONDO GRADO:
+
+Un'equazione di secondo grado è un'equazione del tipo:
+
+			ax^2+bx+c=0
+
+con a,b,c appartenenti ad R ed a!=0, in quanto se a fosse uguale a 0 si avrebbe :
+
+			bx+c=0 
+
+che è un'equazione di grado 1.
+
+La formula risolutiva prevede il calcolo di un 'delta':
+
+- se delta > 0 le soluzioni sono reali e distinte  
+- se delta < 0 non ha soluzioni reali (soluzioni complesse)
+- se delta = 0 ha soluzioni reali coincidenti 
+
+Utilizziamo sperimentalmente le nozioni acquisite per risolvere l'esercizio:
+' Scrivere un programma per la risoluzione delle equazioni di secondo grado.
+  Trasformare il programma in subroutine. '
+
+********************************** TEST 1 ***********************************
+
+Consideriamo : a = 4
+	       b = 5
+	       c = 7
+
+DELTA =      -87.000000
+La soluzione dell'equazione e' complessa
+
+********************************** TEST 2 ***********************************
+
+Consideriamo : a = 1
+	       b = 3
+	       c = -4
+
+DELTA =       25.000000
+La soluzione dell'equazione e':
+
+X1 =       -4.000000
+X2 =        1.000000
+
+********************************* ANALISI ********************************
+
+I test mostrano che l'algoritmo riconosce soluzioni reali e complesse e funziona
+correttamente nel calcolo delle radici reali. 

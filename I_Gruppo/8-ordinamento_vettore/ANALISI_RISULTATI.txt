@@ -1,0 +1,84 @@
+GRUPPO1_ESERCIZIO8
+
+ORDINAMENTO DI UN VETTORE:
+Per risolvere un problema computabile esistono molti algoritmi risolutivi. 
+Algoritmi che vengono valutati secondo diversi criteri, criteri che fanno di un 
+certo algoritmo la soluzione migliore in alcuni casi ma non in altri, in base alle 
+necessità del caso. I principali criteri di valutazione d'un algoritmo sono:
+
+Tempo di calcolo occorrente (complessità temporale)
+Occupazione di memoria (complessità spaziale)
+E solitamente ottimizzare rispetto a un criterio significa spendere rispetto all'altro.
+
+La rapidità di calcolo è sempre un fattore importantissimo nella determinazione della
+bontà di un algoritmo ma essa è ovviamente correlata con la quantità d'informazioni 
+da elaborare, e quindi anche al numero di instruzioni da seguire in particolare 
+operazioni di confronto e scambio.
+
+BUBBLESORT
+Il bubblesort è un algoritmo iterativo, ovvero basato sulla ripetizione di un procedimento
+fondamentale. La singola iterazione dell'algoritmo prevede che gli elementi dell'array 
+siano confrontati a due a due, procedendo in un verso stabilito (che si scandisca l'array
+a partire dall'inizio in avanti, o a partire dal fondo all'indietro, è irrilevante).
+
+CODICE IN C DEL BUBBLESORT
+
+void BubbleSort(int *array, int elemN)
+ {
+   int i, tmp, ultimo;
+   int alto=elemN; /* elemN è il numero degli elementi del vettore da ordinare */
+   
+   while (alto >= 0) /* in questo modo si evita 1 passaggio*/
+     { 
+         ultimo = -1;
+         for (i=0; i<alto-1; i++) /* si mostra che un semplice array come 
+                                     int nums[elemN] = {4,3,2,1};
+                                     non viene ordinato correttamente a causa della condizione i<alto-1
+                                  */
+         {
+           if (array[i]>array[i+1]) /* sostituire ">" con "<" per avere un ordinamento decrescente */
+           { 
+             tmp = array[i]; 
+             array[i] = array[i+1]; 
+             array[i+1] = tmp;
+             ultimo = i;
+           } 
+         }
+     alto = ultimo;
+     }
+ }
+
+Utilizziamo le nozioni acquisite per risolvere il seguente esercizio: 
+' Ordinamento di un insieme di numeri (oppure nomi), stampare l'insieme ordinato.'
+
+******************************* TEST 1 ********************************
+Considero un vettore di 12 elementi.
+VETT: |1, 3, 6, 1, 33, 0, -2, 3, 1, 78, 1, -2|t
+
+Il vettore e':
+       1.000000        3.000000        6.000000        1.000000
+      33.000000    0.000000E+00       -2.000000        3.000000
+       1.000000       78.000000        1.000000       -2.000000
+
+Il vettore ordinato e':
+      -2.000000    0.000000E+00        1.000000        1.000000
+       1.000000        3.000000        3.000000        6.000000
+      33.000000       78.000000    0.000000E+00       -2.000000
+
+********************************* TEST 2 ******************************
+Considero un vettore di 7 elementi.
+VETT: |2345378, 2873625, -49732527, 373737, 0, -271839, 271615357|t
+
+Il vettore e':
+ 2345378.000000  2873625.000000   -4.973253E+07   373737.000000
+   0.000000E+00  -271839.000000    2.716154E+08
+
+Il vettore ordinato e':
+  -4.973253E+07  -271839.000000    0.000000E+00   373737.000000
+ 2345378.000000  2873625.000000    2.716154E+08
+
+********************************* ANALISI *****************************
+L'algoritmo utilizzato funziona correttamente sia per vettori con numeri piccoli 
+che con numeri grandi, positivi e negativi. 
+Il bubble sort effettua all'incirca N^2/2 confronti e N^2/2 scambi sia in media che 
+nel caso peggiore. Il tempo di esecuzione dell'algoritmo é Theta(n^2).

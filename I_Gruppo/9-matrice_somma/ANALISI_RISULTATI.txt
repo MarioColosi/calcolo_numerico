@@ -1,0 +1,57 @@
+GRUPPO1_ESERCIZIO9
+
+MATRICE:
+In algebra lineare una matrice è una tabella ordinata di elementi.
+
+SOMMA DI DUE MATRICI:
+In matematica la somma fra matrici è l'operazione di addizione di due matrici A e B con m righe e n colonne.
+Il risultato è una nuova matrice, che si indica con (A+B), che possiede m righe ed n colonne.
+
+FORMULA: 
+ (A+B)_{i,j}=A_{i,j}+B_{i,j}
+
+Utilizziamo le nozioni acquisite per risolvere il seguente esercizio:
+' Date due matrici di ordine n calcolare la matrice somma.'
+
+******************************* TEST 1 ******************************
+
+Data una matrice di DIM=5X5
+
+La matrice A e':
+       1.000000        3.000000        4.000000        5.000000       6.000000
+       7.000000        5.000000        4.000000        5.000000       6.000000
+       4.000000        5.000000        6.000000        7.000000       5.000000
+       4.000000        5.000000        6.000000        7.000000       5.000000
+       8.000000        9.000000        7.000000        6.000000       5.000000
+La matrice B e':
+       3.000000        4.000000        5.000000        6.000000       7.000000
+       5.000000        6.000000        8.000000        9.000000       7.000000
+       6.000000        3.000000        4.000000        5.000000       6.000000
+       7.000000        8.000000        9.000000        6.000000       4.000000
+       5.000000        5.000000        6.000000        7.000000       8.000000
+La matrice SOMMA e':
+       4.000000        7.000000        9.000000       11.000000      13.000000
+      12.000000       11.000000       12.000000       14.000000      13.000000
+      10.000000        8.000000       10.000000       12.000000      11.000000
+      11.000000       13.000000       15.000000       13.000000       9.000000
+      13.000000       14.000000       13.000000       13.000000      13.000000
+
+********************************** TEST 2 **********************************
+
+Data una matrice di DIM=3X3
+
+La matrice A e':
+       1.000000        3.000000        4.000000
+      -5.000000        7.000000       -8.000000
+       6.000000        5.000000        4.000000
+La matrice B e':
+       5.000000        6.000000        7.000000
+     -88.000000        9.000000    0.000000E+00
+      -3.000000        4.000000        5.000000
+La matrice SOMMA e':
+       6.000000        9.000000       11.000000
+     -93.000000       16.000000       -8.000000
+       3.000000        9.000000        9.000000
+
+**************************** ANALISI **************************
+Il calcolo della matrice somma risulta corretto in entrambi i test.
