@@ -1,0 +1,11 @@
+	SUBROUTINE MUL_MATRIX(A,B,C,N_MAX,N)
+	REAL A(N_MAX,N),B(N_MAX,N),C(N_MAX,N)
+	DO I=1,N
+		DO J=1,N
+			C(I,J)=(0,0)
+			DO K=1,N
+			C(I,J)=C(I,J)+A(I,K)*B(K,J)
+			END DO
+		END DO
+	END DO
+	END

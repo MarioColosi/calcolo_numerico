@@ -1,8 +1,18 @@
 	PROGRAM TAB 
-* .Fare il grafico delle funzioni
+* 14.Fare il grafico delle funzioni
 	REAL X(0:98),Y(0:98)
-	WRITE(*,*)'Inserisci gli estremi di graficazione:'
-	READ(*,*)A,B,N
+
+*    Sottotitolo (INPUT: 1 stringa da 50 caratteri)
+2	FORMAT(/,2X,52('-'),/,2X,'  ',A,/,2X,52('-'),/)
+*    Messaggio di input (INPUT: 1 stringa, 1 intero)
+3	FORMAT(2X,'[INPUT] ',A,$)
+																	
+      WRITE(*,2)'              GRAFICI DI FUNZIONI                 '
+
+	WRITE(*,3)'Inserisci gli estremi di graficazione [a,b]: '
+	READ(*,*)A,B
+	WRITE(*,3)'Inserisci il numero di punti di graficazione: '
+	READ(*,*)N
 	N=N-1
 	H=(B-A)/N
 	X(0)=A
@@ -13,10 +23,13 @@
 	END DO
 	X(N)=B
 	Y(N)=F(X(N))
+	WRITE(*,*)
+	WRITE(*,*)' [RESULT] Punti di graficazione'
 	DO I=0,N
 		WRITE(*,*)X(I),Y(I)
-		WRITE(3,*)X(I),Y(I)
+*		WRITE(3,*)X(I),Y(I)
 	END DO 
+	WRITE(*,*)
 	END 
 	
 	REAL FUNCTION F(X)
