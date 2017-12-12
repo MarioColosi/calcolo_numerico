@@ -23,9 +23,9 @@
 	READ(*,*)N
 	WRITE(*,*)
 *    Inizializzazione della matrice
-	CALL BUILD_WILKINSON(M,N_MAX,N)
+*	CALL BUILD_WILKINSON(M,N_MAX,N)
 *	CALL BUILD_VANDERMONDE(M,N_MAX,N)
-*	CALL BUILD_HILBERT(M,N_MAX,N)
+	CALL BUILD_HILBERT(M,N_MAX,N)
 
 *    Stampa della matrice
 6	FORMAT(:10(' ',F8.3))

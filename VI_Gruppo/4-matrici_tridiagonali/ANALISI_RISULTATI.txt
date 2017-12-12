@@ -14,12 +14,6 @@ e delle linee immediatamente al di sopra e al di sotto di essa (la prima sovradi
 ha solo valori nulli (0). Nella diagonale principale, nella prima sovradiagonale e nella prima sottodiagonale, invece,
 può esserci qualunque valore (compreso il valore nullo). 
 
-MATRICE PENTADIAGONALE:
-Una matrice pentadiagoale è una matrice quadrata che al di fuori delle cinque diagonali centrali ha valori nulli. 
-
-MATRICE EPTADIAGONALE:
-Una matrice eptadiagonale è una matrice quadrata che al di fuori delle sette diagonali centrali ha valori nulli. 
-
 
 Utilizziamo sperimentalmente le nozioni acquisite dalla teoria per risolvere il seguente esercizio:
 'Scrivere il programma del metodo iterativo di Jacobi per risolvere il sistema lineare Ax=b , 

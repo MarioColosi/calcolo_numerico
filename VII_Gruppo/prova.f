@@ -1,6 +1,8 @@
-	PROGRAM TAB 
+	PROGRAM PROVA 
+
+	PARAMETER(N_MAX=500)
 * 14.Fare il grafico delle funzioni
-	REAL X(0:98),Y(0:98)
+	REAL X(0:98),Y(0:98),X2(5),Y2(5)
 
 *    Sottotitolo (INPUT: 1 stringa da 50 caratteri)
 2	FORMAT(/,2X,52('-'),/,2X,'  ',A,/,2X,52('-'),/)
@@ -13,13 +15,16 @@
 	READ(*,*)A,B
 	WRITE(*,3)'Inserisci il numero di punti di graficazione: '
 	READ(*,*)N
+	DO I=1,5
+		READ(3,*)X2(i),Y2(I)
+	ENDDO
 	N=N-1
 	H=(B-A)/N
 	X(0)=A
 	Y(0)=F(X(0))
 	DO I=1,N-1
 		X(I)=X(I-1)+H
-		Y(I)=F(X(I))
+		Y(I)=LAGRANGE(X2,Y2,5)
 	END DO
 	X(N)=B
 	Y(N)=F(X(N))
@@ -39,4 +44,3 @@
 *	F=SIN(X)/X
 *	F=TAN(X)/X
 	END 
-		

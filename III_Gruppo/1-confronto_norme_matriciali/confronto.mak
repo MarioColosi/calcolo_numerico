@@ -32,8 +32,8 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-F90=fl32.exe
 RSC=rc.exe
+F90=fl32.exe
 
 !IF  "$(CFG)" == "confronto - Win32 Release"
 
@@ -157,7 +157,7 @@ SOURCE=.\confronto.f
 ################################################################################
 # Begin Source File
 
-SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_mat.f"
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_mat.f
 
 "$(INTDIR)\norme_mat.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -167,7 +167,7 @@ SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Funzioni\norme_mat.f"
 ################################################################################
 # Begin Source File
 
-SOURCE="\Users\Mario-PC\Desktop\calcolo_numerico\Z_Subroutine\matrici.f"
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\matrici.f
 
 "$(INTDIR)\matrici.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)

@@ -502,6 +502,6 @@ MATRICE DI HILBERT:
  
 --------------------------- ANALISI -----------------------------------
 Considerando la matrice di Vandermonde di ordine N=7 l'errore sulla soluzione è ERR = 6.794883E-06,
-mentre, mantendendo l'ordine N=7, ma considerando la matrice di Hilbert si ottiene ERR = 8.784107E-01.
+mentre, mantendendo l'ordine N=7, ma considerando la matrice di Hilbert, si ottiene ERR = 8.784107E-01.
 Di conseguenza confrontando i due risultati ottenuti si evince che la matrice di Hilbert è mal condizionata
 rispetto a quella di Vandermonde dello stesso ordine. 

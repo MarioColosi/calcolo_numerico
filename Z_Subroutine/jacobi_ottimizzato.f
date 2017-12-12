@@ -25,7 +25,9 @@
 			X_OLD(I)=X(I)
 		END DO
 * ------- TEST DI ARRESTO ------------------------------------------------
-		IF(NORMAINF(DELTA,N)/NORMAINF(X,N).LT.EPS)THEN
+		R=NORMAINF(DELTA,N)/NORMAINF(X,N)
+		WRITE(3,*)ITER,R
+		IF(R.LT.EPS)THEN
 			RETURN
 		END IF
 * ------------------------------------------------------------------------ 

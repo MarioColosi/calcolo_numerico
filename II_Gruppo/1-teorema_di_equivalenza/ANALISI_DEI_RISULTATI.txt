@@ -4,14 +4,14 @@ NORME:
 Una applicazione ||·||: C^n ? R viene detta norma vettoriale se soddisfa alle 
 seguenti proprietà:
 
-• ||x|| = 0, per ogni x ? R; ||x||= 0 se e solo se x = 0;
-• ||ax||= |a| ||x||, per ogni a ? C, x ? C^n;
-• ||x|| + ||y|| = ||x||+ ||y||, per ogni x, y ? C^n (diseguaglianza triangolare)
+• ||x||= 0 se e solo se x = 0;
+• ||ax||= |a| ||x||;
+• ||x|| + ||y|| = ||x||+ ||y||;(diseguaglianza triangolare)
 
 Esempi importanti di norme sono:
 • ||x||1 =sommatoria(i=1,n) |xi| (norma 1)
 • ||x||2 =sommatoria(i=1,n) (sqrt(|xi|^2) (norma euclidea, o norma 2)
-• ||x||8 =Maxi |xi| (norma infinito, o norma del massimo)
+• ||x||inf =Maxi |xi| (norma infinito, o norma del massimo)
 
 Dato il teorema di equivalenza:
 - ||x||inf <= ||x||2 <= SQRT(N)||x||inf

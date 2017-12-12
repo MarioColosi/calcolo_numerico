@@ -37,7 +37,7 @@ Data la seguente matrice di ordine N=5:
     	291.136000 <=      651.000000 <=    1244.855000
 	E' verificata la seconda disequazione!
   3)
-        544 <=      556.716000 <=       2720
+        544        <=      556.716000 <=       2720
 	E' verificata la terza disequazione!
   4)
      	556.716000 <=      671.671800
@@ -61,12 +61,11 @@ Data la seguente matrice di ordine N=4:
      	47.500000 <=       95.000000 <=     177.241800
 	E' verificata la seconda disequazione!
   3)
-        88 <=       88.620910 <=        352
+        88        <=       88.620910 <=        352
 	E' verificata la terza disequazione!
   4)
       	88.620910 <=       97.516660
 	E' verificata la quarta disequazione!
 
 ******************************** ANALISI ****************************
-Le matrici richieste in input risultano ben condizionate in quanto verificano le disequazioni
-proposte dall'esercizio. 
+Le matrici richieste in input verificano le disequazioni proposte dall'esercizio. 

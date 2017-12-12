@@ -17,6 +17,31 @@ Utilizziamo le nozioni acquisite per risolvere il seguente esercizio:
 
 ***************************** TEST 1 ******************************
 
+FATTORIALE DI 6: 
+
+ [INTEGER] Il fattoriale di:  1 e':               1
+ [INTEGER] Il fattoriale di:  2 e':               2
+ [INTEGER] Il fattoriale di:  3 e':               6
+ [INTEGER] Il fattoriale di:  4 e':              24
+ [INTEGER] Il fattoriale di:  5 e':             120
+ [INTEGER] Il fattoriale di:  6 e':             720
+
+ [REAL*8] Il fattoriale di:  1 e':                1.
+ [REAL*8] Il fattoriale di:  2 e':                2.
+ [REAL*8] Il fattoriale di:  3 e':                6.
+ [REAL*8] Il fattoriale di:  4 e':               24.
+ [REAL*8] Il fattoriale di:  5 e':              120.
+ [REAL*8] Il fattoriale di:  6 e':              720.
+
+ [REAL] Il fattoriale di:  1 e':                  1.
+ [REAL] Il fattoriale di:  2 e':                  2.
+ [REAL] Il fattoriale di:  3 e':                  6.
+ [REAL] Il fattoriale di:  4 e':                 24.
+ [REAL] Il fattoriale di:  5 e':                120.
+ [REAL] Il fattoriale di:  6 e':                720.
+
+************************************ TEST 2 ***********************************
+
 FATTORIALE DI 77:
 
 
@@ -213,33 +238,371 @@ FATTORIALE DI 77:
 run-time error M6104: MATH
 - floating-point error: overflow
 
-************************************ TEST 2 ***********************************
 
-FATTORIALE DI 6: 
 
-[INTEGER] Il fattoriale di:  1 e':                1
+
+*********************************** TEST 3 ******************************************
+
+FATTORIALE 175 :
+
+
+ [INTEGER] Il fattoriale di:  1 e':               1
  [INTEGER] Il fattoriale di:  2 e':               2
  [INTEGER] Il fattoriale di:  3 e':               6
  [INTEGER] Il fattoriale di:  4 e':              24
  [INTEGER] Il fattoriale di:  5 e':             120
  [INTEGER] Il fattoriale di:  6 e':             720
+ [INTEGER] Il fattoriale di:  7 e':            5040
+ [INTEGER] Il fattoriale di:  8 e':           40320
+ [INTEGER] Il fattoriale di:  9 e':          362880
+ [INTEGER] Il fattoriale di: 10 e':         3628800
+ [INTEGER] Il fattoriale di: 11 e':        39916800
+ [INTEGER] Il fattoriale di: 12 e':       479001600
+ [INTEGER] Il fattoriale di: 13 e':      1932053504
+ [INTEGER] Il fattoriale di: 14 e':      1278945280
+ [INTEGER] Il fattoriale di: 15 e':      2004310016
+ [INTEGER] Il fattoriale di: 16 e':      2004189184
+ [INTEGER] Il fattoriale di: 17 e':      -288522240
+ [INTEGER] Il fattoriale di: 18 e':      -898433024
+ [INTEGER] Il fattoriale di: 19 e':       109641728
+ [INTEGER] Il fattoriale di: 20 e':     -2102132736
+ [INTEGER] Il fattoriale di: 21 e':     -1195114496
+ [INTEGER] Il fattoriale di: 22 e':      -522715136
+ [INTEGER] Il fattoriale di: 23 e':       862453760
+ [INTEGER] Il fattoriale di: 24 e':      -775946240
+ [INTEGER] Il fattoriale di: 25 e':      2076180480
+ [INTEGER] Il fattoriale di: 26 e':     -1853882368
+ [INTEGER] Il fattoriale di: 27 e':      1484783616
+ [INTEGER] Il fattoriale di: 28 e':     -1375731712
+ [INTEGER] Il fattoriale di: 29 e':     -1241513984
+ [INTEGER] Il fattoriale di: 30 e':      1409286144
+ [INTEGER] Il fattoriale di: 31 e':       738197504
+ [INTEGER] Il fattoriale di: 32 e':     -2147483648
+ [INTEGER] Il fattoriale di: 33 e':     -2147483648
+ [INTEGER] Il fattoriale di: 34 e':               0
+ [INTEGER] Il fattoriale di: 35 e':               0
+ [INTEGER] Il fattoriale di: 36 e':               0
+ [INTEGER] Il fattoriale di: 37 e':               0
+ [INTEGER] Il fattoriale di: 38 e':               0
+ [INTEGER] Il fattoriale di: 39 e':               0
+ [INTEGER] Il fattoriale di: 40 e':               0
+ [INTEGER] Il fattoriale di: 41 e':               0
+ [INTEGER] Il fattoriale di: 42 e':               0
+ [INTEGER] Il fattoriale di: 43 e':               0
+ [INTEGER] Il fattoriale di: 44 e':               0
+ [INTEGER] Il fattoriale di: 45 e':               0
+ [INTEGER] Il fattoriale di: 46 e':               0
+ [INTEGER] Il fattoriale di: 47 e':               0
+ [INTEGER] Il fattoriale di: 48 e':               0
+ [INTEGER] Il fattoriale di: 49 e':               0
+ [INTEGER] Il fattoriale di: 50 e':               0
+ [INTEGER] Il fattoriale di: 51 e':               0
+ [INTEGER] Il fattoriale di: 52 e':               0
+ [INTEGER] Il fattoriale di: 53 e':               0
+ [INTEGER] Il fattoriale di: 54 e':               0
+ [INTEGER] Il fattoriale di: 55 e':               0
+ [INTEGER] Il fattoriale di: 56 e':               0
+ [INTEGER] Il fattoriale di: 57 e':               0
+ [INTEGER] Il fattoriale di: 58 e':               0
+ [INTEGER] Il fattoriale di: 59 e':               0
+ [INTEGER] Il fattoriale di: 60 e':               0
+ [INTEGER] Il fattoriale di: 61 e':               0
+ [INTEGER] Il fattoriale di: 62 e':               0
+ [INTEGER] Il fattoriale di: 63 e':               0
+ [INTEGER] Il fattoriale di: 64 e':               0
+ [INTEGER] Il fattoriale di: 65 e':               0
+ [INTEGER] Il fattoriale di: 66 e':               0
+ [INTEGER] Il fattoriale di: 67 e':               0
+ [INTEGER] Il fattoriale di: 68 e':               0
+ [INTEGER] Il fattoriale di: 69 e':               0
+ [INTEGER] Il fattoriale di: 70 e':               0
+ [INTEGER] Il fattoriale di: 71 e':               0
+ [INTEGER] Il fattoriale di: 72 e':               0
+ [INTEGER] Il fattoriale di: 73 e':               0
+ [INTEGER] Il fattoriale di: 74 e':               0
+ [INTEGER] Il fattoriale di: 75 e':               0
+ [INTEGER] Il fattoriale di: 76 e':               0
+ [INTEGER] Il fattoriale di: 77 e':               0
+ [INTEGER] Il fattoriale di: 78 e':               0
+ [INTEGER] Il fattoriale di: 79 e':               0
+ [INTEGER] Il fattoriale di: 80 e':               0
+ [INTEGER] Il fattoriale di: 81 e':               0
+ [INTEGER] Il fattoriale di: 82 e':               0
+ [INTEGER] Il fattoriale di: 83 e':               0
+ [INTEGER] Il fattoriale di: 84 e':               0
+ [INTEGER] Il fattoriale di: 85 e':               0
+ [INTEGER] Il fattoriale di: 86 e':               0
+ [INTEGER] Il fattoriale di: 87 e':               0
+ [INTEGER] Il fattoriale di: 88 e':               0
+ [INTEGER] Il fattoriale di: 89 e':               0
+ [INTEGER] Il fattoriale di: 90 e':               0
+ [INTEGER] Il fattoriale di: 91 e':               0
+ [INTEGER] Il fattoriale di: 92 e':               0
+ [INTEGER] Il fattoriale di: 93 e':               0
+ [INTEGER] Il fattoriale di: 94 e':               0
+ [INTEGER] Il fattoriale di: 95 e':               0
+ [INTEGER] Il fattoriale di: 96 e':               0
+ [INTEGER] Il fattoriale di: 97 e':               0
+ [INTEGER] Il fattoriale di: 98 e':               0
+ [INTEGER] Il fattoriale di: 99 e':               0
+ [INTEGER] Il fattoriale di:100 e':               0
+ [INTEGER] Il fattoriale di:101 e':               0
+ [INTEGER] Il fattoriale di:102 e':               0
+ [INTEGER] Il fattoriale di:103 e':               0
+ [INTEGER] Il fattoriale di:104 e':               0
+ [INTEGER] Il fattoriale di:105 e':               0
+ [INTEGER] Il fattoriale di:106 e':               0
+ [INTEGER] Il fattoriale di:107 e':               0
+ [INTEGER] Il fattoriale di:108 e':               0
+ [INTEGER] Il fattoriale di:109 e':               0
+ [INTEGER] Il fattoriale di:110 e':               0
+ [INTEGER] Il fattoriale di:111 e':               0
+ [INTEGER] Il fattoriale di:112 e':               0
+ [INTEGER] Il fattoriale di:113 e':               0
+ [INTEGER] Il fattoriale di:114 e':               0
+ [INTEGER] Il fattoriale di:115 e':               0
+ [INTEGER] Il fattoriale di:116 e':               0
+ [INTEGER] Il fattoriale di:117 e':               0
+ [INTEGER] Il fattoriale di:118 e':               0
+ [INTEGER] Il fattoriale di:119 e':               0
+ [INTEGER] Il fattoriale di:120 e':               0
+ [INTEGER] Il fattoriale di:121 e':               0
+ [INTEGER] Il fattoriale di:122 e':               0
+ [INTEGER] Il fattoriale di:123 e':               0
+ [INTEGER] Il fattoriale di:124 e':               0
+ [INTEGER] Il fattoriale di:125 e':               0
+ [INTEGER] Il fattoriale di:126 e':               0
+ [INTEGER] Il fattoriale di:127 e':               0
+ [INTEGER] Il fattoriale di:128 e':               0
+ [INTEGER] Il fattoriale di:129 e':               0
+ [INTEGER] Il fattoriale di:130 e':               0
+ [INTEGER] Il fattoriale di:131 e':               0
+ [INTEGER] Il fattoriale di:132 e':               0
+ [INTEGER] Il fattoriale di:133 e':               0
+ [INTEGER] Il fattoriale di:134 e':               0
+ [INTEGER] Il fattoriale di:135 e':               0
+ [INTEGER] Il fattoriale di:136 e':               0
+ [INTEGER] Il fattoriale di:137 e':               0
+ [INTEGER] Il fattoriale di:138 e':               0
+ [INTEGER] Il fattoriale di:139 e':               0
+ [INTEGER] Il fattoriale di:140 e':               0
+ [INTEGER] Il fattoriale di:141 e':               0
+ [INTEGER] Il fattoriale di:142 e':               0
+ [INTEGER] Il fattoriale di:143 e':               0
+ [INTEGER] Il fattoriale di:144 e':               0
+ [INTEGER] Il fattoriale di:145 e':               0
+ [INTEGER] Il fattoriale di:146 e':               0
+ [INTEGER] Il fattoriale di:147 e':               0
+ [INTEGER] Il fattoriale di:148 e':               0
+ [INTEGER] Il fattoriale di:149 e':               0
+ [INTEGER] Il fattoriale di:150 e':               0
+ [INTEGER] Il fattoriale di:151 e':               0
+ [INTEGER] Il fattoriale di:152 e':               0
+ [INTEGER] Il fattoriale di:153 e':               0
+ [INTEGER] Il fattoriale di:154 e':               0
+ [INTEGER] Il fattoriale di:155 e':               0
+ [INTEGER] Il fattoriale di:156 e':               0
+ [INTEGER] Il fattoriale di:157 e':               0
+ [INTEGER] Il fattoriale di:158 e':               0
+ [INTEGER] Il fattoriale di:159 e':               0
+ [INTEGER] Il fattoriale di:160 e':               0
+ [INTEGER] Il fattoriale di:161 e':               0
+ [INTEGER] Il fattoriale di:162 e':               0
+ [INTEGER] Il fattoriale di:163 e':               0
+ [INTEGER] Il fattoriale di:164 e':               0
+ [INTEGER] Il fattoriale di:165 e':               0
+ [INTEGER] Il fattoriale di:166 e':               0
+ [INTEGER] Il fattoriale di:167 e':               0
+ [INTEGER] Il fattoriale di:168 e':               0
+ [INTEGER] Il fattoriale di:169 e':               0
+ [INTEGER] Il fattoriale di:170 e':               0
+ [INTEGER] Il fattoriale di:171 e':               0
+ [INTEGER] Il fattoriale di:172 e':               0
+ [INTEGER] Il fattoriale di:173 e':               0
+ [INTEGER] Il fattoriale di:174 e':               0
+ [INTEGER] Il fattoriale di:175 e':               0
 
- [REAL*8] Il fattoriale di:  1 e':                1.
- [REAL*8] Il fattoriale di:  2 e':                2.
- [REAL*8] Il fattoriale di:  3 e':                6.
- [REAL*8] Il fattoriale di:  4 e':               24.
- [REAL*8] Il fattoriale di:  5 e':              120.
- [REAL*8] Il fattoriale di:  6 e':              720.
-
- [REAL] Il fattoriale di:  1 e':                  1.
- [REAL] Il fattoriale di:  2 e':                  2.
- [REAL] Il fattoriale di:  3 e':                  6.
- [REAL] Il fattoriale di:  4 e':                 24.
- [REAL] Il fattoriale di:  5 e':                120.
- [REAL] Il fattoriale di:  6 e':                720.
+ [REAL*8] Il fattoriale di:  1 e':                                                                               1.
+ [REAL*8] Il fattoriale di:  2 e':                                                                               2.
+ [REAL*8] Il fattoriale di:  3 e':                                                                               6.
+ [REAL*8] Il fattoriale di:  4 e':                                                                              24.
+ [REAL*8] Il fattoriale di:  5 e':                                                                             120.
+ [REAL*8] Il fattoriale di:  6 e':                                                                             720.
+ [REAL*8] Il fattoriale di:  7 e':                                                                            5040.
+ [REAL*8] Il fattoriale di:  8 e':                                                                           40320.
+ [REAL*8] Il fattoriale di:  9 e':                                                                          362880.
+ [REAL*8] Il fattoriale di: 10 e':                                                                         3628800.
+ [REAL*8] Il fattoriale di: 11 e':                                                                        39916800.
+ [REAL*8] Il fattoriale di: 12 e':                                                                       479001600.
+ [REAL*8] Il fattoriale di: 13 e':                                                                      6227020800.
+ [REAL*8] Il fattoriale di: 14 e':                                                                     87178291200.
+ [REAL*8] Il fattoriale di: 15 e':                                                                   1307674368000.
+ [REAL*8] Il fattoriale di: 16 e':                                                                  20922789888000.
+ [REAL*8] Il fattoriale di: 17 e':                                                                 355687428096000.
+ [REAL*8] Il fattoriale di: 18 e':                                                                6402373705728000.
+ [REAL*8] Il fattoriale di: 19 e':                                                              121645100408832000.
+ [REAL*8] Il fattoriale di: 20 e':                                                             2432902008176640000.
+ [REAL*8] Il fattoriale di: 21 e':                                                            51090942171709440000.
+ [REAL*8] Il fattoriale di: 22 e':                                                          1124000727777608000000.
+ [REAL*8] Il fattoriale di: 23 e':                                                         25852016738884980000000.
+ [REAL*8] Il fattoriale di: 24 e':                                                        620448401733239400000000.
+ [REAL*8] Il fattoriale di: 25 e':                                                      15511210043330990000000000.
+ [REAL*8] Il fattoriale di: 26 e':                                                     403291461126605700000000000.
+ [REAL*8] Il fattoriale di: 27 e':                                                   10888869450418350000000000000.
+ [REAL*8] Il fattoriale di: 28 e':                                                  304888344611713800000000000000.
+ [REAL*8] Il fattoriale di: 29 e':                                                 8841761993739701000000000000000.
+ [REAL*8] Il fattoriale di: 30 e':                                               265252859812191000000000000000000.
+ [REAL*8] Il fattoriale di: 31 e':                                              8222838654177922000000000000000000.
+ [REAL*8] Il fattoriale di: 32 e':                                            263130836933693500000000000000000000.
+ [REAL*8] Il fattoriale di: 33 e':                                           8683317618811886000000000000000000000.
+ [REAL*8] Il fattoriale di: 34 e':                                         295232799039604100000000000000000000000.
+ [REAL*8] Il fattoriale di: 35 e':                                       10333147966386140000000000000000000000000.
+ [REAL*8] Il fattoriale di: 36 e':                                      371993326789901200000000000000000000000000.
+ [REAL*8] Il fattoriale di: 37 e':                                    13763753091226340000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 38 e':                                   523022617466601000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 39 e':                                 20397882081197440000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 40 e':                                815915283247897700000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 41 e':                              33452526613163800000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 42 e':                            1405006117752880000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 43 e':                           60415263063373830000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 44 e':                         2658271574788449000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 45 e':                       119622220865480200000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 46 e':                      5502622159812089000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 47 e':                    258623241511168200000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 48 e':                  12413915592536070000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 49 e':                 608281864034267500000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 50 e':               30414093201713380000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 51 e':             1551118753287382000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 52 e':            80658175170943880000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 53 e':          4274883284060026000000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 54 e':        230843697339241400000000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 55 e':      12696403353658280000000000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 56 e':     710998587804863500000000000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 57 e':   40526919504877220000000000000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 58 e': 2350561331282879000000000000000000000000000000000000000000000000000000000000000.
+ [REAL*8] Il fattoriale di: 59 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 60 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 61 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 62 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 63 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 64 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 65 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 66 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 67 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 68 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 69 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 70 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 71 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 72 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 73 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 74 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 75 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 76 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 77 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 78 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 79 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 80 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 81 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 82 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 83 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 84 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 85 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 86 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 87 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 88 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 89 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 90 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 91 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 92 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 93 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 94 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 95 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 96 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 97 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 98 e': ********************************************************************************
+ [REAL*8] Il fattoriale di: 99 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:100 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:101 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:102 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:103 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:104 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:105 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:106 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:107 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:108 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:109 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:110 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:111 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:112 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:113 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:114 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:115 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:116 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:117 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:118 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:119 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:120 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:121 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:122 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:123 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:124 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:125 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:126 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:127 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:128 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:129 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:130 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:131 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:132 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:133 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:134 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:135 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:136 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:137 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:138 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:139 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:140 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:141 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:142 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:143 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:144 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:145 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:146 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:147 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:148 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:149 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:150 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:151 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:152 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:153 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:154 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:155 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:156 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:157 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:158 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:159 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:160 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:161 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:162 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:163 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:164 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:165 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:166 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:167 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:168 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:169 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:170 e': ********************************************************************************
+ [REAL*8] Il fattoriale di:171 e': ********************************************************************************
+run-time error M6104: MATH
+- floating-point error: overflow
 *************************** ANALISI ***************************
 
-L'algoritmo ottimizzato funziona correttamente per numeri piccoli, ma nel primo test 
-si evince che superata una certa cifra il risultato è sempre 0. Inoltre nel primo test [REAL] dichiara 
-esattamente l'errore di overflow.
-Nel secondo test invece è stato possibile stampare anche la soluzione in doppia precisione. 
+Nel 'TEST 1' viene stampato il funzionamento dell'algoritmo per calcolare il fattoriale 
+di un numero piccolo, N=6, che funziona correttamente. 
+Nel 'TEST 2' il fattoriale di N=77 mostra alcune criticità:
+-Con variabile INTEGER l'iterazione funziona correttamente fino ad N=13.
+-Con variabile REAL l'iterazione funziona correttamente fino alla 34-esima iterazione,
+ mostrando successivamente l'errore di overflow. 
+-Con variabile REAL*8 l'iterazione funziona correttamente. 
+Nel 'TEST 3' il fattoriale di 175 mostra alcune criticità aggiuntive:
+-Con variabile REAL*8 l'iterazione funziona correttamente fino al valore N=171.

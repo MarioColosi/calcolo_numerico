@@ -1,5 +1,5 @@
-	FUNCTION LAGRANGE (T,N_MAX,N)
-	REAL T(N_MAX), P
+	FUNCTION LAGRANGE (T,Y,N)
+	REAL T(N),Y(N), P
 	INTEGER K			
 	DO K=I,N
 		DO I=1,N
@@ -10,7 +10,7 @@
 			DO J=I+1,N
 				P=P*((T(I)-J)/(I-J))
 			END DO
-			P2=Y(I+1)*P 
+			LAGRANGE=Y(I)*P 
 	    END DO 
 	END DO
 	END

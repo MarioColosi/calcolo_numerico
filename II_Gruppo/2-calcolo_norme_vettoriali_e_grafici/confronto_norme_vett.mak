@@ -35,8 +35,8 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-F90=fl32.exe
 RSC=rc.exe
+F90=fl32.exe
 
 !IF  "$(CFG)" == "confronto_norme_vett - Win32 Release"
 
@@ -52,6 +52,7 @@ ALL : "$(OUTDIR)\confronto_norme_vett.exe"
 CLEAN : 
 	-@erase ".\confronto_norme_vett.exe"
 	-@erase ".\confronto_norme_vett.obj"
+	-@erase ".\norme_vett.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -70,7 +71,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/confronto_norme_vett.pdb" /machine:I386\
  /out:"$(OUTDIR)/confronto_norme_vett.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/confronto_norme_vett.obj"
+	".\confronto_norme_vett.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\confronto_norme_vett.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -91,6 +93,7 @@ ALL : "$(OUTDIR)\confronto_norme_vett.exe"
 CLEAN : 
 	-@erase ".\confronto_norme_vett.exe"
 	-@erase ".\confronto_norme_vett.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\confronto_norme_vett.ilk"
 	-@erase ".\confronto_norme_vett.pdb"
 
@@ -111,7 +114,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/confronto_norme_vett.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/confronto_norme_vett.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/confronto_norme_vett.obj"
+	".\confronto_norme_vett.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\confronto_norme_vett.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -147,6 +151,16 @@ LINK32_OBJS= \
 SOURCE=.\confronto_norme_vett.f
 
 "$(INTDIR)\confronto_norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File
