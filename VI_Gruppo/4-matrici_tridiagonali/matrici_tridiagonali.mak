@@ -35,8 +35,9 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-RSC=rc.exe
+# PROP Target_Last_Scanned "matrici_tridiagonali - Win32 Debug"
 F90=fl32.exe
+RSC=rc.exe
 
 !IF  "$(CFG)" == "matrici_tridiagonali - Win32 Release"
 
@@ -51,8 +52,7 @@ ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 
 CLEAN : 
 	-@erase ".\matrici_tridiagonali.exe"
-	-@erase ".\matrici_tridiagonali.obj"
-	-@erase ".\norme_vett.obj"
+	-@erase ".\gauss_seidel.obj"
 	-@erase ".\jacobi_ottimizzato.obj"
 
 # ADD BASE F90 /Ox /c /nologo
@@ -72,8 +72,7 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /machine:I386\
  /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
-	".\matrici_tridiagonali.obj" \
-	".\norme_vett.obj" \
+	".\gauss_seidel.obj" \
 	".\jacobi_ottimizzato.obj"
 
 "$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
@@ -94,8 +93,7 @@ ALL : "$(OUTDIR)\matrici_tridiagonali.exe"
 
 CLEAN : 
 	-@erase ".\matrici_tridiagonali.exe"
-	-@erase ".\matrici_tridiagonali.obj"
-	-@erase ".\norme_vett.obj"
+	-@erase ".\gauss_seidel.obj"
 	-@erase ".\jacobi_ottimizzato.obj"
 	-@erase ".\matrici_tridiagonali.ilk"
 	-@erase ".\matrici_tridiagonali.pdb"
@@ -117,8 +115,7 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/matrici_tridiagonali.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/matrici_tridiagonali.exe" 
 LINK32_OBJS= \
-	".\matrici_tridiagonali.obj" \
-	".\norme_vett.obj" \
+	".\gauss_seidel.obj" \
 	".\jacobi_ottimizzato.obj"
 
 "$(OUTDIR)\matrici_tridiagonali.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
@@ -152,18 +149,10 @@ LINK32_OBJS= \
 ################################################################################
 # Begin Source File
 
-SOURCE=.\matrici_tridiagonali.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss_seidel.f
 
-"$(INTDIR)\matrici_tridiagonali.obj" : $(SOURCE) "$(INTDIR)"
-
-
-# End Source File
-################################################################################
-# Begin Source File
-
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
-
-"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
@@ -171,7 +160,8 @@ SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi_ottimizzato.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\jacobi_ottimizzato.f
 
 "$(INTDIR)\jacobi_ottimizzato.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
