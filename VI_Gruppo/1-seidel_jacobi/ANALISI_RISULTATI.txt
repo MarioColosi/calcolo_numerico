@@ -48,9 +48,8 @@ Utilizziamo sperimentalmente le nozioni acquisite per risolvere il seguente eser
 
 Il risultato che otteniamo con JACOBI è:
 
- [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+[RESULT] Soluzione del sistema [ITERAZIONE:161 ]
   -1.445544E+20   -2.433431E+20   -1.450073E+20
-
 
 Considerando la stessa matrice:
 
@@ -64,9 +63,13 @@ Considerando lo stesso vettore:
 
 Il risultato che otteniamo con GAUSS-SEIDEL è:
 
-
-[RESULT] Soluzione del sistema [ITERAZIONE:134 ]
+ [RESULT] Soluzione del sistema [ITERAZIONE: 14 ]
        1.000000        1.000000        1.000000
+
+************************************ ANALISI TEST 1 *******************************************
+Come si evince dal confronto nel grafico con il Metodo iterativo di :
+-JACOBI, il sistema non converge a 0 ed oscilla tra i valori 1 e 3 circa. 
+-GAUSS-SEIDEL, il sistema converge a 0.
 ******************************************* TEST 2 ********************************************
 
 Data la seguente matrice di input:
@@ -81,7 +84,7 @@ Dato il seguente vettore di input:
 
 Il risultato che otteniamo con JACOBI è:
 
- [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+[RESULT] Soluzione del sistema [ITERAZIONE:161 ]
    9.999998E-01        1.000000        1.000000
 
 Considerando la stessa matrice:
@@ -100,6 +103,11 @@ Il risultato che otteniamo con GAUSS-SEIDEL è:
 [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
      -48.400910        1.000000      -26.444950
 
+****************************** ANALISI TEST 2 ***********************************
+Come si evince dal confronto nel grafico con il Metodo iterativo di :
+-JACOBI, il sistema converge a 0.
+-GAUSS-SEIDEL, il sistema non converge a 0 ed oscilla tra i valori 0,5 e 2 circa.
+
 ************************************ TEST 3 **********************************
 Data la seguente matrice di input:
 
@@ -113,7 +121,7 @@ Dato il seguente vettore di input:
 
 Il risultato che otteniamo con JACOBI è:
 
-[RESULT] Soluzione del sistema [ITERAZIONE:121 ]
+[RESULT] Soluzione del sistema [ITERAZIONE: 23 ]
        1.000000        1.000000        1.000000
 
 Considerando la stessa matrice:
@@ -128,9 +136,90 @@ Considerando lo stesso vettore:
 
 Il risultato che otteniamo con GAUSS-SEIDEL è:
 
-[RESULT] Soluzione del sistema [ITERAZIONE:126 ]
+[RESULT] Soluzione del sistema [ITERAZIONE:  6 ]
        1.000000        1.000000        1.000000
 
-*************************************** ANALISI ***************************************
+*********************************ANALISI TEST 3***************************
+Come si evince dal confronto nel grafico con il Metodo iterativo di :
+-JACOBI, il sistema converge a 0.
+-GAUSS-SEIDEL, il sistema converge a 0.
+********************************* TEST 4 ********************************
+
+Data la seguente matrice di input:
+
+       7.000000        6.000000        9.000000
+       4.000000        5.000000       -4.000000
+      -7.000000       -3.000000        8.000000
+
+Dato il seguente vettore di input:
+
+      22.000000        5.000000       -2.000000
+
+Il risultato che otteniamo con JACOBI è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+       1.000000        1.000000        1.000000
+
+
+Considerando la stessa matrice:
+
+       7.000000        6.000000        9.000000
+       4.000000        5.000000       -4.000000
+      -7.000000       -3.000000        8.000000
+
+Considerando lo stesso vettore:
+
+      22.000000        5.000000       -2.000000
+
+Il risultato che otteniamo con GAUSS-SEIDEL è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+   9.999628E-01    9.999757E-01    9.999583E-01
+************************************** ANALISI TEST 4***********************************
+Come si evince dal confronto nel grafico con il Metodo iterativo di :
+-JACOBI, il sistema converge a 0.
+-GAUSS-SEIDEL, il sistema converge a 0.
+
+************************************* TEST 5 ***********************************
+
+Data la seguente matrice di input:
+
+      -4.000000       -1.000000        1.000000        1.000000
+   0.000000E+00       -4.000000       -1.000000        1.000000
+      -1.000000       -1.000000        4.000000        1.000000
+       1.000000       -1.000000    0.000000E+00        4.000000
+
+Dato il seguente vettore di input:
+
+      -3.000000       -4.000000        3.000000        4.000000
+
+Il risultato che otteniamo con JACOBI è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE: 16 ]
+       1.000000        1.000000        1.000000        1.000000
+
+
+Considerando la stessa matrice:
+
+      -4.000000       -1.000000        1.000000        1.000000
+   0.000000E+00       -4.000000       -1.000000        1.000000
+      -1.000000       -1.000000        4.000000        1.000000
+       1.000000       -1.000000    0.000000E+00        4.000000
+
+Considerando lo stesso vettore:
+
+      -3.000000       -4.000000        3.000000        4.000000
+
+Il risultato che otteniamo con GAUSS-SEIDEL è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE: 12 ]
+       1.000000        1.000000        1.000000        1.000000
+
+****************************** ANALISI TEST 5 ******************************************
+Come si evince dal confronto nel grafico con il Metodo iterativo di :
+-JACOBI, il sistema converge a 0.
+-GAUSS-SEIDEL, il sistema converge a 0.
+
+*************************************** RESOCONTO FINALE ***************************************
 Risulta evidente che un metodo iterativo, rispetto alle analisi svolte negli esercizi precedenti con un metodo diretto,
 è in generale meno sensibile alla propagazione degli errori. 
