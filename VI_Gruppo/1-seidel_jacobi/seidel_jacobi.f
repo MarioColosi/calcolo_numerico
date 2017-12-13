@@ -26,8 +26,8 @@
 	I=1
 	ITER=MAX_ITER+1
 	DO WHILE(ITER.LE.MAX_ITER+1.AND.I.LT.5)
-*		CALL JACOBI(A,B,X,N_MAX,N,MAX_ITER,ITER,EPS,.TRUE.)
-		CALL GAUSS_SEIDEL(A,B,X,N_MAX,N,MAX_ITER,ITER,EPS,.TRUE.)
+		CALL JACOBI(A,B,X,N_MAX,N,MAX_ITER,ITER,EPS,.TRUE.)
+*		CALL GAUSS_SEIDEL(A,B,X,N_MAX,N,MAX_ITER,ITER,EPS,.TRUE.)
 		I=I+1
       END DO
 3	FORMAT(2X,'[RESULT] Soluzione del sistema [ITERAZIONE:',I3,' ]')
@@ -41,15 +41,15 @@
 	REAL A(N_MAX,N)
 	REAL B(N)
 *    - Primo sistema:     n=3, A=[3,0,4,7,4,2,-1,-1,-2] ,  b=[7,13,-4]
-*	A(1,1)=3;	A(1,2)=0;	A(1,3)=4;	B(1)=7;
-*	A(2,1)=7;	A(2,2)=4;	A(2,3)=2;	B(2)=13;
-*	A(3,1)=-1;	A(3,2)=-1;	A(3,3)=-2;	B(3)=-4;
+	A(1,1)=3;	A(1,2)=0;	A(1,3)=4;	B(1)=7;
+	A(2,1)=7;	A(2,2)=4;	A(2,3)=2;	B(2)=13;
+	A(3,1)=-1;	A(3,2)=-1;	A(3,3)=-2;	B(3)=-4;
 *	- Secondo sistema:	n=3, A=[-3,3,-6,-4,7,-8,5,7,-9], b=[-6,-5,3]
 *	A(1,1)=-3;	A(1,2)=3;	A(1,3)=-6;	B(1)=-6 
 *	A(2,1)=-4;	A(2,2)=7;	A(2,3)=-8;	B(2)=-5
 *	A(3,1)=5;	A(3,2)=7;	A(3,3)=-9;	B(3)=3	     	
 *    - Terzo sistema:		n=3, A=[4,1,1,2,-9,0,0,-8,-6],   b=[6,-7,-14]
-	A(1,1)=4;	A(1,2)=1;	A(1,3)=1;	B(1)=6;
-	A(2,1)=2;	A(2,2)=-9;	A(2,3)=0;	B(2)=-7
-	A(3,1)=0;	A(3,2)=-8;	A(3,3)=-6;	B(3)=-14
+*	A(1,1)=4;	A(1,2)=1;	A(1,3)=1;	B(1)=6;
+*	A(2,1)=2;	A(2,2)=-9;	A(2,3)=0;	B(2)=-7
+*	A(3,1)=0;	A(3,2)=-8;	A(3,3)=-6;	B(3)=-14
 	END 

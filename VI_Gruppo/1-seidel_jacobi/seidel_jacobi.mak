@@ -51,6 +51,9 @@ ALL : "$(OUTDIR)\seidel_jacobi.exe"
 CLEAN : 
 	-@erase ".\seidel_jacobi.exe"
 	-@erase ".\seidel_jacobi.obj"
+	-@erase ".\jacobi.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\gauss_seidel.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -69,7 +72,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/seidel_jacobi.pdb" /machine:I386\
  /out:"$(OUTDIR)/seidel_jacobi.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/seidel_jacobi.obj"
+	".\seidel_jacobi.obj" \
+	".\jacobi.obj" \
+	".\norme_vett.obj" \
+	".\gauss_seidel.obj"
 
 "$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -90,6 +96,9 @@ ALL : "$(OUTDIR)\seidel_jacobi.exe"
 CLEAN : 
 	-@erase ".\seidel_jacobi.exe"
 	-@erase ".\seidel_jacobi.obj"
+	-@erase ".\jacobi.obj"
+	-@erase ".\norme_vett.obj"
+	-@erase ".\gauss_seidel.obj"
 	-@erase ".\seidel_jacobi.ilk"
 	-@erase ".\seidel_jacobi.pdb"
 
@@ -110,7 +119,10 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/seidel_jacobi.pdb" /debug /machine:I386\
  /out:"$(OUTDIR)/seidel_jacobi.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/seidel_jacobi.obj"
+	".\seidel_jacobi.obj" \
+	".\jacobi.obj" \
+	".\norme_vett.obj" \
+	".\gauss_seidel.obj"
 
 "$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -146,6 +158,36 @@ LINK32_OBJS= \
 SOURCE=.\seidel_jacobi.f
 
 "$(INTDIR)\seidel_jacobi.obj" : $(SOURCE) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi.f
+
+"$(INTDIR)\jacobi.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
+
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\gauss_seidel.f
+
+"$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
+   $(F90) $(F90_PROJ) $(SOURCE)
 
 
 # End Source File

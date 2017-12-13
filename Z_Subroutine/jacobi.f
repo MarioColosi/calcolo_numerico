@@ -42,7 +42,7 @@
 		END DO
 * ------- TEST DI ARRESTO ------------------------------------------------
 		R=NORMAINF(DELTA,N)/NORMAINF(X,N)
-		IF(WRITE_ERR)WRITE(3,*)ITER,R
+		IF(WRITE_ERR)WRITE(3,*)R
 		IF(R.LT.EPS)THEN
 			RETURN
 		END IF

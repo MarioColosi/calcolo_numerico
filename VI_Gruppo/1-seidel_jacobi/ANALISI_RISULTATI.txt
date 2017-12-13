@@ -64,9 +64,9 @@ Considerando lo stesso vettore:
 
 Il risultato che otteniamo con GAUSS-SEIDEL è:
 
-run-time error M6110: MATH
-- floating-point error: stack overflow
 
+[RESULT] Soluzione del sistema [ITERAZIONE:134 ]
+       1.000000        1.000000        1.000000
 ******************************************* TEST 2 ********************************************
 
 Data la seguente matrice di input:
@@ -96,8 +96,9 @@ Considerando lo stesso vettore:
 
 Il risultato che otteniamo con GAUSS-SEIDEL è:
 
-run-time error M6110: MATH
-- floating-point error: stack overflow
+
+[RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+     -48.400910        1.000000      -26.444950
 
 ************************************ TEST 3 **********************************
 Data la seguente matrice di input:
@@ -112,7 +113,7 @@ Dato il seguente vettore di input:
 
 Il risultato che otteniamo con JACOBI è:
 
- [RESULT] Soluzione del sistema [ITERAZIONE:121 ]
+[RESULT] Soluzione del sistema [ITERAZIONE:121 ]
        1.000000        1.000000        1.000000
 
 Considerando la stessa matrice:
@@ -127,8 +128,8 @@ Considerando lo stesso vettore:
 
 Il risultato che otteniamo con GAUSS-SEIDEL è:
 
-run-time error M6110: MATH
-- floating-point error: stack overflow
+[RESULT] Soluzione del sistema [ITERAZIONE:126 ]
+       1.000000        1.000000        1.000000
 
 *************************************** ANALISI ***************************************
 Risulta evidente che un metodo iterativo, rispetto alle analisi svolte negli esercizi precedenti con un metodo diretto,
