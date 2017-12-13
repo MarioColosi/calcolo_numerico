@@ -47,7 +47,7 @@ ALL : "$(OUTDIR)\prova.exe"
 CLEAN : 
 	-@erase ".\prova.exe"
 	-@erase ".\prova.obj"
-	-@erase ".\Lagrange.obj"
+	-@erase ".\lagrange.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -66,7 +66,7 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
  /pdb:"$(OUTDIR)/prova.pdb" /machine:I386 /out:"$(OUTDIR)/prova.exe" 
 LINK32_OBJS= \
 	".\prova.obj" \
-	".\Lagrange.obj"
+	".\lagrange.obj"
 
 "$(OUTDIR)\prova.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -87,7 +87,7 @@ ALL : "$(OUTDIR)\prova.exe"
 CLEAN : 
 	-@erase ".\prova.exe"
 	-@erase ".\prova.obj"
-	-@erase ".\Lagrange.obj"
+	-@erase ".\lagrange.obj"
 	-@erase ".\prova.ilk"
 	-@erase ".\prova.pdb"
 
@@ -108,7 +108,7 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/prova.pdb" /debug /machine:I386 /out:"$(OUTDIR)/prova.exe" 
 LINK32_OBJS= \
 	".\prova.obj" \
-	".\Lagrange.obj"
+	".\lagrange.obj"
 
 "$(OUTDIR)\prova.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -150,9 +150,10 @@ SOURCE=.\prova.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\Lagrange.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\lagrange.f
 
-"$(INTDIR)\Lagrange.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\lagrange.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

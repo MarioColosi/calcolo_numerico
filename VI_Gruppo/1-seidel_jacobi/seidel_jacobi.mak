@@ -34,8 +34,9 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-RSC=rc.exe
+# PROP Target_Last_Scanned "seidel_jacobi - Win32 Debug"
 F90=fl32.exe
+RSC=rc.exe
 
 !IF  "$(CFG)" == "seidel_jacobi - Win32 Release"
 
@@ -52,8 +53,8 @@ CLEAN :
 	-@erase ".\seidel_jacobi.exe"
 	-@erase ".\seidel_jacobi.obj"
 	-@erase ".\jacobi.obj"
-	-@erase ".\norme_vett.obj"
 	-@erase ".\gauss_seidel.obj"
+	-@erase ".\norme_vett.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -74,8 +75,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
 LINK32_OBJS= \
 	".\seidel_jacobi.obj" \
 	".\jacobi.obj" \
-	".\norme_vett.obj" \
-	".\gauss_seidel.obj"
+	".\gauss_seidel.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -97,8 +98,8 @@ CLEAN :
 	-@erase ".\seidel_jacobi.exe"
 	-@erase ".\seidel_jacobi.obj"
 	-@erase ".\jacobi.obj"
-	-@erase ".\norme_vett.obj"
 	-@erase ".\gauss_seidel.obj"
+	-@erase ".\norme_vett.obj"
 	-@erase ".\seidel_jacobi.ilk"
 	-@erase ".\seidel_jacobi.pdb"
 
@@ -121,8 +122,8 @@ LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
 LINK32_OBJS= \
 	".\seidel_jacobi.obj" \
 	".\jacobi.obj" \
-	".\norme_vett.obj" \
-	".\gauss_seidel.obj"
+	".\gauss_seidel.obj" \
+	".\norme_vett.obj"
 
 "$(OUTDIR)\seidel_jacobi.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -164,7 +165,7 @@ SOURCE=.\seidel_jacobi.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi.f
+SOURCE=\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\jacobi.f
 
 "$(INTDIR)\jacobi.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
@@ -174,9 +175,10 @@ SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\jacobi.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Subroutine\gauss_seidel.f
 
-"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 
@@ -184,9 +186,10 @@ SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Funzioni\norme_vett.f
 ################################################################################
 # Begin Source File
 
-SOURCE=\Users\Grazia\Desktop\calcolo_numerico\Z_Subroutine\gauss_seidel.f
+SOURCE=\
+\Users\xmari\Desktop\UNI\Calcolo_Numerico\Esercizi\Z_Funzioni\norme_vett.f
 
-"$(INTDIR)\gauss_seidel.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\norme_vett.obj" : $(SOURCE) "$(INTDIR)"
    $(F90) $(F90_PROJ) $(SOURCE)
 
 

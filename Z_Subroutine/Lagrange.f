@@ -1,16 +1,15 @@
-	FUNCTION LAGRANGE (T,Y,N)
-	REAL T(N),Y(N), P
-	INTEGER K			
-	DO K=I,N
-		DO I=1,N
-			P=1
-			DO J=1,I-1
-				P=P*((T(I)-J)/(I-J))
-			END DO 
-			DO J=I+1,N
-				P=P*((T(I)-J)/(I-J))
-			END DO
-			LAGRANGE=Y(I)*P 
-	    END DO 
+	REAL FUNCTION LAGRANGE(X,A,Y,N)
+	REAL X,A(N),Y(N),P			
+	LAGRANGE=0
+      DO I=1,N
+		P=1
+		DO J=1,I-1
+			P=P*(X-A(J))/(A(I)-A(J))
+		END DO 
+		DO J=I+1,N
+			P=P*(X-A(J))/(A(I)-A(J))
+		END DO
+		P=P*Y(I)
+		LAGRANGE=LAGRANGE+P
 	END DO
 	END
