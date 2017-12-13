@@ -29,9 +29,106 @@ Utilizziamo sperimentalmente le nozioni acquisite per risolvere il seguente eser
 
 ******************************************* TEST 1 ********************************************
 
+ ____________________________________________________
+ |                                                  |
+ | RISOLUZIONE SISTEMI LINEARI CON METODI ITERATIVI |
+ |       E CONFRONTO TRA JACOBI E GAUSS-SEIDEL      |
+ |__________________________________________________|
+
+
+ Data la seguente matrice di input:
+
+       3.000000    0.000000E+00        4.000000
+       7.000000        4.000000        2.000000
+      -1.000000       -1.000000       -2.000000
+
+ Dato il seguente vettore di input:
+
+       7.000000       13.000000       -4.000000
+
+Il risultato che otteniamo con JACOBI è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+  -1.445544E+20   -2.433431E+20   -1.450073E+20
+
+
+Considerando la stessa matrice:
+
+       3.000000    0.000000E+00        4.000000
+       7.000000        4.000000        2.000000
+      -1.000000       -1.000000       -2.000000
+
+Considerando lo stesso vettore:
+
+       7.000000       13.000000       -4.000000
+
+Il risultato che otteniamo con GAUSS-SEIDEL è:
+
+run-time error M6110: MATH
+- floating-point error: stack overflow
 
 ******************************************* TEST 2 ********************************************
 
+Data la seguente matrice di input:
+
+      -3.000000        3.000000       -6.000000
+      -4.000000        7.000000       -8.000000
+       5.000000        7.000000       -9.000000
+
+Dato il seguente vettore di input:
+
+      -6.000000       -5.000000        3.000000
+
+Il risultato che otteniamo con JACOBI è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE:161 ]
+   9.999998E-01        1.000000        1.000000
+
+Considerando la stessa matrice:
+
+      -3.000000        3.000000       -6.000000
+      -4.000000        7.000000       -8.000000
+       5.000000        7.000000       -9.000000
+
+Considerando lo stesso vettore:
+
+      -6.000000       -5.000000        3.000000
+
+Il risultato che otteniamo con GAUSS-SEIDEL è:
+
+run-time error M6110: MATH
+- floating-point error: stack overflow
+
+************************************ TEST 3 **********************************
+Data la seguente matrice di input:
+
+       4.000000        1.000000        1.000000
+       2.000000       -9.000000    0.000000E+00
+   0.000000E+00       -8.000000       -6.000000
+
+Dato il seguente vettore di input:
+
+       6.000000       -7.000000      -14.000000
+
+Il risultato che otteniamo con JACOBI è:
+
+ [RESULT] Soluzione del sistema [ITERAZIONE:121 ]
+       1.000000        1.000000        1.000000
+
+Considerando la stessa matrice:
+
+       4.000000        1.000000        1.000000
+       2.000000       -9.000000    0.000000E+00
+   0.000000E+00       -8.000000       -6.000000
+
+Considerando lo stesso vettore:
+
+       6.000000       -7.000000      -14.000000
+
+Il risultato che otteniamo con GAUSS-SEIDEL è:
+
+run-time error M6110: MATH
+- floating-point error: stack overflow
 
 *************************************** ANALISI ***************************************
 Risulta evidente che un metodo iterativo, rispetto alle analisi svolte negli esercizi precedenti con un metodo diretto,
