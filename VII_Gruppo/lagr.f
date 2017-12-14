@@ -1,9 +1,12 @@
-	PROGRAM PROVA 
-
+	PROGRAM LAGR 
+* Verificare la bontà del metodo di interpolazione di Lagrange o di Newton su alcune funzioni,
+* di cui si conosce la formula analitica, considerando tabulati con 5, 6, 11, 12, 20, 25 punti 
+* equidistanti. Analizzare il grafico degli errori. Costruire la tabella contenente la norma 
+* dell'errore. Commentare i risultati.
 	PARAMETER(N_MAX=500)
 * 14.Fare il grafico delle funzioni
 	REAL LAGRANGE
-	REAL X(0:98),Y(0:98),X2(5),Y2(5)
+	REAL X(0:98),Y(0:98),X2(N_MAX),Y2(N_MAX)
 	REAL A,B,H
 *    Sottotitolo (INPUT: 1 stringa da 50 caratteri)
 2	FORMAT(/,2X,52('-'),/,2X,'  ',A,/,2X,52('-'),/)
@@ -16,21 +19,21 @@
 	READ(*,*)A,B
 	WRITE(*,3)'Inserisci il numero di punti di graficazione: '
 	READ(*,*)N
-	X2(1)=-10;			Y2(1)=3.998401E-04	
-	X2(2)=-5;			Y2(2)=1.597444E-03
-	X2(3)=0;			Y2(3)=1.000000 
-	X2(4)=5;			Y2(4)=1.597444E-03
-	X2(5)=10;			Y2(5)=3.998401E-04
+	WRITE(*,3)'Inserisci il numero di punti di interpolazione: '
+	READ(*,*)N1
+	DO I=1,N1
+		READ(3,*)X2(I),Y2(I)
+	END DO
 	N=N-1
 	H=(B-A)/N
 	X(0)=A
-	Y(0)=LAGRANGE(X(0),X2,Y2,5)
+	Y(0)=LAGRANGE(X(0),X2,Y2,N1)
 	DO I=1,N-1
 		X(I)=X(I-1)+H
-		Y(I)=LAGRANGE(X(I),X2,Y2,5)
+		Y(I)=LAGRANGE(X(I),X2,Y2,N1)
 	END DO
 	X(N)=B
-	Y(N)=LAGRANGE(X(N),X2,Y2,5)
+	Y(N)=LAGRANGE(X(N),X2,Y2,N1)
 	WRITE(*,*)
 	WRITE(*,*)' [RESULT] Punti di graficazione'
 	DO I=0,N

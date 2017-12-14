@@ -36,13 +36,13 @@ Utilizziamo sperimentalmente le nozioni acquisite per risolvere il seguente eser
  |__________________________________________________|
 
 
- Data la seguente matrice di input:
+Data la seguente matrice di input:
 
        3.000000    0.000000E+00        4.000000
        7.000000        4.000000        2.000000
       -1.000000       -1.000000       -2.000000
 
- Dato il seguente vettore di input:
+Dato il seguente vettore di input:
 
        7.000000       13.000000       -4.000000
 
@@ -70,6 +70,7 @@ Il risultato che otteniamo con GAUSS-SEIDEL è:
 Come si evince dal confronto nel grafico con il Metodo iterativo di :
 -JACOBI, il sistema non converge a 0 ed oscilla tra i valori 1 e 3 circa. 
 -GAUSS-SEIDEL, il sistema converge a 0.
+Con Jacobi la soluzione non è accettabile, con Gauss-Seidel la soluzione è accettabile.
 ******************************************* TEST 2 ********************************************
 
 Data la seguente matrice di input:
@@ -107,7 +108,7 @@ Il risultato che otteniamo con GAUSS-SEIDEL è:
 Come si evince dal confronto nel grafico con il Metodo iterativo di :
 -JACOBI, il sistema converge a 0.
 -GAUSS-SEIDEL, il sistema non converge a 0 ed oscilla tra i valori 0,5 e 2 circa.
-
+Con Jacobi la soluzione è accettabile, con Gauss-Seidel la soluzione non è accettabile.
 ************************************ TEST 3 **********************************
 Data la seguente matrice di input:
 
@@ -143,6 +144,7 @@ Il risultato che otteniamo con GAUSS-SEIDEL è:
 Come si evince dal confronto nel grafico con il Metodo iterativo di :
 -JACOBI, il sistema converge a 0.
 -GAUSS-SEIDEL, il sistema converge a 0.
+La soluzione è accettabile utilizzando entrambi i metodi.
 ********************************* TEST 4 ********************************
 
 Data la seguente matrice di input:
@@ -179,7 +181,7 @@ Il risultato che otteniamo con GAUSS-SEIDEL è:
 Come si evince dal confronto nel grafico con il Metodo iterativo di :
 -JACOBI, il sistema converge a 0.
 -GAUSS-SEIDEL, il sistema converge a 0.
-
+La soluzione è accettabile con entrambi i metodi.
 ************************************* TEST 5 ***********************************
 
 Data la seguente matrice di input:
@@ -219,7 +221,5 @@ Il risultato che otteniamo con GAUSS-SEIDEL è:
 Come si evince dal confronto nel grafico con il Metodo iterativo di :
 -JACOBI, il sistema converge a 0.
 -GAUSS-SEIDEL, il sistema converge a 0.
+La soluzione è accettabile con entrambi i metodi.
 
-*************************************** RESOCONTO FINALE ***************************************
-Risulta evidente che un metodo iterativo, rispetto alle analisi svolte negli esercizi precedenti con un metodo diretto,
-è in generale meno sensibile alla propagazione degli errori. 

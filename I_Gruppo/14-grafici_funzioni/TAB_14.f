@@ -33,8 +33,8 @@
 	END 
 	
 	REAL FUNCTION F(X)
-*	F=ABS(X)
-	F=1/((25*X*X)+1)
+	F=ABS(X)
+*	F=1/((25*X*X)+1)
 *	F=X/(1+(X*X))
 *	F=SIN(X)/X
 *	F=TAN(X)/X
