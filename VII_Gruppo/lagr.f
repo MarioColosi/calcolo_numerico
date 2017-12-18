@@ -8,7 +8,7 @@
 	REAL LAGRANGE
 	REAL X(0:98),Y(0:98),X2(N_MAX),Y2(N_MAX)
 	REAL A,B,H
-	REAL F,FATT,POLI_MOD_MON,M,R
+	REAL F,FATT,POLI_MOD_MON,M,R,R2
 *    Sottotitolo (INPUT: 1 stringa da 50 caratteri)
 2	FORMAT(/,2X,52('-'),/,2X,'  ',A,/,2X,52('-'),/)
 *    Messaggio di input (INPUT: 1 stringa, 1 intero)
@@ -40,33 +40,5 @@
 	DO I=0,N
 		WRITE(*,*)X(I),Y(I)
 *		WRITE(3,*)X(I),Y(I)
-	END DO 
-	WRITE(*,*)
-	DO I=0,N
-		R=F(X(I))/FATT(N1+1)*POLI_MOD_MON(X(I),X2,N1)
-		WRITE(3,*)R
 	END DO
-*	M=0
-*	DO I=0,N
-*		IF(M.LT.F(X(I)))THEN
-*			M=ABS(F(X(I)))
-*		END IF 
-*	END DO
-
 	END 
-
-	REAL FUNCTION F(X)
-	REAL X 
-	F=1/((25*X*X)+1)
-	END 
-
-	REAL FUNCTION POLI_MOD_MON(X,X2,N1)
-	REAL X2(N1),X,P
-      POLI_MOD_MON=1
-	DO I=1,N1
-		P=P*(X-(X2(I)))
-	END DO 
-	END 
-	
-
-

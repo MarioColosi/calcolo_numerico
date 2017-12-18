@@ -55,11 +55,11 @@
 * FORMATO STRINGA PER INPUT DATI
 3	FORMAT(2X,'[VETT_TRI] ',A,$)
 	VETT(0)=0
-	WRITE(*,3)'Inserisci i valori del vettore a: '
+	WRITE(*,3)'Inserisci i valori della sottodiagonale: '
 	READ(*,*)(VETT(I),I=2,N)
-	WRITE(*,3)'Inserisci i valori del vettore b: '
+	WRITE(*,3)'Inserisci i valori della diagonale): '
 	READ(*,*)(VETT(I),I=N+1,2*N)
-	WRITE(*,3)'Inserisci i valori del vettore b: '
+	WRITE(*,3)'Inserisci i valori della sopradiagonale: '
 	READ(*,*)(VETT(I),I=2*N+1,3*N-1)
 	VETT(3*N)=0
 	END

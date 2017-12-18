@@ -66,5 +66,16 @@ numero di punti di interpolazione considerati.
 Quando consideriamo il numero di punti di interpolazione dispari, la curva incontra l'asse x nel punto (0,0), questo 
 dipende ovviamente dal fatto che i punti sono scelti equidistanti.  
 Inoltre dal grafico finale si evince un confronto tra tutte le differenti interpolazioni.
-************************************* RESOCONTO FINALE ***********************************
 
+
+**************************** TABELLA DELLA NORMA DEGLI ERRORI ****************************
+		 ___________________________________________________________________________________________________
+		 |					PUNTI DI INTERPOLAZIONE					    |
+_________________|__________________________________________________________________________________________________|
+		 |	5		6		11		12		20		25	    |
+   FUNZIONE      |__________________________________________________________________________________________________|
+		 |												    |
+F(X)=(1/1+25x^2) |	4.383461E-01	4.326922E-01	1.914974	5.531326E-01	8.214561	257.148600  |
+		 |												    |
+F(X)=|x|         |	2.942860E-01	2.812494E-01	1.326690	2.158940E-01	6.119585	1832.294000 |
+_________________|__________________________________________________________________________________________________|
